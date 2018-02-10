@@ -5,6 +5,10 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
  1. [Setting up the command-line environment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Software_setup.md)
 
+## Topics
+
+ 1. [RNA-seq alignment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMTQ3NjMwN119
+eyJoaXN0b3J5IjpbLTc0ODQ5OTc1NV19
 -->
