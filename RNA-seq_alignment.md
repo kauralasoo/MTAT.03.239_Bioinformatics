@@ -15,32 +15,28 @@ Let's download the sequence for chromosme 21:
 	wget ftp://ftp.ensembl.org/pub/release-91/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
 	gunzip Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
 
-From the website we also need to download the gene annotations if GFF3 format:
-	
-	wget ftp://ftp.ensembl.org/pub/release-91/gff3/homo_sapiens/Homo_sapiens.GRCh38.91.chromosome.21.gff3.gz
-	gunzip Homo_sapiens.GRCh38.91.chromosome.21.gff3.gz
-
-# Building the HISAT2 index
+### Build the HISAT2 index
 We can now use the FASTA and GFF3 files to build an index of the reference genome:
 
 	mkdir hisat2_index
 	hisat2-build Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
 
-## Download RNA-seq reads
+### Download RNA-seq reads
 
 	wget https://www.dropbox.com/s/tx711uumrareh2j/fikt_A.1.fastq.gz
 	wget https://www.dropbox.com/s/u6zzkypm3uzte4s/fikt_A.2.fastq.gz
 
-## Align with HISAT2
+### Align with HISAT2
 
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
 ### Sort and index the BAM file
 
 	samtools sort -o fikt_A.sortedByCoords.bam fikt_A.bam
+	samtools index fikt_A.sortedByCoords.bam
 	
 	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzg5NTA1NzJdfQ==
+eyJoaXN0b3J5IjpbMjkxOTgzMzk5XX0=
 -->
