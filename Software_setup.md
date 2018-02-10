@@ -18,7 +18,8 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
     docker pull ubuntu:16.04
 
 ## Install commonly used utilities
-The vanilla ubuntu image is missing some important utilites such as wget (for downloading files) and bzip2 (for uncompressing them). Let's install them 
+The vanilla ubuntu image is missing some important utilities such as wget (for downloading files) and bzip2 (for uncompressing them). 
+Let's install them:
 
     apt-get update
     apt-get install wget
@@ -37,7 +38,7 @@ Finally, we can [install](https://docs.anaconda.com/anaconda/install/linux) Anac
 
 	bash Anaconda3-5.0.1-Linux-x86_64.sh
 
-Anaconda should now be installed and you are ready to create and manage conda environments. See the full documentation  [here](https://conda.io/docs/user-guide/tasks/manage-environments.html).
+Anaconda should now be installed and you are ready to create and manage conda [environments](https://conda.io/docs/user-guide/tasks/manage-environments.html). Before we can start, we need to make sure that 
 	
 First let's make sure, that the PATH environment variable is up to date:
 
@@ -82,5 +83,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2MjExMjc5XX0=
+eyJoaXN0b3J5IjpbLTE3NTIzMTk3MDFdfQ==
 -->
