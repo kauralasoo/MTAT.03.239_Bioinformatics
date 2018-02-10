@@ -9,6 +9,8 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
  1. [RNA-seq alignment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)
 
+## Related courses
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0ODQ5OTc1NV19
+eyJoaXN0b3J5IjpbLTEyNjQ0MTkxNTRdfQ==
 -->
