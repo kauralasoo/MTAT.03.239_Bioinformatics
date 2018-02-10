@@ -15,11 +15,11 @@ Your first task is to install docker. I recommend you to follow this excellent [
 STAR is a program to align RNA sequencing reads to a reference genome.
 
 ## Installing featureCounts
-featureCounts is a tool for counting the number of RNA-seq reads that overlap gene annotations. A popular alternative is HTSeq-count, but both of the tools should provide reasonably similar results.
+[featureCounts](http://subread.sourceforge.net/) is a tool for counting the number of RNA-seq reads that overlap gene annotations. A popular alternative is HTSeq-count, but both of the tools should provide reasonably similar results.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDk1MDc4MzRdfQ==
+eyJoaXN0b3J5IjpbLTIwMTAxNDYwNDVdfQ==
 -->
