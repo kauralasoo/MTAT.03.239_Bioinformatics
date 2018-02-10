@@ -39,6 +39,12 @@ Then, let's create our first conda environment with python 3.6:
 Now, let's activate this environment:
 
 	source activate py3.6
+
+## Set up bioconda
+
+	conda config --add channels defaults
+	conda config --add channels conda-forge
+	conda config --add channels bioconda
 	
 ## Installing Snakemake
 [Snakemake](http://snakemake.readthedocs.io/en/latest/) is a tool to define and execute reproducible bioinformatics workflows [ADD LINK TO PAPER]. It greatly simplifies running multiple analysis steps on a large number of input files (biological samples). We will be using Snakemake throughout the course to gradually build more and more complex workflows.
@@ -56,5 +62,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MTYzMjcyNF19
+eyJoaXN0b3J5IjpbMTkwMzQ4OTM4MF19
 -->
