@@ -56,6 +56,8 @@ Once conda is installed, installing snakemake is easy:
 
 ## Installing STAR RNA-seq aligner
 STAR is a program to align RNA sequencing reads to a reference genome.
+	
+	conda install STAR
 
 ## Installing featureCounts
 [featureCounts](http://subread.sourceforge.net/) is a tool for counting the number of RNA-seq reads that overlap gene annotations. A popular alternative is HTSeq-count, but both of the tools should provide reasonably similar results.
@@ -64,5 +66,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODQ0Mjg3Nl19
+eyJoaXN0b3J5IjpbMTQ4OTU4MDYwMF19
 -->
