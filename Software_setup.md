@@ -4,6 +4,7 @@ Bioinformatics software can be notoriously difficult to install. To make your li
 
 ## Useful tutorials
 
+ - [command-line bootcamp](http://rik.smith-unna.com/command_line_bootcamp/)
  - [Enough Docker to be Dangerous](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html)
  - [Conda environments](https://conda.io/docs/user-guide/tasks/manage-environments.html%29)
  - 
@@ -79,5 +80,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MjYzMTEyOF19
+eyJoaXN0b3J5IjpbLTY2OTE4NDMyNF19
 -->
