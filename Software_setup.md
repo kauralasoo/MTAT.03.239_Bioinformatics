@@ -1,4 +1,4 @@
-# Setting up the command line environment
+# Setting up the command-line environment
 
 Bioinformatics software can be notoriously difficult to install. To make your life easier, we are going to perform all data analysis tasks using [docker](https://www.docker.com/) containers. You are, of course, free to install all of the software in your own environment, but in this case we will not be able to provide any support when software issues do arise. Importantly, many bioinformatics tools do not run on Windows.
 
@@ -82,5 +82,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc3MzAyNjBdfQ==
+eyJoaXN0b3J5IjpbLTY0NjQyMTE1MV19
 -->
