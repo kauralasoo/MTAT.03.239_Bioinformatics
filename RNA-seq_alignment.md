@@ -15,6 +15,12 @@ Let's download the sequence for chromosme 21:
 	wget ftp://ftp.ensembl.org/pub/release-91/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
 	gunzip Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
 
+From the website we also need to download the gene annotations if GFF3 format:
+	
+	 wget ftp://ftp.ensembl.org/pub/release-91/gff3/homo_sapiens/Homo_sapiens.GRCh38.91.chromosome.21.gff3.gz
+ 	gunzip Homo_sapiens.GRCh38.91.chromosome.21.gff3.gz
+ 	cd ..
+
 ### Build the HISAT2 index
 We can now use the FASTA and GFF3 files to build an index of the reference genome:
 
@@ -39,7 +45,8 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 	samtools index results/fikt_A.sortedByCoords.bam
 	
 	
+### Counting reads overlapping gene annotations
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI3ODQ1Nzk5XX0=
+eyJoaXN0b3J5IjpbNjc2ODc3MjA4XX0=
 -->
