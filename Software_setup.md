@@ -1,4 +1,4 @@
-# Setting up the software for environments for the Bioinformatics course
+# Setting up the command line environment
 
 Bioinformatics software can be notoriously difficult to install. To make your life easier, we are going to perform all data analysis tasks using [docker](https://www.docker.com/) containers. You are, of course, free to install all of the software in your own environment, but in this case we will not be able to provide any support when software issues do arise. Importantly, many bioinformatics tools do not run on Windows.
 
@@ -47,7 +47,7 @@ Now, let's create our first conda environment with python 3.6:
 Now, let's activate this environment:
 
 	source activate py3.6
-To learn more about the environments, have a look at the conda tutorial.
+To learn more about the environments, have a look at the conda [tutorial](https://conda.io/docs/user-guide/tasks/manage-environments.html).
 
 ## Set up bioconda
 
@@ -82,5 +82,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMyNTYwNDIxXX0=
+eyJoaXN0b3J5IjpbODc3MzAyNjBdfQ==
 -->
