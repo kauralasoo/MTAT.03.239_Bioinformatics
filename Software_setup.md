@@ -9,7 +9,7 @@ Your first task is to install docker. I recommend you to follow this excellent [
 [Anaconda](https://www.anaconda.com/download) is an all-in-one package manager, environment manager and Python distribution as well as a collection of hundreds of open source packages. Anaconda makes it easy to run multiple different version of Python in parallel. Furthermore, [bioconda](https://bioconda.github.io/) that is built on top of the anaconda package manager, makes it easy to install many different bioinformatics software packages, including those that are not written in Python.
 
 ## Installing Snakemake
-[Snakemake](http://snakemake.readthedocs.io/en/latest/) is a tool to define and execute reproducible bioinformatics workflows. It greatly simplifies running multiple analysis steps on a large number of input files (biological samples). We will be using Snakemake throughout the course, 
+[Snakemake](http://snakemake.readthedocs.io/en/latest/) is a tool to define and execute reproducible bioinformatics workflows [ADD LINK TO PAPER]. It greatly simplifies running multiple analysis steps on a large number of input files (biological samples). We will be using Snakemake throughout the course to gradually build more and more complex workflows.
 
 ## Installing STAR RNA-seq aligner
 STAR is a program to align RNA sequencing reads to a reference genome.
@@ -21,5 +21,5 @@ featureCounts is a tool for counting the number of RNA-seq reads that overlap ge
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MzU4NDU5N119
+eyJoaXN0b3J5IjpbLTEzMDk1MDc4MzRdfQ==
 -->
