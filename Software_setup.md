@@ -5,7 +5,8 @@ Bioinformatics software can be notoriously difficult to install. To make your li
 ## Useful tutorials
 
  - [Enough Docker to be Dangerous](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html)
- - Conda environments
+ - [Conda environments](https://conda.io/docs/user-guide/tasks/manage-environments.html%29)
+ - 
 
 ## Setting up docker
 Your first task is to install docker. I recommend you to follow this excellent [tutorial](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html) to get familiar with the basic functionality of docker, including how to download images, how to start and stop containers and how to copy files between your own environment and the docker container.
@@ -78,5 +79,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzk1ODYxODBdfQ==
+eyJoaXN0b3J5IjpbMTA4MjYzMTEyOF19
 -->
