@@ -6,9 +6,9 @@ Bioinformatics software can be notoriously difficult to install. To make your li
 Your first task is to install docker. I recommend you to follow this excellent [tutorial](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html) to get familiar with the basic functionality of docker, including how to download images, how to start and stop containers and how to copy files between your own environment and the docker container.
 
 ## Installing anaconda
-Anaconda is a package manager 
+[Anaconda](https://www.anaconda.com/download) is an all-in-one package manager, environment manager and Python distribution as well as a collection of hundreds of open source packages. Anaconda makes it easy to run multiple different version of Python in parallel. Furthermore, [bioconda](https://bioconda.github.io/) that is built on top of the anaconda package manager, makes it easy to install many different bioinformatics software packages, including those that are not written in Python.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0Nzg2NDkxN119
+eyJoaXN0b3J5IjpbLTExMzQyNDkyMDRdfQ==
 -->
