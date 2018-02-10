@@ -47,7 +47,8 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 	
 	
 ### Counting reads overlapping gene annotations
-
+	
+	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NzQ2ODcyN119
+eyJoaXN0b3J5IjpbMTk4MTk0MDc1NV19
 -->
