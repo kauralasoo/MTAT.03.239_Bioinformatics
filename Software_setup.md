@@ -17,8 +17,12 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 ## Installing anaconda
 [Anaconda](https://www.anaconda.com/download) is an all-in-one package manager, environment manager and Python distribution as well as a collection of hundreds of open source packages. Anaconda makes it easy to run multiple different version of Python in parallel. Furthermore, [bioconda](https://bioconda.github.io/) that is built on top of the anaconda package manager, makes it easy to install many different bioinformatics software packages, including those that are not written in Python.
 
-First, lets switch to root users home directory:
+First, let's switch to root users home directory:
 
+    cd root
+Now, let's download anaconda installation script:
+
+	wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 
 ## Installing Snakemake
 [Snakemake](http://snakemake.readthedocs.io/en/latest/) is a tool to define and execute reproducible bioinformatics workflows [ADD LINK TO PAPER]. It greatly simplifies running multiple analysis steps on a large number of input files (biological samples). We will be using Snakemake throughout the course to gradually build more and more complex workflows.
@@ -33,5 +37,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzNTE5MDE0XX0=
+eyJoaXN0b3J5IjpbODAwNzA3MTIwXX0=
 -->
