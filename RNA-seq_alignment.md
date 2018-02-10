@@ -1,6 +1,10 @@
 # RNA-seq alignment
 This tutorial describes how to align RNA sequencing data to the reference genome. To make the process faster, we will perform all of the analyses on human chromosome 21, but all of steps will remain the same when you perform the analysis at the level of the full genome.
 
+## Useful tutorials
+
+ - [NBIS RNA-seq tutorial](https://scilifelab.github.io/courses/rnaseq/labs/)
+
 ## Downloading the reference genome
 You can find the human reference genome from the Ensembl [website](https://www.ensembl.org). Go to Downloads -> Download databases and software and then follow the links to Human - DNA (FASTA).
 
@@ -33,5 +37,5 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2OTc5MjIyNV19
+eyJoaXN0b3J5IjpbLTEwODE2MDQxMjNdfQ==
 -->
