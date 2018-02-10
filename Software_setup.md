@@ -18,7 +18,7 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
     docker pull ubuntu:16.04
 
 ## Install commonly used utilities
-The vanilla ubuntu image is missing some important utilites. Let's install them 
+The vanilla ubuntu image is missing some important util. Let's install them 
 
     apt-get update
     apt-get install wget
@@ -82,5 +82,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MTc3Njk0NV19
+eyJoaXN0b3J5IjpbODkwNTEwOTAyXX0=
 -->
