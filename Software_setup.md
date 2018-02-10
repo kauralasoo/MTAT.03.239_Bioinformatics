@@ -28,6 +28,7 @@ Finally, we can [install](https://docs.anaconda.com/anaconda/install/linux) Anac
 
 	bash Anaconda3-5.0.1-Linux-x86_64.sh
 
+Conda should now be installed and you are ready to create and manage environments.
 	
 	
 	
@@ -45,5 +46,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2MTExODgxXX0=
+eyJoaXN0b3J5IjpbLTg2NDY2OTA2Nl19
 -->
