@@ -1,6 +1,9 @@
 # Setting up software for environments for the Bioinformatics course
 
-Bioinformatics software can be notoriously difficult to install. To make your life easier, we are going to perform all data analysis tasks using docker containers. 
+Bioinformatics software can be notoriously difficult to install. To make your life easier, we are going to perform all data analysis tasks using [docker](https://www.docker.com/) containers. 
+
+## Installing docker
+Your first task is to get familiar with docker. 
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. If you have finished with me, you can just create new files by opening the **file explorer** on the left corner of the navigation bar.
 
@@ -144,5 +147,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMzg1ODY0XX0=
+eyJoaXN0b3J5IjpbMzk0NTE0MDM4XX0=
 -->
