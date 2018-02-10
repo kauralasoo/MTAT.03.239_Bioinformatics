@@ -51,6 +51,8 @@ Now, let's activate this environment:
 
 Once conda is installed, installing snakemake is easy:
 
+	conda install snakemake
+
 
 ## Installing STAR RNA-seq aligner
 STAR is a program to align RNA sequencing reads to a reference genome.
@@ -62,5 +64,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMzQ4OTM4MF19
+eyJoaXN0b3J5IjpbLTIxODQ0Mjg3Nl19
 -->
