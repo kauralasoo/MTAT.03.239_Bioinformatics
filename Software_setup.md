@@ -64,9 +64,12 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 	conda install subread
 
+## Installing samtools
+
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDU5NDE2MDhdfQ==
+eyJoaXN0b3J5IjpbMjEzMTc3OTY1XX0=
 -->
