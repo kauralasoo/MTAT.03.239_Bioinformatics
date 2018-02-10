@@ -38,17 +38,16 @@ Finally, we can [install](https://docs.anaconda.com/anaconda/install/linux) Anac
 
 	bash Anaconda3-5.0.1-Linux-x86_64.sh
 
-Anaconda should now be installed and you are ready to create and manage conda [environments](https://conda.io/docs/user-guide/tasks/manage-environments.html). Before we can start, we need to make sure that 
-	
-First let's make sure, that the PATH environment variable is up to date:
+Anaconda should now be installed and you are ready to create and manage conda [environments](https://conda.io/docs/user-guide/tasks/manage-environments.html). However, before we can start, we need to make sure that that the PATH environment variable is up to date:
 
 	source .bashrc
-Then, let's create our first conda environment with python 3.6:
+Now, let's create our first conda environment with python 3.6:
 
 	conda create -n py3.6 python=3.6
 Now, let's activate this environment:
 
 	source activate py3.6
+To learn more about the environments, have a look at the conda tutorial.
 
 ## Set up bioconda
 
@@ -83,5 +82,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTIzMTk3MDFdfQ==
+eyJoaXN0b3J5IjpbOTMyNTYwNDIxXX0=
 -->
