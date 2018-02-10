@@ -8,7 +8,10 @@ Your first task is to install docker. I recommend you to follow this excellent [
 ## Installing anaconda
 [Anaconda](https://www.anaconda.com/download) is an all-in-one package manager, environment manager and Python distribution as well as a collection of hundreds of open source packages. Anaconda makes it easy to run multiple different version of Python in parallel. Furthermore, [bioconda](https://bioconda.github.io/) that is built on top of the anaconda package manager, makes it easy to install many different bioinformatics software packages, including those that are not written in Python.
 
+## Installing Snakemake
+Snakemake is a workflow engine for running bio
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzQyNDkyMDRdfQ==
+eyJoaXN0b3J5IjpbLTE5NzkzMTExMjNdfQ==
 -->
