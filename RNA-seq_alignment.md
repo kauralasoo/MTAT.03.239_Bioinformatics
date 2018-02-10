@@ -35,11 +35,11 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 
 ### Sort and index the BAM file
 
-	samtools sort -o fikt_A.sortedByCoords.bam fikt_A.bam
-	samtools index fikt_A.sortedByCoords.bam
+	samtools sort -o results/fikt_A.sortedByCoords.bam results/fikt_A.bam
+	samtools index results/fikt_A.sortedByCoords.bam
 	
 	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDYwNTIxNl19
+eyJoaXN0b3J5IjpbNDI3ODQ1Nzk5XX0=
 -->
