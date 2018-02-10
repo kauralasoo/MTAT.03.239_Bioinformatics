@@ -23,6 +23,10 @@ First, let's switch to root users home directory:
 Now, let's download anaconda installation script:
 
 	wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+Finally, we can install Anaconda:
+
+	
+	
 
 ## Installing Snakemake
 [Snakemake](http://snakemake.readthedocs.io/en/latest/) is a tool to define and execute reproducible bioinformatics workflows [ADD LINK TO PAPER]. It greatly simplifies running multiple analysis steps on a large number of input files (biological samples). We will be using Snakemake throughout the course to gradually build more and more complex workflows.
@@ -37,5 +41,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAwNzA3MTIwXX0=
+eyJoaXN0b3J5IjpbMjA3NzI2NzA5M119
 -->
