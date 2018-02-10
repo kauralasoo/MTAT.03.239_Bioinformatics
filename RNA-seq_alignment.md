@@ -33,9 +33,9 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 
 ## Align with HISAT2
 
-	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/test.bam
+	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODE2MDQxMjNdfQ==
+eyJoaXN0b3J5IjpbMjQ5MzIwNTg1XX0=
 -->
