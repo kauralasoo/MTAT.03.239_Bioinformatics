@@ -62,9 +62,11 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 ## Installing featureCounts
 [featureCounts](http://subread.sourceforge.net/) is a tool for counting the number of RNA-seq reads that overlap gene annotations. A popular alternative is HTSeq-count, but both of the tools should provide reasonably similar results.
 
+	conda install subread
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTU4MDYwMF19
+eyJoaXN0b3J5IjpbLTIxMDU5NDE2MDhdfQ==
 -->
