@@ -4,6 +4,7 @@ Bioinformatics software can be notoriously difficult to install. To make your li
 
 ## Useful tutorials
 
+ - List item
 
 ## Setting up docker
 Your first task is to install docker. I recommend you to follow this excellent [tutorial](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html) to get familiar with the basic functionality of docker, including how to download images, how to start and stop containers and how to copy files between your own environment and the docker container.
@@ -76,5 +77,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjgxMzgyMTRdfQ==
+eyJoaXN0b3J5IjpbLTExNzA4NzQyNjZdfQ==
 -->
