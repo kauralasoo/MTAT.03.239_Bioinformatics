@@ -27,6 +27,7 @@ Now, let's download anaconda installation script (this file is 525 MB!):
 Finally, we can [install](https://docs.anaconda.com/anaconda/install/linux) Anaconda:
 
 	bash Anaconda3-5.0.1-Linux-x86_64.sh
+
 	
 	
 	
@@ -44,5 +45,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5OTE3NDI2M119
+eyJoaXN0b3J5IjpbODQ2MTExODgxXX0=
 -->
