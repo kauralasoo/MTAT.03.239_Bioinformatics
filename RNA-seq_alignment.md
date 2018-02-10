@@ -23,8 +23,11 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 
 ### Download RNA-seq reads
 
+	mkdir data
+	cd data
 	wget https://www.dropbox.com/s/tx711uumrareh2j/fikt_A.1.fastq.gz
 	wget https://www.dropbox.com/s/u6zzkypm3uzte4s/fikt_A.2.fastq.gz
+	cd ..
 
 ### Align with HISAT2
 
@@ -38,5 +41,5 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxOTgzMzk5XX0=
+eyJoaXN0b3J5IjpbMTI0NDYwNTIxNl19
 -->
