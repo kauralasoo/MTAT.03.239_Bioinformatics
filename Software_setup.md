@@ -7,8 +7,7 @@ Bioinformatics software can be notoriously difficult to install. To make your li
  - [command-line bootcamp](http://rik.smith-unna.com/command_line_bootcamp/)
  - [Enough Docker to be Dangerous](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html)
  - [Conda environments](https://conda.io/docs/user-guide/tasks/manage-environments.html%29)
- - [NBIS Reproducible Research Course](http://nbis-reproducible-research.readthedocs.io/en/latest/) (Snakemake, 
- - 
+ - [NBIS Reproducible Research Course](http://nbis-reproducible-research.readthedocs.io/en/latest/) (conda, Snakemake, Docker, Jupyter, etc)
  - 
 
 ## Setting up docker
@@ -82,5 +81,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc4NjQzMTE1XX0=
+eyJoaXN0b3J5IjpbMTQ4NzkzMTkxXX0=
 -->
