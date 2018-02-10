@@ -11,6 +11,8 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 ## Related courses
 
+ - Ben Langmead's "[Algorithms for DNA Sequencing](https://www.youtube.com/playlist?list=PL2mpR0RYFQsBiCWVJSvVAO3OJ2t7DzoHA)"
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjQ0MTkxNTRdfQ==
+eyJoaXN0b3J5IjpbLTE3NDQ3NjE5NTRdfQ==
 -->
