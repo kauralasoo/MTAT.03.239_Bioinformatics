@@ -20,7 +20,7 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 First, let's switch to root users home directory:
 
     cd root
-Now, let's download anaconda installation script:
+Now, let's download anaconda installation script (this file is 525 MB!):
 
 	wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 Finally, we can install Anaconda:
@@ -41,5 +41,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NzI2NzA5M119
+eyJoaXN0b3J5IjpbLTc4NjI0NDM2Ml19
 -->
