@@ -9,10 +9,11 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 
     docker pull ubuntu:16.04
 
-## Install wget for downloading files
+## Install commonly used utilities
 
     apt-get update
     apt-get install wget
+    apt-get install bzip2
 
 ## Installing anaconda
 [Anaconda](https://www.anaconda.com/download) is an all-in-one package manager, environment manager and Python distribution as well as a collection of hundreds of open source packages. Anaconda makes it easy to run multiple different version of Python in parallel. Furthermore, [bioconda](https://bioconda.github.io/) that is built on top of the anaconda package manager, makes it easy to install many different bioinformatics software packages, including those that are not written in Python.
@@ -41,5 +42,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NjI0NDM2Ml19
+eyJoaXN0b3J5IjpbLTU4ODk3NzM2Nl19
 -->
