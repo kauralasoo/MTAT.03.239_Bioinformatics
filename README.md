@@ -14,8 +14,9 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  - Ben Langmead's [Algorithms for DNA Sequencing](https://www.youtube.com/playlist?list=PL2mpR0RYFQsBiCWVJSvVAO3OJ2t7DzoHA) (excellent video lectures)
  - Aaron Quinlan's [Applied Computational Genomics Course](https://github.com/quinlan-lab/applied-computational-genomics)
  - Mike Love's [Introduction to Computational Biology](https://biodatascience.github.io/compbio/)
+ - Bioinformatics Algorithms (http://bioinformaticsalgorithms.com/index.htm)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEwNDUxNDcxXX0=
+eyJoaXN0b3J5IjpbMjQ2NTE0NDM2XX0=
 -->
