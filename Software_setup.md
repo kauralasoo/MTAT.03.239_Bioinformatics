@@ -29,7 +29,7 @@ Let's install them:
 ## Installing anaconda
 [Anaconda](https://www.anaconda.com/download) is an all-in-one package manager, environment manager and Python distribution as well as a collection of hundreds of open source packages. Anaconda makes it easy to run multiple different version of Python in parallel. Furthermore, [bioconda](https://bioconda.github.io/) that is built on top of the anaconda package manager, makes it easy to install many different bioinformatics software packages, including those that are not written in Python.
 
-First, let's switch to root users home directory:
+To perform the next steps, you need to  First, let's switch to root users home directory:
 
     cd root
 Now, let's download anaconda installation script (this file is 525 MB!):
@@ -83,5 +83,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMTAwODM2OF19
+eyJoaXN0b3J5IjpbLTEyOTI5ODY5NjNdfQ==
 -->
