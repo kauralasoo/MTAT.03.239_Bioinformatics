@@ -29,10 +29,10 @@ Let's install them:
 ## Installing anaconda
 [Anaconda](https://www.anaconda.com/download) is an all-in-one package manager, environment manager and Python distribution as well as a collection of hundreds of open source packages. Anaconda makes it easy to run multiple different version of Python in parallel. Furthermore, [bioconda](https://bioconda.github.io/) that is built on top of the anaconda package manager, makes it easy to install many different bioinformatics software packages, including those that are not written in Python.
 
-To perform the next steps, you need to  First, let's switch to root users home directory:
+To perform the next steps, you need to start the docker container following the [tutorial](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html) linked above. Now, let's switch to root user's home directory:
 
     cd root
-Now, let's download anaconda installation script (this file is 525 MB!):
+Then, let's download anaconda installation script (this file is 525 MB!):
 
 	wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 Finally, we can [install](https://docs.anaconda.com/anaconda/install/linux) Anaconda:
@@ -83,5 +83,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTI5ODY5NjNdfQ==
+eyJoaXN0b3J5IjpbLTE0MzU3MjIwNzBdfQ==
 -->
