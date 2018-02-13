@@ -57,17 +57,17 @@ To learn more about the environments, have a look at the conda [tutorial](https:
 	conda config --add channels bioconda
 	
 ## Installing Snakemake
-[Snakemake](http://snakemake.readthedocs.io/en/latest/) is a tool to define and execute reproducible bioinformatics workflows [ADD LINK TO PAPER]. It greatly simplifies running multiple analysis steps on a large number of input files (biological samples). We will be using Snakemake throughout the course to gradually build more and more complex workflows.
+[Snakemake](http://snakemake.readthedocs.io/en/latest/) is a tool to define and execute reproducible [bioinformatics workflows](https://academic.oup.com/bib/article/18/3/530/2562749). It greatly simplifies running multiple analysis steps on a large number of input files (biological samples). We will be using Snakemake throughout the course to gradually build more and more complex workflows.
 
 Once conda is installed, installing snakemake is easy:
 
 	conda install snakemake
 
 
-## Installing STAR RNA-seq aligner
-STAR is a program to align RNA sequencing reads to a reference genome.
+## Installing HISAT2 RNA-seq aligner
+HISAT2 is a program to align RNA sequencing reads to a reference genome.
 	
-	conda install STAR
+	conda install hisat2
 
 ## Installing featureCounts
 [featureCounts](http://subread.sourceforge.net/) is a tool for counting the number of RNA-seq reads that overlap gene annotations. A popular alternative is HTSeq-count, but both of the tools should provide reasonably similar results.
@@ -83,5 +83,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzU3MjIwNzBdfQ==
+eyJoaXN0b3J5IjpbNjE5Nzc0MzldfQ==
 -->
