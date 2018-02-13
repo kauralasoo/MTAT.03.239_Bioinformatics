@@ -11,14 +11,14 @@ Bioinformatics software can be notoriously difficult to install. To make your li
  - [Snakemake tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html)
 
 ## Setting up docker
-Your first task is to install docker. I recommend you to follow this excellent [tutorial](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html) to get familiar with the basic functionality of docker, including how to download images, how to start and stop containers and how to copy files between your own environment and the docker container.
+Your first task is to install docker. I recommend  to follow this excellent [tutorial](http://seankross.com/2017/09/17/Enough-Docker-to-be-Dangerous.html) to get familiar with the basic functionality of docker, including how to download images, how to start and stop containers and how to copy files between your own environment and the docker container.
 
 Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 
     docker pull ubuntu:16.04
 
 ## Install commonly used utilities
-The vanilla ubuntu image is missing some important utilities such as wget (for downloading files) and bzip2 (for uncompressing them). 
+The vanilla ubuntu image is missing some important utilities such as wget (for downloading files), bzip2 (for uncompressing them) and less (for viewing them). 
 Let's install them:
 
     apt-get update
@@ -83,5 +83,5 @@ STAR is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NDYxNzEyM119
+eyJoaXN0b3J5IjpbMTkyMTAwODM2OF19
 -->
