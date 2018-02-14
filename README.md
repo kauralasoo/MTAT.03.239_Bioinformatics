@@ -5,6 +5,18 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
  1. [Setting up the command-line environment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Software_setup.md)
 
+## Topics
+
+ 1. [RNA-seq alignment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)
+
+## Related courses
+
+ - Ben Langmead's [Algorithms for DNA Sequencing](https://www.youtube.com/playlist?list=PL2mpR0RYFQsBiCWVJSvVAO3OJ2t7DzoHA) (excellent video lectures on DNA alignment)
+ - Aaron Quinlan's [Applied Computational Genomics Course](https://github.com/quinlan-lab/applied-computational-genomics)
+ - Mike Love's [Introduction to Computational Biology](https://biodatascience.github.io/compbio/)
+ - [Bioinformatics Algorithms](http://bioinformaticsalgorithms.com/index.htm)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMTQ3NjMwN119
+eyJoaXN0b3J5IjpbLTE1MzM1NTUzMDFdfQ==
 -->
