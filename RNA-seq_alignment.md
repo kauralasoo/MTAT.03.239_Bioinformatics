@@ -55,9 +55,11 @@ Next, we can sort the BAM file according to the position of each read in the ref
 	
 	
 ### Downloading transcript annotations
-Ultimately, we want to know what is the relative expression of each gene in the genome. To do this, we need download transcript annotations in the Gene Transfer Format (GTF). (These are similar to the transcript annotations that you saw in IGV. In fact, you can open and view GTF files with IGV).
+Ultimately, we want to know what is the relative expression of each gene in the genome. To do this, we need download transcript annotations in the Gene Transfer Format (GTF). 
 
-From the Ensembl website we need to download the gene annotations if GTF format:
+> Annotations in the GTF format are similar to the transcript annotations that you saw in IGV. In fact, you can open and view GTF files with IGV.
+
+From the Ensembl website we need to download the gene annotations in GTF format:
 	
 	cd annotations
 	wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz
@@ -72,5 +74,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjY5MjAwN119
+eyJoaXN0b3J5IjpbLTE1MjY5MDEwOTVdfQ==
 -->
