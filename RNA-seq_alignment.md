@@ -29,9 +29,12 @@ I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/117
 	wget https://zenodo.org/record/1173306/files/fikt_A.1.fastq.gz
 	wget https://zenodo.org/record/1173306/files/fikt_A.2.fastq.gz
 	cd ..
-
+	
 ### Viewing and counting lines in the fastq files
-We can use 
+We can use zless to view the contents of compressed text files.
+	
+	zless data/fikt_A.1.fastq.gz
+We can also count the number of lines in 
 
 ### Align with HISAT2
 Now, let's align all of the reads in these two files using 
@@ -56,5 +59,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjkzNTQ1OTZdfQ==
+eyJoaXN0b3J5IjpbMTI2Njk0NDk0NF19
 -->
