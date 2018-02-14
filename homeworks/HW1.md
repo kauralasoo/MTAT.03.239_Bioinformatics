@@ -8,7 +8,8 @@ Test# Homework 1
  4. How long is the longest transcript? How far is it from closest neighbouring genes on the left and right?
  5. Now go to the lactase (LCT) gene (it's the gene that allows us to drink milk). How long is this on? How far is it from its neigbours?
 
-## Task 2: 
+## Task 2: RNA-seq alignment
+Using the RNA-seq alignment tutorial, answer the following que
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MjI1Mzc5XX0=
+eyJoaXN0b3J5IjpbLTUxODQ0MjcxOV19
 -->
