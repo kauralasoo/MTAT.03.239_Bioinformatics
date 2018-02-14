@@ -15,8 +15,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Following the instructions, align the FASTQ files to the reference genome. Sort the alignments by position and create the index.
  3. What fraction of the reads mapped to the reference genome? (HINT: use samtools flagstat).
  4. What fraction of the paired-end fragments were assigned to genes? (HINT: You can find this from the summary file created by featureCounts)
- 5. Copy to sorted BAM file together with the index out of the docker container to your own environment. Open the BAM file in IGV. Zoom into the PFKL gene on chromosome 21. You should be able to see individual reads mapping to the exons of the gene. Now move to the neighbouring AIRE gene. Make IGV scr
+ 5. Copy to sorted BAM file together with the index out of the docker container to your own environment. Open the BAM file in IGV. Zoom into the PFKL gene on chromosome 21. You should be able to see individual reads mapping to the exons of the gene. Now move to the neighbouring AIRE gene. Make IGV screenshots for both geens
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NTMzMTU2N119
+eyJoaXN0b3J5IjpbOTMzNDQxNjM4XX0=
 -->
