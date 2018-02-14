@@ -19,7 +19,7 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  6. Find the number of paired-end fragments overlapping the the PFKL and AIRE genes from the featureCounts file. Do these match to what you observed in the IGV? (HINT: You can use the search box on the [Ensembl website](http://www.ensembl.org/) to find the gene ids for both gens).
 
 ## Task 3. Constructing a data analysis workflow with Snakemake
-
+Use Snakemake to automate the RNA-seq analysis that you perfomed in Task 2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMTg2NzQyNF19
+eyJoaXN0b3J5IjpbMTYzMjc0OTg3OF19
 -->
