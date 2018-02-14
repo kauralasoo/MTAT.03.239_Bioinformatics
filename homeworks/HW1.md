@@ -18,8 +18,11 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  5. Copy to sorted BAM file together with the index out of the docker container to your own environment. Open the BAM file in IGV. Zoom into the PFKL gene on chromosome 21. You should be able to see individual reads mapping to the exons of the gene. Now move to the neighbouring AIRE gene. Make IGV screenshots for both genes and include them to your report.
  6. Find the number of paired-end fragments overlapping the the PFKL and AIRE genes from the featureCounts file. Do these match to what you observed in the IGV? (HINT: You can use the search box on the [Ensembl website](http://www.ensembl.org/) to find the gene ids for both gens).
 
-## Task 3. Constructing a data analysis workflow with Snakemake
-Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) to automate the RNA-seq analysis that you perfomed in Task 2. Expand this to all four RNA-seq samples 
+## Task 3. Constructing a data analysis workflow with Snakemake (2 points)
+Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) to automate the RNA-seq analysis that you perfomed in Task 2. Expand this to all four RNA-seq samples available from [Zenodo](https://zenodo.org/record/1173306). 
+
+ 1. List item
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMTA4ODM0M119
+eyJoaXN0b3J5IjpbMTQwNDI2ODA1MF19
 -->
