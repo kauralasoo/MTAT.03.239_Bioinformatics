@@ -54,22 +54,23 @@ Next, we can sort the BAM file according to the position of each read in the ref
 	samtools index results/fikt_A.sortedByCoords.bam
 	
 	
-### Counting reads overlapping gene annotations
+### Downloading transcript annotatio
 Ultimately, we want to know what is the relative expression of each gene in the genome. To do this, we need download transcript annotations in the Gene Transfer Format (GTF). (These are similar to the transcript annotations that you saw in IGV. In fact, you can open and view GTF files with IGV).
 
 From the Ensembl website we need to download the gene annotations if GTF format:
 	
+	cd annotations
 	wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz
+	cd ..
 
 Now, lets's uncompress them and extract only those genes that are on chromosome 21:
 
 	gunzip annotations/Homo_sapiens.GRCh38.91.gtf.gz
 	grep ^21 annotations/Homo_sapiens.GRCh38.91.gtf > annotations/Homo_sapiens.GRCh38.91.chr21.gtf
-	cd ..
 
 We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NDQ0NTk5NF19
+eyJoaXN0b3J5IjpbMTE0MDg2OTMxMF19
 -->
