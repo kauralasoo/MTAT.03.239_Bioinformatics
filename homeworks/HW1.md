@@ -13,8 +13,9 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
 
  1. How many reads are there in the fikt_A.1.fastq.gz and fikt_A.1.fastq.gz FASTQ files?
  2. Following the instructions, align the FASTQ files to the reference genome. Sort the alignments by position and create the index.
- 3. 
+ 3. What fraction of the reads mapped to the reference genome? (HINT: use samtools flagstat).
+ 4. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzA1ODkzOTRdfQ==
+eyJoaXN0b3J5IjpbNTE4Mzg3NTg2XX0=
 -->
