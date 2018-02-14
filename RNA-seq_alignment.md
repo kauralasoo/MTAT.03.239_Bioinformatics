@@ -71,9 +71,9 @@ Now, lets's uncompress them and extract only those genes that are on chromosome 
 	grep ^21 annotations/Homo_sapiens.GRCh38.91.gtf > annotations/Homo_sapiens.GRCh38.91.chr21.gtf
 
 ### Counting the number of reads overlapping gene annotations 
-We can now proceed with read counting
+We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Njg4ODQyMTRdfQ==
+eyJoaXN0b3J5IjpbMTY0NDM0MzIyNF19
 -->
