@@ -2,8 +2,9 @@ Test# Homework 1
 
 ## Task 1: Getting familiar with the IGV genome browser
 
- 1. Download and run the Integrative Genomics Viewer.
+ 1. Download and run the [Integrative Genomics Viewer](http://software.broadinstitute.org/software/igv/).
+ 2. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzUxMDU5NDhdfQ==
+eyJoaXN0b3J5IjpbODA3OTc1ODc1XX0=
 -->
