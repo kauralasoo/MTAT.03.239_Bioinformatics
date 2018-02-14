@@ -55,6 +55,7 @@ Next, we can sort the BAM file according to the position of each read in the ref
 	
 	
 ### Counting reads overlapping gene annotations
+Ultimately, we want to know what is the relative expression of each gene in the genome. To do this, we need to first download gene annotations 
 From the website we also need to download the gene annotations if GFF3 format:
 	
 	wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz
@@ -66,5 +67,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTYzNzE1NF19
+eyJoaXN0b3J5IjpbLTM1Njk4OTY5M119
 -->
