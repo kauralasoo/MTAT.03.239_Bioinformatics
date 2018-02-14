@@ -9,7 +9,8 @@ Test# Homework 1
  5. Now go to the lactase (LCT) gene (it's the gene that allows us to drink milk). How long is this on? How far is it from its neigbours?
 
 ## Task 2: RNA-seq alignment
-Using the RNA-seq alignment tutorial, answer the following que
+Using the RNA-seq alignment tutorial, answer the following questions:
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxODQ0MjcxOV19
+eyJoaXN0b3J5IjpbLTI0NTI2MDg0NV19
 -->
