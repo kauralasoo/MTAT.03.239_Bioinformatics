@@ -4,6 +4,7 @@ This tutorial describes how to align RNA sequencing data to the reference genome
 ## Useful tutorials
 
  - [NBIS RNA-seq tutorial](https://scilifelab.github.io/courses/rnaseq/labs/)
+ - [HISAT2 documentation](https://ccb.jhu.edu/software/hisat2/manual.shtml)
 
 ## Example workflow
 ### Downloading the reference genome
@@ -62,5 +63,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyOTcyODUzMF19
+eyJoaXN0b3J5IjpbMTM0MjEzNDQ5Nl19
 -->
