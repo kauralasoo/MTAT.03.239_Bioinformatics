@@ -5,7 +5,8 @@ This tutorial describes how to align RNA sequencing data to the reference genome
 
  - [NBIS RNA-seq tutorial](https://scilifelab.github.io/courses/rnaseq/labs/)
 
-## Downloading the reference genome
+## Example workflow
+### Downloading the reference genome
 You can find the human reference genome from the Ensembl [website](https://www.ensembl.org). Go to Downloads -> Download databases and software and then follow the links to Human - DNA (FASTA).
 
 Let's download the sequence for chromosme 21:
@@ -39,7 +40,7 @@ We can also count the number of lines in each file using a combination of zcat a
 	zcat data/fikt_A.1.fastq.gz | wc -l
 
 ### Align with HISAT2
-Now, let's align all of the reads in these two files to the reference genome using HISAT2. We will need the index file that 
+Now, let's align all of the reads in these two files to the reference genome using HISAT2. We will need the index file 
 
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
@@ -61,5 +62,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODExMjIxNzcxXX0=
+eyJoaXN0b3J5IjpbMTcyOTcyODUzMF19
 -->
