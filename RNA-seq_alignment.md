@@ -48,6 +48,7 @@ By default, HISAT2 outputs results as uncompressed SAM to the standard output. S
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
 ### Sort and index the BAM file
+Next, we can sort the BAM file according to the position of each read in the reference genome (
 
 	samtools sort -o results/fikt_A.sortedByCoords.bam results/fikt_A.bam
 	samtools index results/fikt_A.sortedByCoords.bam
@@ -65,5 +66,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIzMTI3MjYxXX0=
+eyJoaXN0b3J5IjpbNjYxOTY4MzA0XX0=
 -->
