@@ -6,9 +6,9 @@ Test# Homework 1
  2. Change the genome version to hg38 (top left corner)
  3. Search for the Sonic Hedgehog (SHH) gene. Right click on the gene and select Expanded to see all of the annotate transcripts. How many annotated transcript does the SHH gene have?
  4. How long is the longest transcript? How far is it from closest neighbouring genes on the left and right?
- 5. Now go to the lactase (LCT) gene  
+ 5. Now go to the lactase (LCT) gene (
 How about the lactase (LCT) gene that allows you to drink milk?
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1ODk2MzE5M119
+eyJoaXN0b3J5IjpbNzUzMDY5ODM5XX0=
 -->
