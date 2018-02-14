@@ -15,8 +15,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Following the instructions, align the FASTQ files to the reference genome. Sort the alignments by position and create the index.
  3. What fraction of the reads mapped to the reference genome? (HINT: use samtools flagstat).
  4. What fraction of the paired-end fragments were assigned to genes? (HINT: You can find this from the summary file created by featureCounts)
- 5. Copy to sorted BAM file together with the index out of the docker container to your own environment. Open the BAM file in IGV. Zoom into the ICOSLG gene on chromosome 21. You should be able to see individual reads mapping to 
+ 5. Copy to sorted BAM file together with the index out of the docker container to your own environment. Open the BAM file in IGV. Zoom into the ICOSLG gene on chromosome 21. You should be able to see individual reads mapping to the exons of the gene. Now 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMzU0ODQ3Nl19
+eyJoaXN0b3J5IjpbMjEwNTk5MzU1M119
 -->
