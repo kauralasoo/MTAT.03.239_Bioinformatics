@@ -11,8 +11,9 @@ Test# Homework 1
 ## Task 2: RNA-seq alignment
 Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md), answer the following questions:
 
- 1. How many reads are there in the 
+ 1. How many reads are there in the fikt_A.1.fastq.gz and fikt_A.1.fastq.gz FASTQ files?
+ 2. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyMzMzNDA5XX0=
+eyJoaXN0b3J5IjpbLTEyMTMzMjU4MjNdfQ==
 -->
