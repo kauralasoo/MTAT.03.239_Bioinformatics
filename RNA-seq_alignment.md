@@ -25,8 +25,8 @@ We can now use the FASTA and GFF3 files to build an index of the reference genom
 
 	mkdir data
 	cd data
-	wget https://www.dropbox.com/s/tx711uumrareh2j/fikt_A.1.fastq.gz
-	wget https://www.dropbox.com/s/u6zzkypm3uzte4s/fikt_A.2.fastq.gz
+	wget https://zenodo.org/record/1173306/files/fikt_A.1.fastq.gz
+	wget https://zenodo.org/record/1173306/files/fikt_A.2.fastq.gz
 	cd ..
 
 ### Align with HISAT2
@@ -51,5 +51,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MTE4MjA2XX0=
+eyJoaXN0b3J5IjpbODQ3NDI3NDM0XX0=
 -->
