@@ -22,8 +22,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
 Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) to automate the RNA-seq analysis that you perfomed in Task 2. Expand this to all four RNA-seq samples available from [Zenodo](https://zenodo.org/record/1173306). 
 
  1. Submit the Snakemake workflow that you wrote as well as the the graphical representation of the workflow (generated with `snakemake --dag`).
- 2. Report the paired-end fragment counts for PFKL and AIRE genes
+ 2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MTYwNzYxMV19
+eyJoaXN0b3J5IjpbNDM3MTU5MTIwXX0=
 -->
