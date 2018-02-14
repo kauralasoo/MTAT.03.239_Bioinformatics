@@ -21,8 +21,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
 ## Task 3. Constructing a data analysis workflow with Snakemake (2 points)
 Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) to automate the RNA-seq analysis that you perfomed in Task 2. Expand this to all four RNA-seq samples available from [Zenodo](https://zenodo.org/record/1173306). 
 
- 1. Submit the Snakemake workflow that you wrote as well as the 
+ 1. Submit the Snakemake workflow that you wrote as well as the the graphical representation of the workflow (generated using .
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDkxMTYxNzldfQ==
+eyJoaXN0b3J5IjpbOTA5OTA1MzIyXX0=
 -->
