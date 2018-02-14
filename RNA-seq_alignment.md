@@ -31,6 +31,7 @@ I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/117
 	cd ..
 
 ### Align with HISAT2
+Now, let's align all of the reads in these two files using 
 
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
@@ -52,5 +53,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA4MTkxMTJdfQ==
+eyJoaXN0b3J5IjpbLTE2MDM4NDM0NzFdfQ==
 -->
