@@ -9,6 +9,9 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
  1. [RNA-seq alignment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)
 
+## Homeworks
+
+
 ## Related courses
 
  - Ben Langmead's [Algorithms for DNA Sequencing](https://www.youtube.com/playlist?list=PL2mpR0RYFQsBiCWVJSvVAO3OJ2t7DzoHA) (excellent video lectures on DNA alignment)
@@ -18,5 +21,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzM1NTUzMDFdfQ==
+eyJoaXN0b3J5IjpbLTEzMDc4MTI0NDZdfQ==
 -->
