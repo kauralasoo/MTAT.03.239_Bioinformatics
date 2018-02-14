@@ -1,4 +1,4 @@
-Test# Homework 1
+# Homework 1
 
 ## Task 1: Getting familiar with the IGV genome browser (1 point)
 
@@ -25,5 +25,5 @@ Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.htm
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3MTU5MTIwXX0=
+eyJoaXN0b3J5IjpbLTEwMTk1ODQ3MzhdfQ==
 -->
