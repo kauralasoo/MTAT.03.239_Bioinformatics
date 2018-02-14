@@ -41,7 +41,7 @@ We can also count the number of lines in each file using a combination of zcat a
 	zcat data/fikt_A.1.fastq.gz | wc -l
 
 ### Align with HISAT2
-Now, let's align all of the reads in these two files to the reference genome using HISAT2. We will need the supply index that we created beforehand with the -x option.
+Now, let's align all of the reads in these two files to the reference genome using HISAT2. We will need the supply index that we created beforehand with the `-x` option and both read pairs with `-1` and `-2` options.
 
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
@@ -63,5 +63,5 @@ We can now proceed with read counting
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o test.out results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NjExNzUxNV19
+eyJoaXN0b3J5IjpbMjAzODA1NDgyMF19
 -->
