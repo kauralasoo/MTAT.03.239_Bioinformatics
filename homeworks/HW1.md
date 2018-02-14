@@ -16,8 +16,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  3. What fraction of the reads mapped to the reference genome? (HINT: use samtools flagstat).
  4. What fraction of the paired-end fragments were assigned to genes? (HINT: You can find this from the summary file created by featureCounts)
  5. Copy to sorted BAM file together with the index out of the docker container to your own environment. Open the BAM file in IGV. Zoom into the PFKL gene on chromosome 21. You should be able to see individual reads mapping to the exons of the gene. Now move to the neighbouring AIRE gene. Make IGV screenshots for both genes and include them to your report.
- 6. Find the number of paired-end fragments overlapping the the PFKL and AIRE genes from the featureCounts file. Do these match to what you observed in IGV? 
+ 6. Find the number of paired-end fragments overlapping the the PFKL and AIRE genes from the featureCounts file. Do these match to what you observed in IGV? (HINT: You can use the search box on Ensembl website to find the ge
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2ODk4NzgzNV19
+eyJoaXN0b3J5IjpbLTg0OTE5NTM5N119
 -->
