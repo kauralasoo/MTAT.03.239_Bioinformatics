@@ -18,7 +18,7 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 
     docker pull ubuntu:16.04
 
-All of the following commands in this worksheet should be run within the docker container. You can start the container with the following command:
+**All of the following commands in this worksheet should be run within the docker container.** You can start the container with the following command:
 	
 	docker run -it ubuntu:16.04
 
@@ -77,7 +77,7 @@ HISAT2 is a program to align RNA sequencing reads to a reference genome.
 	conda install hisat2
 
 ## Installing featureCounts
-[featureCounts](http://subread.sourceforge.net/) is a tool for counting the number of RNA-seq reads that overlap gene annotations. A popular alternative is HTSeq-count, but both of the tools should provide reasonably similar results.
+[featureCounts](http://subread.sourceforge.net/) is a tool for counting the number of RNA-seq reads that overlap gene annotations. A popular alternative is [HTSeq-count](https://htseq.readthedocs.io), but both of the tools should provide reasonably similar results.
 
 	conda install subread
 
@@ -90,5 +90,5 @@ HISAT2 is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzNTA5MTk0XX0=
+eyJoaXN0b3J5IjpbMTA2MDA0NDI3M119
 -->
