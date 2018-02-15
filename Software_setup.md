@@ -23,7 +23,8 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 	docker run -it ubuntu:16.04
 
 Alternatively, you can mount local directories directly into the docker container:
-docker run -ti -v /Users/alasoo/igv/:/data:rw ubuntu:16.04 bash
+
+	docker run -ti -v /Users/alasoo/igv/:/data:rw ubuntu:16.04 bash
 
 ## Install commonly used utilities
 The vanilla ubuntu image is missing some important utilities such as wget (for downloading files), bzip2 (for uncompressing them) and less (for viewing them). 
@@ -93,5 +94,5 @@ HISAT2 is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzM2MTUwMTBdfQ==
+eyJoaXN0b3J5IjpbMzk3NDQ4MzI4XX0=
 -->
