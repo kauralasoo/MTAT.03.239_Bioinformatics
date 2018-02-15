@@ -57,6 +57,7 @@ Now, let's activate this environment:
 Remember that you need to activate the environment every time you restart the docker container, because all of the software installed below will be in that environment. To learn more about the environments, have a look at the conda [tutorial](https://conda.io/docs/user-guide/tasks/manage-environments.html).
 
 ## Set up bioconda
+[Bioconda](https://bioconda.github.io/) is a channel for the conda package manager specializing in bioinformatics software. You can set up bioconda using the following commands:
 
 	conda config --add channels defaults
 	conda config --add channels conda-forge
@@ -89,5 +90,5 @@ HISAT2 is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM0MjQ0NDM0XX0=
+eyJoaXN0b3J5IjpbMjIzNTA5MTk0XX0=
 -->
