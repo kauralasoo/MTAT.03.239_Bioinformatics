@@ -54,8 +54,7 @@ Now, let's create our first conda environment with python 3.6:
 Now, let's activate this environment:
 
 	source activate py3.6
-Remember that you need to activate the environment every time you restart the docker container, because all of the software installed below will be in that environment.
-To learn more about the environments, have a look at the conda [tutorial](https://conda.io/docs/user-guide/tasks/manage-environments.html).
+Remember that you need to activate the environment every time you restart the docker container, because all of the software installed below will be in that environment. To learn more about the environments, have a look at the conda [tutorial](https://conda.io/docs/user-guide/tasks/manage-environments.html).
 
 ## Set up bioconda
 
@@ -90,5 +89,5 @@ HISAT2 is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTg3NzY5MzZdfQ==
+eyJoaXN0b3J5IjpbNDM0MjQ0NDM0XX0=
 -->
