@@ -22,9 +22,10 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 	
 	docker run -ti ubuntu:16.04
 
-Alternatively, you can mount local directories directly into the docker container. The advantage of this approach is that you can access the same files from your own environment as well as within the docker container:
+Alternatively, you can mount local directories directly into the docker container. The advantage of this approach is that you can access the same files from your own environment as well as within the docker container. 
 
 	docker run -ti -v /Users/alasoo/igv/:/data:rw ubuntu:16.04 bash
+You can learn more about docker volumes from this [tutorial](https://rominirani.com/docker-tutorial-series-part-7-data-volumes-93073a1b5b72).
 
 ## Install commonly used utilities
 The vanilla ubuntu image is missing some important utilities such as wget (for downloading files), bzip2 (for uncompressing them) and less (for viewing them). 
@@ -94,5 +95,5 @@ HISAT2 is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc4OTcwNTE0XX0=
+eyJoaXN0b3J5IjpbLTUxMDM0NTA3N119
 -->
