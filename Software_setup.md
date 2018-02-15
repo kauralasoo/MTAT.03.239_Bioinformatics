@@ -20,9 +20,9 @@ Instead of Ubuntu 14.04 used in the tutorial, we will be using Ubunt 16.04:
 
 **All of the following commands in this worksheet should be run within the docker container.** You can start the container with the following command:
 	
-	docker run -it ubuntu:16.04
+	docker run -ti ubuntu:16.04
 
-Alternatively, you can mount local directories directly into the docker container:
+Alternatively, you can mount local directories directly into the docker container. The advantage of this approach is that you can access the same files from your own environment as well as within the docker image.
 
 	docker run -ti -v /Users/alasoo/igv/:/data:rw ubuntu:16.04 bash
 
@@ -94,5 +94,5 @@ HISAT2 is a program to align RNA sequencing reads to a reference genome.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk3NDQ4MzI4XX0=
+eyJoaXN0b3J5IjpbMjY2NjI1MDhdfQ==
 -->
