@@ -3,8 +3,8 @@ We have now created a pre-configured docker container that has all of the necess
 
 	docker pull kauralasoo/bioinfo_anaconda
 
-
+It's a good practice to use docker containers only for the software and keep 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMDAxMTU4N119
+eyJoaXN0b3J5IjpbMTQ5MzU2OTI0XX0=
 -->
