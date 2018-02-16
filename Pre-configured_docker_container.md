@@ -3,8 +3,8 @@ I have now created a pre-configured docker image that has all of the necessary s
 
 	docker pull kauralasoo/bioinfo_anaconda
 
-It's a good practice to use docker only for the software and keep all of the data outside of the container. I prefer to have a local directory with all of the data that I mount to 
+It's a good practice to use docker only for the software and keep all of the data outside of the container. To achieve that, I prefer to have a local directory with all of the data that I mount to the container. You can do this when you create a container from the image using the docker run command. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDc0OTI1NzNdfQ==
+eyJoaXN0b3J5IjpbMTQ1NjYyMDk4Nl19
 -->
