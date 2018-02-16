@@ -15,7 +15,7 @@ Next, to be able to access all of the software that has been installed in contai
 After you have exited to container with the `exit` command, you can restart it with the following command: 
 
 	docker start -ai <container_id>
-You can find out your container id using the `docker ps -a` . Do not try to restart the container with the docker run command. 
+You can find out your container id using the `docker ps -a` . **Do not try to restart the container with the `docker run` command! Instead of restarting your previous container, it will create a new container from the image that your provide** 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwODc2MTMwMV19
+eyJoaXN0b3J5IjpbMTcxODQ2MDM3M119
 -->
