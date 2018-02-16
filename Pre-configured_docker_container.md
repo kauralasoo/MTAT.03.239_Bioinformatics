@@ -12,9 +12,8 @@ With this command, my local folder `/Users/alasoo/projects/biocourse/` is mounte
 Next, to be able to access all of the software that has been installed in container, you need to first activate the conda environment:
 
 	source activate py3.6
-
-
+After you have exited to container with the exit command
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU0ODUwODQyXX0=
+eyJoaXN0b3J5IjpbMjg2NzEyMTc0XX0=
 -->
