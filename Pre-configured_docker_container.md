@@ -7,6 +7,8 @@ It's a good practice to use docker only for the software and keep all of the dat
 
 	docker run -ti -v /Users/alasoo/projects/biocourse/:/biocourse:rw kauralasoo/bioinfo_anaconda bash
 
+With this command, my local folder /Users/alasoo/projects/biocourse/ is mounted into to container 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk0NzUwOTg1XX0=
+eyJoaXN0b3J5IjpbLTE5Mjk2Mzc0NDJdfQ==
 -->
