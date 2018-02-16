@@ -9,6 +9,12 @@ It's a good practice to use docker only for the software and keep all of the dat
 
 With this command, my local folder `/Users/alasoo/projects/biocourse/` is mounted into to container as `/biocourse`. Any files that I write into the `/biocourse` folder while I am running the container will be immediately visible in my own environment. 
 
+Next, to be able to access all of the software that has been installed in container, you need to first activate the conda environment:
+
+	source activate py3.6
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NDEzODEzMV19
+eyJoaXN0b3J5IjpbNjU0ODUwODQyXX0=
 -->
