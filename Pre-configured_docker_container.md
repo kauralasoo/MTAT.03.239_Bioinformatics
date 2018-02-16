@@ -3,12 +3,12 @@ I have now created a pre-configured docker image that has all of the necessary s
 
 	docker pull kauralasoo/bioinfo_anaconda
 
-It's a good practice to use docker only for the software and keep all of the data outside of the container. To achieve that, I prefer to have a local directory with all of the data that I mount to the container as a data volume. You can do this when you create a container from the image using the `docker run` command:
+It's a good practice to use docker only for the software and keep all of the data outside of the container. To achieve that, I prefer to have a local directory with all of the data that I mount to the container as a [data volume](https://rominirani.com/docker-tutorial-series-part-7-data-volumes-93073a1b5b72). You can do this when you create a container from the image using the `docker run` command:
 
 	docker run -ti -v /Users/alasoo/projects/biocourse/:/biocourse:rw kauralasoo/bioinfo_anaconda bash
 
-With this command, my local folder `/Users/alasoo/projects/biocourse/` is mounted into to container as `/biocourse`. Any files that I write into the `/biocourse` folder from the container will be immediately visible in my own environment. 
+With this command, my local folder `/Users/alasoo/projects/biocourse/` is mounted into to container as `/biocourse`. Any files that I write into the `/biocourse` folder while I am running the container will be immediately visible in my own environment. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDcwOTAyODldfQ==
+eyJoaXN0b3J5IjpbLTI0NDEzODEzMV19
 -->
