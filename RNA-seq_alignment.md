@@ -36,6 +36,7 @@ I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/117
 We can use zless to view the contents of compressed text files.
 	
 	zless data/fikt_A.1.fastq.gz
+To ex
 We can also count the number of lines in each file using a combination of zcat and wc:
 
 	zcat data/fikt_A.1.fastq.gz | wc -l
@@ -75,5 +76,5 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NDM0MzIyNF19
+eyJoaXN0b3J5IjpbLTIwOTkzMDE3NjZdfQ==
 -->
