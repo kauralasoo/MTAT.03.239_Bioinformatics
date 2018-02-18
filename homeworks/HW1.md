@@ -1,7 +1,7 @@
 # Homework 1
 
 ## Task 1: Getting familiar with the IGV genome browser (1 point)
-**Learning objective:** 
+**Learning objective:** Gain an intuitive feeling of what the human genome looks like. How long are the genes, where they are located and 
 
  1. Download and run the [Integrative Genomics Viewer](http://software.broadinstitute.org/software/igv/).
  2. Change the genome version to hg38 (top left corner)
@@ -26,5 +26,5 @@ Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.htm
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk1NTM4NDE1XX0=
+eyJoaXN0b3J5IjpbLTU2OTA1MDk2Nl19
 -->
