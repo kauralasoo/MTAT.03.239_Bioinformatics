@@ -22,7 +22,7 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  6. Find the number of paired-end fragments overlapping the the PFKL and AIRE genes from the featureCounts file. Do these match to what you observed in the IGV? (HINT: You can use the search box on the [Ensembl website](http://www.ensembl.org/) to find the gene ids for both gens).
 
 ## Task 3. Constructing a data analysis workflow with Snakemake (2 points)
-**Learning objective:** In Task 2, you learned how to measure gene expression (count the number of RNA-seq reads overlapping a gene) in one sample. You saw, that this process involved multiple steps - alignment, sorting, indexing and counting. This a typical of many real-world bioinformatics workflows where you have to run tens of data processing steps on hundreds of samples. In this task, you will learn how to automate these steps using Snakemake. A key advantage of Snakemake is that the same pipeline works equally well on your own computer as well as a computer cluster with only minor modifications needed.
+**Learning objective:** In Task 2, you learned how to measure gene expression (count the number of RNA-seq reads overlapping a gene) in one sample. You saw, that this process involved multiple steps - alignment, sorting, indexing and counting. This a typical of many real-world bioinformatics workflows where you have to run tens of data processing steps on hundreds of samples. In this task, you will learn how to automate these steps using Snakemake. A key advantage of Snakemake is that the same pipeline works equally well on your own computer as well as on a high perfomance computing infrastructure with only minor modifications needed.
 
 **Assignment**: Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) to automate the RNA-seq analysis that you perfomed in Task 2. Expand this to all four RNA-seq samples available from [Zenodo](https://zenodo.org/record/1173306). 
 
@@ -30,5 +30,5 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTQxNzg2OV19
+eyJoaXN0b3J5IjpbLTkyMjU0NzM3NF19
 -->
