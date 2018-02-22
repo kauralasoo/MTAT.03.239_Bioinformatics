@@ -19,8 +19,15 @@ We can easiliy convert it into a Snakemake rule:
 
 However, this rule is not very useful, because it will only work on a single sample. To make the rule more general, we can replace the sample name with a wildcard:
 
-
+	rule align_reads:
+		intput:
+			fastq1 = data/{sample}.1.fastq.gz,
+			fastq2 = data/{sample}.fastq.gz
+		output:
+			bam = results/{sample}.bam
+		shell:
+			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTc3OTQ3MTRdfQ==
+eyJoaXN0b3J5IjpbLTE5NzUzOTAyODBdfQ==
 -->
