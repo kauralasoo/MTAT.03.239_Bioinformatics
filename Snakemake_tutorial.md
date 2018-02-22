@@ -27,12 +27,18 @@ However, this rule is not very useful, because it will only work on a single sam
 	rule align_reads:
 		intput:
 			fastq1 = data/{sample}.1.fastq.gz,
-			fastq2 = data/{sample}.fastq.gz
+			fastq2 = data/{sample}.2fastq.gz
 		output:
 			bam = results/{sample}.bam
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
+
+Now we can use the same rule to also process a different sample:
+
+	snakemake -p results/fikt_C.bam
+
+
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODg4MjMzODldfQ==
+eyJoaXN0b3J5IjpbNDk2NTY4ODIyXX0=
 -->
