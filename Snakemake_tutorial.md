@@ -15,9 +15,8 @@ We can easiliy convert it into a Snakemake rule:
 		output:
 			bam = results/fikt_A.bam
 		shell:
-		
-			annotations/hisat2_index/hisat2_index -1  -2 data/fikt_A.2.fastq.gz | samtools view -Sb > 
+			hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 {input.fastq1} | samtools view -Sb > {outbut.bam}
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTM1MTcxNjRdfQ==
+eyJoaXN0b3J5IjpbNDAxMjk5MDQ4XX0=
 -->
