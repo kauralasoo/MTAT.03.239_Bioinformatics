@@ -10,8 +10,14 @@ We can easiliy convert it into a Snakemake rule:
 
 	rule align_reads:
 		intput:
-			fastq1 = hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
+			fastq1 = data/fikt_A.1.fastq.gz,
+			fastq2 = data/fikt_A.2.fastq.gz
+		output:
+			bam = results/fikt_A.bam
+		shell:
+		
+			annotations/hisat2_index/hisat2_index -1  -2 data/fikt_A.2.fastq.gz | samtools view -Sb > 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTk2MjA1MjVdfQ==
+eyJoaXN0b3J5IjpbLTE0NTM1MTcxNjRdfQ==
 -->
