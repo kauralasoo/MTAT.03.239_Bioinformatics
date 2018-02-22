@@ -17,6 +17,11 @@ We can easiliy convert it into a Snakemake rule:
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
 
+We can now execute this rule by running:
+
+	snakemake -np sorted_reads/B.bam
+
+
 However, this rule is not very useful, because it will only work on a single sample. To make the rule more general, we can replace the sample name with a wildcard:
 
 	rule align_reads:
@@ -29,5 +34,5 @@ However, this rule is not very useful, because it will only work on a single sam
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzUzOTAyODBdfQ==
+eyJoaXN0b3J5IjpbMTA3NjQyODAzOF19
 -->
