@@ -19,7 +19,7 @@ We can easiliy convert it into a Snakemake rule:
 
 We can now execute this rule by running:
 
-	snakemake -np sorted_reads/B.bam
+	snakemake -p results/fikt_A.bam
 
 
 However, this rule is not very useful, because it will only work on a single sample. To make the rule more general, we can replace the sample name with a wildcard:
@@ -34,5 +34,5 @@ However, this rule is not very useful, because it will only work on a single sam
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NjQyODAzOF19
+eyJoaXN0b3J5IjpbLTEwODg4MjMzODldfQ==
 -->
