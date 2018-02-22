@@ -27,7 +27,7 @@ However, this rule is not very useful, because it will only work on a single sam
 	rule align_reads:
 		intput:
 			fastq1 = data/{sample}.1.fastq.gz,
-			fastq2 = data/{sample}.2fastq.gz
+			fastq2 = data/{sample}.2.fastq.gz
 		output:
 			bam = results/{sample}.bam
 		shell:
@@ -40,5 +40,5 @@ Now we can use the same rule to also process a different sample:
 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk2NTY4ODIyXX0=
+eyJoaXN0b3J5IjpbLTIwODQ2NzAzOTZdfQ==
 -->
