@@ -1,7 +1,5 @@
+# Snakemake tutorial
 
-
-
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE3Nzk4MjUyXX0=
+eyJoaXN0b3J5IjpbMTQ0NjA3NjYyOV19
 -->
