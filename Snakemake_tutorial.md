@@ -36,7 +36,16 @@ The simplest option is to specify the list of samples at the top of your Snakema
 	#Specify the list of samples
 	samples = ['eipl_A', 'eipl_C', 'fikt_A', 'fikt_C']
 	
-	
+	#Rule that performs the alignments
+	rule align_reads:
+		intput:
+			fastq1 = data/{sample}.1.fastq.gz,
+			fastq2 = data/{sample}.2.fastq.gz
+		output:
+			bam = results/{sample}.bam
+		shell:
+			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTY2MTgyM119
+eyJoaXN0b3J5IjpbMTg3Njg4Nl19
 -->
