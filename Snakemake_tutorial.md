@@ -6,23 +6,7 @@ Couple of you have asked me, how to construct Snakemake rules with multiple inpu
 	
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
-One option is to specify names for input  We can easiliy convert it into a Snakemake rule:
-
-	rule align_reads:
-		intput:
-			fastq1 = data/fikt_A.1.fastq.gz,
-			fastq2 = data/fikt_A.2.fastq.gz
-		output:
-			bam = results/fikt_A.bam
-		shell:
-			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
-
-We can now execute this rule by running:
-
-	snakemake -p results/fikt_A.bam
-
-
-However, this rule is not very useful, because it will only work on a single sample. To make the rule more general, we can replace the sample name with a wildcard:
+One option is to specify names for input or output files:
 
 	rule align_reads:
 		intput:
@@ -33,6 +17,17 @@ However, this rule is not very useful, because it will only work on a single sam
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
 
+Alternatively, you can use index to access multiple in
+
+
+We can now execute this rule by running:
+
+	snakemake -p results/fikt_A.bam
+
+
+However, this rule is not very useful, because it will only work on a single sample. To make the rule more general, we can replace the sample name with a wildcard:
+
+
 Now we can use the same rule to also process a different sample:
 
 	snakemake -p results/fikt_C.bam
@@ -42,5 +37,5 @@ Instead of named input parameters, you can al
 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYwNTA2MTM3XX0=
+eyJoaXN0b3J5IjpbLTE1MjUyOTAwMDldfQ==
 -->
