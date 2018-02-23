@@ -49,8 +49,9 @@ The simplest option is to specify the list of samples at the top of your Snakema
 	rule make_all:
 		input:
 			expand(results/{sample}.bam, sample=SAMPLES)
-		output
+		output:
+			"
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM5NzU3NzQxXX0=
+eyJoaXN0b3J5IjpbMTEwMTk1MDYwMV19
 -->
