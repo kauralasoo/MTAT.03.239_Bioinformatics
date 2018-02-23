@@ -28,7 +28,7 @@ Alternatively, you can access  individual input or output files separately by th
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input[0]} -2 {input[1]} | samtools view -Sb > {output}"
 
-I prefer (and recommend) to use names, because I find that it makes it easier to read to rule
+I prefer (and recommend) to use names, because I find that it makes it easier to read to rules.
 
 
 
@@ -51,5 +51,5 @@ Instead of named input parameters, you can al
 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODY2MDU3NV19
+eyJoaXN0b3J5IjpbMTI1NDc1NDUzMl19
 -->
