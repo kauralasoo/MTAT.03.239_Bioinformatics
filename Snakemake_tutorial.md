@@ -1,5 +1,5 @@
 # Snakemake tutorial
-Snakemake has an excellent online [tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) on how the get started. You should be able to find answers to most of your questions from that tutorial, although, I admit, it can be quite difficult due to the large amount if information in there. There is also a shorter summary in the form of [slides](http://slides.com/johanneskoester/snakemake-tutorial-2016#/). Thus, to make it easier for you, I have but a couple of basic examples here as well.
+Snakemake has an excellent online [tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) on how the get started. You should be able to find answers to most of your questions from that tutorial, although, I admit, it can be quite difficult due to the large amount if information in there. There is also a shorter summary in the form of [slides](http://slides.com/johanneskoester/snakemake-tutorial-2016#/). To make your life a little bit easier, I have also but a couple of basic examples here as well.
 
 ## Multiple input files in a rule
 Couple of you have asked me, how to construct Snakemake rules with multiple input files, as is required for the HISAT2 command in the [RNA-seq tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)):
@@ -51,5 +51,5 @@ Instead of named input parameters, you can al
 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDc1NDUzMl19
+eyJoaXN0b3J5IjpbLTE5OTEyNDY5MTNdfQ==
 -->
