@@ -33,8 +33,10 @@ I prefer (and recommend) to use names, because I find that it makes it easier to
 ## Executing rules on multiple samples
 The simplest option is to specify the list of samples at the top of your Snakemake file and then write one 'meta rule' that collects the results from all of the samples. This would look something like this:
 	
-	
+	#Specify the list of samples
+	samples = ['eipl_A', 'eipl_C', 'fikt_A', 'fikt_C']
+
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDM2MDU2ODZdfQ==
+eyJoaXN0b3J5IjpbMTk0OTUzMjUwNV19
 -->
