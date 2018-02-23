@@ -46,8 +46,10 @@ The simplest option is to specify the list of samples at the top of your Snakema
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
 	
-	rule m
+	rule make_all:
+		input:
+			expand()
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjEyNzk2MV19
+eyJoaXN0b3J5IjpbLTY2NzI2Mjg1OV19
 -->
