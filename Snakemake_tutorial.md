@@ -6,7 +6,7 @@ Couple of you have asked me, how to construct Snakemake rules with multiple inpu
 	
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
-One option is to use named We can easiliy convert it into a Snakemake rule:
+One option is to specify names for input  We can easiliy convert it into a Snakemake rule:
 
 	rule align_reads:
 		intput:
@@ -42,5 +42,5 @@ Instead of named input parameters, you can al
 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDM3OTY1M119
+eyJoaXN0b3J5IjpbOTYwNTA2MTM3XX0=
 -->
