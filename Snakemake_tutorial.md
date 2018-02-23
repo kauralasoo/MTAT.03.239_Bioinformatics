@@ -34,7 +34,7 @@ I prefer (and recommend) to use names, because I find that it makes it easier to
 The simplest option is to specify the list of samples at the top of your Snakemake file and then write one 'meta rule' that collects the results from all of the samples. This would look something like this:
 	
 	#Specify the list of samples
-	samples = ['eipl_A', 'eipl_C', 'fikt_A', 'fikt_C']
+	SAMPLES = ['eipl_A', 'eipl_C', 'fikt_A', 'fikt_C']
 	
 	#Rule that performs the alignments
 	rule align_reads:
@@ -48,8 +48,8 @@ The simplest option is to specify the list of samples at the top of your Snakema
 	
 	rule make_all:
 		input:
-			expand()
+			expand(results/{sample}.bam, sample=SAMPLES)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NzI2Mjg1OV19
+eyJoaXN0b3J5IjpbMTE2MTEyMTYxNl19
 -->
