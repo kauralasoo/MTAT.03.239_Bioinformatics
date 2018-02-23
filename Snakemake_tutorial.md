@@ -31,8 +31,10 @@ Alternatively, you can access individual input or output files separately by the
 I prefer (and recommend) to use names, because I find that it makes it easier to read to rules.
 
 ## Executing rules on multiple samples
-The simplest option is to specify the list of samples at the top of your Snakemake file and then write another rule
+The simplest option is to specify the list of samples at the top of your Snakemake file and then write one 'meta rule' that collects the results from all of the samples. This would look something like this:
+	
+	
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQwMjYxMTRdfQ==
+eyJoaXN0b3J5IjpbLTE5NDM2MDU2ODZdfQ==
 -->
