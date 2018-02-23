@@ -56,9 +56,11 @@ The simplest option is to specify the list of samples at the top of your Snakema
 		shell:
 			"echo 'Done!' > {output}"
 
-You can now execute this file using
+You can now execute this Snakefile using the following command:
+
+	snakemake -p out.txt
 		
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MTMyMTQ4OV19
+eyJoaXN0b3J5IjpbLTE4NDIzNzI2MDVdfQ==
 -->
