@@ -5,6 +5,7 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
  1. [Setting up the command-line environment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Software_setup.md)
  2. [Using a pre-configured docker container](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Pre-configured_docker_container.md)
+ 3. U
 
 ## Topics
 
@@ -23,5 +24,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MDQwNDc4M119
+eyJoaXN0b3J5IjpbLTk0NDk2Mzk2MV19
 -->
