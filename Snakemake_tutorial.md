@@ -3,11 +3,10 @@ Snakemake has an excellent online [tutorial](https://snakemake.readthedocs.io/en
 
 ## Multiple input files in a rule
 Couple of you have asked me, how to construct Snakemake rules with multiple input files, as is required for the HISAT2 command in the [RNA-seq tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)):
-To get  started, let's look at the HISAT2 command from the RNA-seq tutorial:
 	
 	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
-We can easiliy convert it into a Snakemake rule:
+One option is to use named We can easiliy convert it into a Snakemake rule:
 
 	rule align_reads:
 		intput:
@@ -43,5 +42,5 @@ Instead of named input parameters, you can al
 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTEyNjU1MjM3XX0=
+eyJoaXN0b3J5IjpbLTM1NDM3OTY1M119
 -->
