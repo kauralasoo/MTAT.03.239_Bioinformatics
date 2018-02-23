@@ -35,8 +35,8 @@ The simplest option is to specify the list of samples at the top of your Snakema
 	
 	#Specify the list of samples
 	samples = ['eipl_A', 'eipl_C', 'fikt_A', 'fikt_C']
-
+	
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0OTUzMjUwNV19
+eyJoaXN0b3J5IjpbLTEyMTY2MTgyM119
 -->
