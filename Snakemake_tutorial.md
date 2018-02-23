@@ -51,8 +51,11 @@ The simplest option is to specify the list of samples at the top of your Snakema
 		input:
 			expand("results/{sample}.bam", sample=SAMPLES)
 		output:
-			"
+			"out.txt"
+		shell:
+			"echo 'Done!' > {output}
+		
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA3NDEyMDYxXX0=
+eyJoaXN0b3J5IjpbLTQzOTUwNDkxNF19
 -->
