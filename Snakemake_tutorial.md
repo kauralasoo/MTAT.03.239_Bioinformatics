@@ -17,7 +17,8 @@ One option is to specify names for input or output files:
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
 
-Alternatively, you can use index to access multiple in
+Alternatively, you can use index to access multiple individual input or output files separately:
+
 
 
 We can now execute this rule by running:
@@ -37,5 +38,5 @@ Instead of named input parameters, you can al
 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjUyOTAwMDldfQ==
+eyJoaXN0b3J5IjpbLTE4OTA3MDUyNTZdfQ==
 -->
