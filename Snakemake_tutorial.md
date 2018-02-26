@@ -9,18 +9,18 @@ Couple of you have asked me, how to construct Snakemake rules with multiple inpu
 One option is to specify names for input or output files:
 
 	rule align_reads:
-		intput:
+		input:
 			fastq1 = data/{sample}.1.fastq.gz,
 			fastq2 = data/{sample}.2.fastq.gz
 		output:
 			bam = results/{sample}.bam
 		shell:
-			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
+			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
 
 Alternatively, you can access individual input or output files separately by their index:
 
 	rule align_reads:
-		intput:
+		input:
 			data/{sample}.1.fastq.gz,
 			data/{sample}.2.fastq.gz
 		output:
@@ -38,13 +38,13 @@ The simplest option is to specify the list of samples at the top of your Snakema
 	
 	#Rule that performs the alignments
 	rule align_reads:
-		intput:
+		input:
 			fastq1 = data/{sample}.1.fastq.gz,
 			fastq2 = data/{sample}.2.fastq.gz
 		output:
 			bam = results/{sample}.bam
 		shell:
-			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {outbut.bam}"
+			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
 	
 	#One meta rule whose input files are all 
 	#of the desired output files
@@ -62,5 +62,5 @@ You can now execute this Snakefile using the following command:
 		
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDIzNzI2MDVdfQ==
+eyJoaXN0b3J5IjpbLTE4NzE3MTMwNDldfQ==
 -->
