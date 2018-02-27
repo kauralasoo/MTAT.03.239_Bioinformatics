@@ -3,8 +3,8 @@
 
 ## Tutorials
 
- - Multiple testing tutorial
+ - [Multiple testing](http://genomicsclass.github.io/book/pages/multiple_testing.html) 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTgwMDgwMF19
+eyJoaXN0b3J5IjpbNDMxMzgwMDQxXX0=
 -->
