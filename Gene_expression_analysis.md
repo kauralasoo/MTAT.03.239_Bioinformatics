@@ -39,7 +39,7 @@ If it asks to update other packages, you can choose 'no' for now. For other pack
 	install.packages("dplyr")
 
 ## Exploring the datasets
-First, download the dataset. You can do this eith
+First, download the dataset. (HINT: You can do 
 
 
 
@@ -47,5 +47,5 @@ First, download the dataset. You can do this eith
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEyMTM2MzEyXX0=
+eyJoaXN0b3J5IjpbLTk5NzA0MTg3MV19
 -->
