@@ -16,6 +16,7 @@ Let's download the sequence for chromosme 21:
 	cd annotations
 	wget ftp://ftp.ensembl.org/pub/release-91/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
 	gunzip Homo_sapiens.GRCh38.dna.chromosome.21.fa.gz
+	cd ..
 
 ### Build the HISAT2 index
 We can now use the FASTA and GFF3 files to build an index of the reference genome:
@@ -77,5 +78,5 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MjI0MDg1N119
+eyJoaXN0b3J5IjpbLTE4Njk0OTg3OTZdfQ==
 -->
