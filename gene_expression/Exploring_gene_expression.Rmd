@@ -1,0 +1,169 @@
+---
+title: "Exploring gene expression data"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+suppressMessages(library("SummarizedExperiment"))
+suppressMessages(library("dplyr"))
+suppressMessages(library("DESeq2"))
+suppressMessages(library("gplots"))
+suppressMessages(library("ggplot2"))
+```
+
+First, we need to load the libraries:
+
+```{r}
+library("SummarizedExperiment")
+library("DESeq2")
+library("dplyr")
+library("gplots")
+library("ggplot2")
+```
+
+## Importing the data
+
+First, you can import the data into R using to following command:
+
+```{r}
+	dataset = readRDS("data/RNA_SummarizedExperiment.rds")
+```
+
+
+Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata. Consequently, when you subset the data, SummarizedExperiment ensures that the metadata is always synchronised with the expression data itself. For more information, have a look at the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) tutorial.
+
+You can see the summary of the dataset by just printing it out:
+```{r}
+	dataset
+```
+The `## dim` line tells to that this dataset has 35033 genes and 336 samples. 
+
+You can view the sample metadata (first 5 rows and columns) using the `colData()` function:
+```{r}
+	colData(dataset)[1:5,1:5]
+```
+And you can do the same for gene metadata:
+```{r}
+	rowData(dataset)[1:5,]
+```
+
+Finally, to view the raw read counts, you can use the assays command:
+```{r}
+	assays(dataset)
+```
+
+```{r}
+	assays(dataset)$counts[1:5,1:5]
+```
+
+# Subsetting
+To illustrate the power of SummarizedExperiment, let's take random subset of the data containing eight random donors. First, let's identify the donors:
+```{r}
+	set.seed(1)
+  donors_subset = colData(dataset)$donor %>% unique() %>% sample(8)
+  donors_subset
+```
+Note that I used the `%>%` (pipe) operator from the dplyr pacakge. The last command is exactly equivalent (but more readable) as the following:
+```{r}
+	set.seed(1)
+  donors_subset = sample(unique(colData(dataset)$donor),8)
+  donors_subset
+```
+
+Now we can just subset the original dataset:
+```{r}
+data_subset = dataset[,dataset$donor %in% donors_subset]
+data_subset
+```
+Note the that we now have 8 donors x 4 conditions = 32 samples.
+
+# Expolratory data analysis
+First, let's convert the SummarizedExperiment object into a DESeq object:
+```{r}
+dds <- DESeqDataSet(data_subset, design = ~ condition_name)
+dds
+```
+
+Next, let's perform variance stabilising normalisation:
+```{r}
+vsd <- vst(dds, blind=FALSE)
+```
+This is what the data looks like after normalisation:
+```{r}
+  assay(vsd)[1:5, 1:5]
+```
+Now, let's etract 10,000 most highly expressed genes
+```{r}
+  highly_expressed = names(sort(rowMeans(assay(vsd)), decreasing = TRUE)[1:10000])
+  vsd = vsd[highly_expressed,]
+```
+
+The simplest exploratory analysis is to look at the heatmap pairwise sample-to-sample correlations:
+```{r}
+cor_matrix = cor(assay(vsd), method = "spearman")
+gplots::heatmap.2(cor_matrix)
+```
+
+Second approach is to perform PCA. DESeq2 has a built-in function for that:
+```{r}
+  plotPCA(vsd, intgroup=c("condition_name"))
+```
+Alternatively, you can do it manually using prcomp and ggplot2. The advantage of the manual approach is that you can customise the plot more, including adding names for individual samples:
+```{r}
+  pca = prcomp(t(assay(vsd)), center = TRUE, scale. = TRUE)
+  pca_matrix = dplyr::mutate(as.data.frame(pca$x), sample_id = rownames(pca$x))
+  ggplot(pca_matrix, aes(x = PC1, y = PC2, label = sample_id)) + geom_text() + geom_point()
+```
+## Differential expression
+
+For simplicity let's first look at only two conditions - naive and interferon-gamma stimulation:
+
+```{r}
+naive_IFNg = data_subset[,data_subset$condition_name %in% c("naive", "IFNg")]
+```
+
+Make DEseq2 object
+```{r}
+dds <- DESeqDataSet(naive_IFNg, design = ~ condition_name)
+dds$condition_name = relevel(dds$condition_name, ref = "naive")
+```
+
+Remove genes that have very low absolute expression levels
+```{r}
+keep <- rowSums(counts(dds)) >= 10
+dds <- dds[keep,]
+```
+
+#Run DEseq2
+```{r}
+dds <- DESeq(dds)
+res_true <- results(dds)
+res_shrunken = lfcShrink(dds, res = res_true, coef = 2)
+```
+
+Make a histogram of the p-values
+```{r}
+hist(res_true$pvalue)
+```
+
+#Identify genes that are signficantly differentially expressed:
+```{r}
+filtered_genes = dplyr::mutate(as.data.frame(res_shrunken), gene_id = rownames(res_shrunken)) %>% 
+  dplyr::tbl_df() %>% 
+  dplyr::filter(!is.na(padj)) %>% #Remove NA p-values
+  dplyr::filter(padj < 0.01) %>% #Filter according to FDR
+  dplyr::filter(abs(log2FoldChange) > 1) %>% #Filter according to fold-change
+  dplyr::arrange(-log2FoldChange) #Sort by fold change
+filtered_genes
+```
+
+Save the results to disk:
+```{r}
+write.table(filtered_genes, "naive_vs_IFNg_gene_list.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+```
