@@ -45,14 +45,11 @@ First, download the dataset. (HINT: You can do this in the Terminal tab in RStud
 
 Next, you can import the data into R using to following command:
 
-	se = readRDS("RNA_SummarizedExperiment.rds")
+	dataset = readRDS("RNA_SummarizedExperiment.rds")
 
-
-
-
-
+Here, `dataset` is an SummarizedExperiment object. 
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTg2NTMxNV19
+eyJoaXN0b3J5IjpbMjA1MjIxNTU1XX0=
 -->
