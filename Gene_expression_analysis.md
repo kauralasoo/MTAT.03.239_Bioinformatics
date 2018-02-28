@@ -20,9 +20,12 @@ First, pull the correct docker image. We are going to use `bioconductor/release_
 	
 	docker pull bioconductor/release_core2
 
+Next, we can run the RStudio server:
+
+
 
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTAzNTY0NDNdfQ==
+eyJoaXN0b3J5IjpbMTQ0OTQ2NTk3OV19
 -->
