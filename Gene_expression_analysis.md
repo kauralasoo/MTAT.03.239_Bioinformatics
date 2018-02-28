@@ -37,19 +37,16 @@ You can install Bioconductor packages using the `biocLite` command:
 If it asks to update other packages, you can choose 'no' for now. For other packages in CRAN, you can just use the install.packages() command:
 	
 	install.packages("dplyr")
+	install.packages("gplots")
+	install.packages("gplots")
+	
+
 
 ## Exploring the datasets
 First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line):
 
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
 
-Next, you can import the data into R using to following command:
-
-	dataset = readRDS("RNA_SummarizedExperiment.rds")
-
-Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class  is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata. Consequently, when you subset the data, SummarizedExperiment ensures that the metadata is always synchronised with the expression data itself. For more information, have a look at the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) tutorial.
-
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2OTkxMDI2XX0=
+eyJoaXN0b3J5IjpbMzM2MjY2OTE1XX0=
 -->
