@@ -34,7 +34,9 @@ You can install Bioconductor packages using the `biocLite` command:
 	source("https://bioconductor.org/biocLite.R")
 	biocLite("SummarizedExperiment")
 	biocLite("DESeq2")
-If it asks to update other packages, you can choose 'no' for now.
+If it asks to update other packages, you can choose 'no' for now. For other packages in CRAN, you can just use the install.packages() command:
+	
+	install.packages("
 
 
 
@@ -42,5 +44,5 @@ If it asks to update other packages, you can choose 'no' for now.
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5ODc5MjQ0N119
+eyJoaXN0b3J5IjpbMTkyMzY4MzA5N119
 -->
