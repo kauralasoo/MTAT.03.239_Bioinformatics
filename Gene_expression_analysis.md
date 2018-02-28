@@ -29,7 +29,7 @@ And finally, you can connect to RStudio by opening the following URL in your fav
 	http://127.0.0.1:8787
 
 ## Installing packages
-You can install Bioconductor packages using the 
+You can install Bioconductor packages using the biocLite command:
 
 	source("https://bioconductor.org/biocLite.R")
 	biocLite("SummarizedExperiment")
@@ -39,5 +39,5 @@ You can install Bioconductor packages using the
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMDEyNzcwXX0=
+eyJoaXN0b3J5IjpbOTc3MTc0NjUwXX0=
 -->
