@@ -26,11 +26,11 @@ Next, we can run the RStudio server:
 
 And finally, you can connect to RStudio by opening the following URL in your favourite browser:
 	
-	
+	http://127.0.0.1:
 
 
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MjQ4MDg0NF19
+eyJoaXN0b3J5IjpbOTk1NDgxNjVdfQ==
 -->
