@@ -47,8 +47,8 @@ Next, you can import the data into R using to following command:
 
 	dataset = readRDS("RNA_SummarizedExperiment.rds")
 
-Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class  is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata.
+Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class  is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata. Consequently, when you want to subset the data, 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTEzMDI2MF19
+eyJoaXN0b3J5IjpbLTE3NDM2NzY5MDNdfQ==
 -->
