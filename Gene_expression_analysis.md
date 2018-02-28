@@ -13,6 +13,7 @@ For this week's practice session, you will need latest version of R together wit
  - SummarizedExperiment
  - DESeq2
  - dplyr
+ - gplots
 
 This software should work on all operating systems, but for simplicity, you can also use Bioconductor [docker images](https://www.bioconductor.org/help/docker/).
 
@@ -38,15 +39,12 @@ If it asks to update other packages, you can choose 'no' for now. For other pack
 	
 	install.packages("dplyr")
 	install.packages("gplots")
-	install.packages("gplots")
-	
 
-
-## Exploring the datasets
+## Downloading the datasets
 First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line):
 
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM2MjY2OTE1XX0=
+eyJoaXN0b3J5IjpbLTE2NzY0ODE4NDldfQ==
 -->
