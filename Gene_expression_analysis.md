@@ -47,8 +47,8 @@ Next, you can import the data into R using to following command:
 
 	dataset = readRDS("RNA_SummarizedExperiment.rds")
 
-Here, `dataset` is an SummarizedExperiment object. The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
+Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class to store your gene expression data is that the gene expression data is stored together with the  is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzkwMzAwOV19
+eyJoaXN0b3J5IjpbLTExNTIwNTQ1NDldfQ==
 -->
