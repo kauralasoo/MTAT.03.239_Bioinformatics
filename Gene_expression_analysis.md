@@ -39,9 +39,11 @@ If it asks to update other packages, you can choose 'no' for now. For other pack
 	install.packages("dplyr")
 
 ## Exploring the datasets
-First, download the dataset. (HINT: You can do this in the Terminal tab in RStudion):
+First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line):
 
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
+
+Next, 
 
 
 
@@ -49,5 +51,5 @@ First, download the dataset. (HINT: You can do this in the Terminal tab in RStud
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2OTM4NDUyM119
+eyJoaXN0b3J5IjpbMTI0NDQwNDUwOV19
 -->
