@@ -15,8 +15,8 @@ For this week's practice session, you will need latest version of R together wit
  - dplyr
 This software should work on all operating systems, but for simplicity, you can also use Bioconductor [docker images](https://www.bioconductor.org/help/docker/).
 
-The key advantage of using SummarizedExper
+The key advantage of using SummarizedExperiment class
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTk5MTA5ODldfQ==
+eyJoaXN0b3J5IjpbLTQyOTcwMDgzNF19
 -->
