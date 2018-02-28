@@ -13,10 +13,14 @@ For this week's practice session, you will need latest version of R together wit
  - SummarizedExperiment
  - DESeq2
  - dplyr
+
 This software should work on all operating systems, but for simplicity, you can also use Bioconductor [docker images](https://www.bioconductor.org/help/docker/).
 
-The key advantage of using SummarizedExperiment class to store your gene expresson data is that you can easily perform 
+First, download the correct docker images:
+	
+
+The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NzAyMDY5XX0=
+eyJoaXN0b3J5IjpbMTM5MjIzMDgwNF19
 -->
