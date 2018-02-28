@@ -7,7 +7,7 @@
  - [R Bioconductor cheat sheet](https://github.com/mikelove/bioc-refcard)
  - [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) tutorial
 
-## Setting up the command-line environment
+## Setting up the R environment
 For this week's practice session, you will need latest version of R together with RStudio and the following packages:
 
  - SummarizedExperiment
@@ -26,11 +26,18 @@ Next, we can run the RStudio server:
 
 And finally, you can connect to RStudio by opening the following URL in your favourite browser:
 	
-	http://127.0.0.1:
+	http://127.0.0.1:8787
+
+## Installing packages
+You can install Bioconductor packages using the 
+
+	source("https://bioconductor.org/biocLite.R")
+	biocLite("SummarizedExperiment")
+
 
 
 The key advantage of using the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) class to store your gene expression data is that you can easily perform coordinated subsetting of the data.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk1NDgxNjVdfQ==
+eyJoaXN0b3J5IjpbMTUxMDEyNzcwXX0=
 -->
