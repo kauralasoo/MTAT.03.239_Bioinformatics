@@ -12,8 +12,9 @@ For this week's practice session, you will need latest version of R together wit
 
  - SummarizedExperiment
  - DESeq2
- - 
+ - dplyr
+This software should work on all operating systems, but for simplicity, you can also use Bioconductor docker images.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3ODgyOTM2OF19
+eyJoaXN0b3J5IjpbNDM2OTk2MDEwXX0=
 -->
