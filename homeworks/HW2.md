@@ -7,7 +7,8 @@ The [gene expression data tutorial](https://github.com/kauralasoo/MTAT.03.239_Bi
 
 In this exercise, your task is to download a 'dirty' [gene expression dataset](https://www.dropbox.com/s/ogwvx9qf8hwt591/RNA_SummarizedExperiment_swapped.rds) and use exploratory data analysis techniques (heatmap, PCA) to identify which (if any) of the samples have been swapped. In your report, please include the plots that you created, the code that you used to generate these plots and the names of the samples that have been swapped and what should be their correct names.
 
-## Task 2: 
+## Task 2: Differential expression analysis
+Le
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUyMTUzMzYwXX0=
+eyJoaXN0b3J5IjpbLTExNDAyNTY4MjZdfQ==
 -->
