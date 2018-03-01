@@ -28,7 +28,7 @@ Next, we can run the RStudio server:
 And finally, you can connect to RStudio by opening the following URL in your favourite browser:
 	
 	http://127.0.0.1:8787
-The user n
+The user name and passwo
 
 ## Installing packages
 You can install Bioconductor packages using the `biocLite` command:
@@ -47,5 +47,5 @@ First, download the dataset. (HINT: You can do this in the Terminal tab in RStud
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODA0MDk3OV19
+eyJoaXN0b3J5IjpbLTUyMzU4MjIyMF19
 -->
