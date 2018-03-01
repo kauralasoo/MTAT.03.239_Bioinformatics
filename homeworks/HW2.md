@@ -17,8 +17,8 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
 ## Task 3: Functional enrichment analysis
 **Learning objective:** Learn how to interpret the differential expressed gene lists that you generated in Task 2.
 
- 1. Identify genes that are upregulated after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/), 
+ 1. Identify genes that are upregulated after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/), disable "Hierarchical sorting" under the options and run the analysis. Report top 20 most strongly enriched terms. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTcxMzI5NzJdfQ==
+eyJoaXN0b3J5IjpbLTIxMTAzNTMxNjZdfQ==
 -->
