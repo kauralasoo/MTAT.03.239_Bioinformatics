@@ -23,7 +23,7 @@ First, pull the correct docker image. We are going to use `bioconductor/release_
 
 Next, we can run the RStudio server:
 	
-	docker run -p 8787:8787 bioconductor/devel_base2
+	docker run -p 8787:8787 bioconductor/release_core2
 
 And finally, you can connect to RStudio by opening the following URL in your favourite browser:
 	
@@ -47,5 +47,5 @@ First, download the dataset. (HINT: You can do this in the Terminal tab in RStud
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTc5MDIyNV19
+eyJoaXN0b3J5IjpbLTExMzIwMjAwODJdfQ==
 -->
