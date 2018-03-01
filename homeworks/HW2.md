@@ -1,7 +1,7 @@
+# Homework 2
 
+## Task 1: Exploratory data analysis
 
-
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NjQzMTIxOF19
+eyJoaXN0b3J5IjpbLTE4NDE5MjgzNTRdfQ==
 -->
