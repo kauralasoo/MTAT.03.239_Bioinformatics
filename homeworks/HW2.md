@@ -22,9 +22,9 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
 
 ## Bonus tasks
 
- 1. How many principal components can you 'explain' by the known sample metadata?
- 2. How many replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset?
+ 1. How many principal components can you 'explain' by the known sample metadata? (2 point)
+ 2. How many replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset? (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjU3NDA5N119
+eyJoaXN0b3J5IjpbMTUyODE2NzAwNl19
 -->
