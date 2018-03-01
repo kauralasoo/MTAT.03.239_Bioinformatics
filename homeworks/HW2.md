@@ -12,7 +12,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
 
  1. Following the gene expression tutorial, identify genes that are significantly differentially expressed between the naive and interferon-gamma (IFNg) conditions (false discovery rate (FDR) < 0.01). How many genes are there? How many genes have absolute log2 fold-change > 1? How many genes are upregulated (increase in expression) by IFNg stimulation at these fold-change and FDR thresholds? How many genes are downregulated (decrease in expression)? (NOTE: the sign of the log2 fold-change depends on the factor levels of the conditions that you put into the model, always check that the sign is what you expect it to be using raw counts!)
  2.  Repeat the same differential expression analysis on the naive versus Salmonella (SL1344) conditions. Answer the same questions that you answered in point 1. 
- 3. 
+ 3. Make a scatter plot of the shrunken log2 fold changes from the comparisons (naive vs IFNg on one axis and naive vs SL1344 on the other axis).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU2NzMwNzk2XX0=
+eyJoaXN0b3J5IjpbMjA1ODgzNDEzOV19
 -->
