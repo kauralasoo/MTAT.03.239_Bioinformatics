@@ -45,8 +45,8 @@ If it asks to update other packages, you can choose 'no' for now. For other pack
 First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line if you are using your own computer):
 
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
-	
+https://figshare.com/articles/RNA-seq_data/5938858
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNjM2OTI0NF19
+eyJoaXN0b3J5IjpbODY4MDgxODk1XX0=
 -->
