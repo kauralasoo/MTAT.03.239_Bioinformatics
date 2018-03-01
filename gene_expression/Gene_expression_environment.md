@@ -42,10 +42,10 @@ If it asks to update other packages, you can choose 'no' for now. For other pack
 	install.packages("gplots")
 
 ## Downloading the datasets
-First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line):
+First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line if you are ):
 
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMDI2NjUzNV19
+eyJoaXN0b3J5IjpbLTQyMTMzNDUxOV19
 -->
