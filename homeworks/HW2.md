@@ -10,8 +10,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
 ## Task 2: Differential expression analysis
 **Learning objective**: Learn how to identify genes that are significantly differentially expressed between two conditions.
 
- 1. Following the gene expression tutorial, identify genes that are significantly differentially expressed between the naive and interferon-gamma (IFNg) conditions (false discovery rate (FDR) < 0.01). How many genes are there? How many genes have absolute  log2 fold-change > 1? How many genes are upregulated by IFNg stimulation these fold-change and FDR thresholds? How many genes are downregulated (de?
-
+ 1. Following the gene expression tutorial, identify genes that are significantly differentially expressed between the naive and interferon-gamma (IFNg) conditions (false discovery rate (FDR) < 0.01). How many genes are there? How many genes have absolute  log2 fold-change > 1? How many genes are upregulated by IFNg stimulation these fold-change and FDR thresholds? How many genes are downregulated (decrease in expression)? (NOTE: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1MjYxNTldfQ==
+eyJoaXN0b3J5IjpbMjY1NTM3MDM4XX0=
 -->
