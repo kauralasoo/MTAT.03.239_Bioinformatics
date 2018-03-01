@@ -6,6 +6,7 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  1. [Setting up the command-line environment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Software_setup.md)
  2. [Using a pre-configured docker container](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Pre-configured_docker_container.md)
  3. [Using Snakemake](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Snakemake_tutorial.md)
+ 4. [Setting up RStudio for gene expression analysis](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Gene_expression_environment.md).
 
 ## Topics
 
@@ -25,5 +26,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI2ODgwNjcyXX0=
+eyJoaXN0b3J5IjpbMTQ5MzczNzU2Ml19
 -->
