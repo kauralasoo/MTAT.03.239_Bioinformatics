@@ -21,6 +21,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  2. Repeat the same g:Profiler analysis for genes differentially expressed after Salmonella infection (FDR < 0.01, log2 fold-change > 1). Report top 20 most enriched terms. How do the results compare to the IFNg response? Are there specific enrichments that you did not see in the IFNg results?
 
 ## Bonus tasks
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MzA0Njg4N119
+eyJoaXN0b3J5IjpbMTQxOTQyNzY2OV19
 -->
