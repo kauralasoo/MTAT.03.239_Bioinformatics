@@ -15,7 +15,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. Make a scatter plot of the shrunken log2 fold changes from the comparisons (naive vs IFNg on one axis and naive vs SL1344 on the other axis). What is the correlation? Are there any other patterns if interest?
 
 ## Task 3: Functional enrichment analysis
-
+**Learning objective:** Learn how to interpret the gene lists 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4ODg2MTUzMl19
+eyJoaXN0b3J5IjpbNTc0NjM5OTcyXX0=
 -->
