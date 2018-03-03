@@ -15,10 +15,10 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. Make a scatter plot of the shrunken log2 fold changes from the two comparisons (naive vs IFNg on one axis and naive vs SL1344 on the other axis) and add it to your report. What is the correlation? Are there any other patterns of interest?
 
 ## Task 3: Functional enrichment analysis (1.5 points)
-**Learning objective:** Learn how to interpret the differential expressed gene lists that you generated in Task 2.
+**Learning objective:** Learn how to interpret the differentially expressed gene lists that you generated in Task 2.
 
- 1. Identify genes that are upregulated after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/), disable "Hierarchical sorting" under the options and run the analysis. Report top 20 most strongly enriched terms. Can you find evidence that this gene list corresponds to response to interferon-gamma.
- 2. Repeat the same g:Profiler analysis for genes differentially expressed after Salmonella infection (FDR < 0.01, log2 fold-change > 1). Report top 20 most enriched terms. How do the results compare to the IFNg response? Are there specific enrichments that you did not see in the IFNg results?
+ 1. Identify genes that are **upregulated** after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/), disable "Hierarchical sorting" under the options and run the analysis. Report the top 20 most strongly enriched terms. Can you find evidence that this gene list corresponds to response to interferon-gamma? 
+ 2. Repeat the same g:Profiler analysis for genes differentially expressed after Salmonella infection (FDR < 0.01, log2 fold-change > 1). Report the top 20 most enriched terms. How do the results compare to the IFNg response? Are there specific enrichments that you did not see in the IFNg results?
 
 ## Bonus tasks
 
@@ -26,5 +26,5 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  2. How many replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset? (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NDY0MDIxM119
+eyJoaXN0b3J5IjpbNDYzMTg5NjFdfQ==
 -->
