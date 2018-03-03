@@ -1,4 +1,4 @@
-# Homework 2
+# Homework 2 (deadline 9 March
 
 ## Task 1: Exploratory data analysis (1.5  points)
 **Learning objective**: Learn how to use exploratory data analysis techniques to detect issues with data quality.
@@ -26,5 +26,5 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  2. How many replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset? (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYzMTg5NjFdfQ==
+eyJoaXN0b3J5IjpbMTY3MTQ0NTc0OV19
 -->
