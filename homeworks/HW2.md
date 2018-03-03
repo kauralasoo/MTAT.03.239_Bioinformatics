@@ -1,4 +1,4 @@
-# Homework 2 (deadline 9 March
+# Homework 2 (deadline 9 March 2018 @ 11:59PM)
 
 ## Task 1: Exploratory data analysis (1.5  points)
 **Learning objective**: Learn how to use exploratory data analysis techniques to detect issues with data quality.
@@ -20,11 +20,11 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  1. Identify genes that are **upregulated** after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/), disable "Hierarchical sorting" under the options and run the analysis. Report the top 20 most strongly enriched terms. Can you find evidence that this gene list corresponds to response to interferon-gamma? 
  2. Repeat the same g:Profiler analysis for genes differentially expressed after Salmonella infection (FDR < 0.01, log2 fold-change > 1). Report the top 20 most enriched terms. How do the results compare to the IFNg response? Are there specific enrichments that you did not see in the IFNg results?
 
-## Bonus tasks
+# Bonus tasks 1 (Deadline 
 
  1. How many principal components can you 'explain' by the known sample metadata? (2 point)
  2. How many replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset? (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MTQ0NTc0OV19
+eyJoaXN0b3J5IjpbLTE1NDUxMzU3ODJdfQ==
 -->
