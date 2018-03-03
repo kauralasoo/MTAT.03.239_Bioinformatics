@@ -22,9 +22,9 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
 
 # Bonus tasks 1 (deadline 16 March 2018 @ 11:59PM) 
 
- 1. How many principal components of the [full gene expression dataset](https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds) (336 samples) can you 'explain' by the known sample metadata? You can find view the sample metadata using the colData() function of the SummarizedExperiment class and you can find the  (2 point)
- 2. How many replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset? (2 points)
+ 1. How many principal components of the [full gene expression dataset](https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds) (336 samples) can you 'explain' by the known sample metadata? You can find view the sample metadata using the colData() function of the SummarizedExperiment class and you can find a longer description of the metadata columns in [here](https://zenodo.org/record/1188300/files/RNA_metadata_columns.txt). (2 point)
+ 2. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset? (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1Mzg2MTY5MV19
+eyJoaXN0b3J5IjpbLTQ1MTM1NDk5M119
 -->
