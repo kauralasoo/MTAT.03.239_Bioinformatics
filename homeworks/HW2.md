@@ -5,7 +5,7 @@
 
 The [gene expression data tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Exploring_gene_expression.md) tells you how to get started with analysing gene expression data in R. The dataset used in the tutorial has already been cleaned, but this is usually not the case for real biological data. For example, sometimes samples can get accidentally mis-labeled in the laboratory. A common occurence (that has happened to me me as well!) is that different treatments from the same individual are accidentally swapped. 
 
-In this exercise, your task is to download a 'dirty' [gene expression dataset](https://courses.cs.ut.ee/2018/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment_swapped.rds.zip) and use exploratory data analysis techniques (heatmap, PCA) to identify which (if any) of the samples have been swapped. In your report, please include the plots that you created, the code that you used to generate these plots and the names of the samples that have been swapped and what should be their correct names.
+In this exercise, your task is to download a 'dirty' [gene expression dataset](https://courses.cs.ut.ee/2018/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment_swapped.rds.gz) and use exploratory data analysis techniques (heatmap, PCA) to identify which (if any) of the samples have been swapped. In your report, please include the plots that you created, the code that you used to generate these plots and the names of the samples that have been swapped and what should be their correct names.
 
 ## Task 2: Differential expression analysis (2 points)
 **Learning objective**: Learn how to identify genes that are significantly differentially expressed between two conditions.
@@ -26,5 +26,5 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDA3OTY0MF19
+eyJoaXN0b3J5IjpbLTYxMDIyNTMyMl19
 -->
