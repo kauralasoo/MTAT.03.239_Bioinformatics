@@ -23,11 +23,12 @@ First, pull the correct docker image. We are going to use `bioconductor/release_
 
 Next, we can run the RStudio server:
 	
-	docker run -p 8787:8787 bioconductor/devel_base2
+	docker run -p 8787:8787 bioconductor/release_core2
 
 And finally, you can connect to RStudio by opening the following URL in your favourite browser:
 	
 	http://127.0.0.1:8787
+The user name and password are both `rstudio`.
 
 ## Installing packages
 You can install Bioconductor packages using the `biocLite` command:
@@ -41,10 +42,11 @@ If it asks to update other packages, you can choose 'no' for now. For other pack
 	install.packages("gplots")
 
 ## Downloading the datasets
-First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line):
+First, download the dataset. (HINT: You can do this in the Terminal tab in RStudio or from the command line if you are using your own computer):
 
 	wget https://www.dropbox.com/s/j52l5kdrxpaho30/RNA_SummarizedExperiment.rds
+https://figshare.com/articles/RNA-seq_data/5938858
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzY0ODE4NDldfQ==
+eyJoaXN0b3J5IjpbODY4MDgxODk1XX0=
 -->

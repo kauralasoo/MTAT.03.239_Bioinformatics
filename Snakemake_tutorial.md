@@ -10,10 +10,10 @@ One option is to specify names for input or output files:
 
 	rule align_reads:
 		input:
-			fastq1 = data/{sample}.1.fastq.gz,
-			fastq2 = data/{sample}.2.fastq.gz
+			fastq1 = "data/{sample}.1.fastq.gz",
+			fastq2 = "data/{sample}.2.fastq.gz"
 		output:
-			bam = results/{sample}.bam
+			bam = "results/{sample}.bam"
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
 
@@ -21,10 +21,10 @@ Alternatively, you can access individual input or output files separately by the
 
 	rule align_reads:
 		input:
-			data/{sample}.1.fastq.gz,
-			data/{sample}.2.fastq.gz
+			"data/{sample}.1.fastq.gz",
+			"data/{sample}.2.fastq.gz"
 		output:
-			results/{sample}.bam
+			"results/{sample}.bam"
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input[0]} -2 {input[1]} | samtools view -Sb > {output}"
 
@@ -39,10 +39,10 @@ The simplest option is to specify the list of samples at the top of your Snakema
 	#Rule that performs the alignments
 	rule align_reads:
 		input:
-			fastq1 = data/{sample}.1.fastq.gz,
-			fastq2 = data/{sample}.2.fastq.gz
+			fastq1 = "data/{sample}.1.fastq.gz",
+			fastq2 = "data/{sample}.2.fastq.gz"
 		output:
-			bam = results/{sample}.bam
+			bam = "results/{sample}.bam"
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
 	
@@ -62,5 +62,5 @@ You can now execute this Snakefile using the following command:
 		
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzE3MTMwNDldfQ==
+eyJoaXN0b3J5IjpbLTEyMjkwNzIyOTNdfQ==
 -->

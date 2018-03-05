@@ -6,14 +6,19 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  1. [Setting up the command-line environment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Software_setup.md)
  2. [Using a pre-configured docker container](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Pre-configured_docker_container.md)
  3. [Using Snakemake](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Snakemake_tutorial.md)
+ 4. [Setting up RStudio for gene expression analysis](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Gene_expression_environment.md).
+ 5. [RNA-seq tutorial from Galaxy](https://galaxyproject.org/tutorials/rb_rnaseq/)
+ 6. [Introduction to R](https://courses.cs.ut.ee/2017/DM/fall/Main/RTutorial)
 
 ## Topics
 
  1. [RNA-seq alignment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)
+ 2. [Exploring gene expression data](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Exploring_gene_expression.md)
 
 ## Homeworks
 
  1. [Homework 1](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW1.md)
+ 2. [Homework 2](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW2.md)
 
 ## Related courses
 
@@ -24,5 +29,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzE0NDc2MzldfQ==
+eyJoaXN0b3J5IjpbLTE5NjkyNDIzODddfQ==
 -->
