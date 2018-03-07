@@ -1,3 +1,8 @@
 
 .DS_Store
 results/*
+.Rproj.user
+.Rhistory
+data/*
+.snakemake
+*.Rproj
