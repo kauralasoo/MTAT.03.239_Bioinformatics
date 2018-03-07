@@ -9,9 +9,9 @@
 **Dataset:** [SummarizedExperiment object](https://www.dropbox.com/s/hwl30are5g6k3ka/salmon_SummarizedExperiment_subset.rds?dl=0) ([alternative link](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG)) containing transcript expression estimated using Salmon. [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) for visualisation.
 **Software: **[DRIMSeq R package](http://bioconductor.org/packages/release/bioc/html/DRIMSeq.html), IGV
 
-
+## T
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjgwMDU5NF19
+eyJoaXN0b3J5IjpbLTExNjU4OTk2MjJdfQ==
 -->
