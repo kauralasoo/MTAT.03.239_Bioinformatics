@@ -6,7 +6,7 @@
 ## Task 2: Identify transcripts that are differentially used between conditions
 **Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how these changes can be visualized using IGV.
 
-Using the SummarizedExperiment object containing transcript ex
+Using the SummarizedExperiment object containing transcript expression 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NjA2NzUzMl19
+eyJoaXN0b3J5IjpbLTc2OTQ3MDkzOV19
 -->
