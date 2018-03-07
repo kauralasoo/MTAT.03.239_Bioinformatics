@@ -6,7 +6,7 @@
 ## Task 2: Identify transcripts that are differentially used between conditions
 **Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how these changes can be visualized using IGV.
 
-Dataset: SummarizedExperiment object containing transcript expression estimated using Salmon. 
+Dataset: [SummarizedExperiment object](https://www.dropbox.com/s/hwl30are5g6k3ka/salmon_SummarizedExperiment_subset.rds?dl=0) (alternative link) containing transcript expression estimated using Salmon. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTY3NDQ5NjZdfQ==
+eyJoaXN0b3J5IjpbNDI2NzIzMTUxXX0=
 -->
