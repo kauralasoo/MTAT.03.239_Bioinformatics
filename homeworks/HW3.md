@@ -4,7 +4,9 @@
 **Learning objective**: Understand how the EM algorithm can be used to estimate transcript expression and how it can be influenced by missing transcript annotations.
 
 ## Task 2: Identify transcripts that are differentially used between conditions
-**Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how 
+**Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how these changes can be visualized using IGV.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2OTE1MTAyXX0=
+eyJoaXN0b3J5IjpbODcwODU4ODI3XX0=
 -->
