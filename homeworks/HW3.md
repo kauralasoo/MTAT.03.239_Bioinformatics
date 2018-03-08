@@ -17,7 +17,7 @@ Your are given the following three transcripts with corresponding exon-level rea
 
 **Software:** [DRIMSeq R package](http://bioconductor.org/packages/release/bioc/html/DRIMSeq.html), IGV
 
-Following the DRIMSeq tutorial and example code p
+Following the DRIMSeq tutorial and example code provided in here, 
 
 
 
@@ -27,5 +27,5 @@ Following the DRIMSeq tutorial and example code p
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjcxMjI1NjBdfQ==
+eyJoaXN0b3J5IjpbMTc1ODM1Nzk2NF19
 -->
