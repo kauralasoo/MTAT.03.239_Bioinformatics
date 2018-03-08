@@ -3,7 +3,7 @@
 ## Task 1: Estimating transcript expression using the EM algorithm
 **Learning objective**: Understand how the EM algorithm can be used to estimate transcript expression and how it can be influenced by missing transcript annotations.
 
-![](EM_illustration.png)<!-- -->
+![](HW3_transcripts.png)<!-- -->
 
 
 ## Task 2: Identify transcripts that are differentially used between conditions
@@ -18,5 +18,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNDMyMDcwOF19
+eyJoaXN0b3J5IjpbMTgwNzY4MDY4MV19
 -->
