@@ -23,11 +23,11 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
  2. What are the three genes with the smallest DTU p-values? Report both the Ensembl gene ids as well as the their friendly names.
  3. Make 
 
-## Task 3: Visualise differentially used transcripts using IGV
+## Task 3: Visualise differentially used transcripts using IGV (1 point)
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzODQ3MTIzNl19
+eyJoaXN0b3J5IjpbLTIwODI2MjM5MTZdfQ==
 -->
