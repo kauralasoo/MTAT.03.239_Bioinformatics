@@ -4,11 +4,19 @@
 
 
 
+# Estimating transcript expression with the Expectation-Maximisation algorithm
 
 ![](EM_illustration.png)<!-- -->
 
 
 # The EM-algorihm
+
+```r
+library("dplyr")
+library("ggplot2")
+library("tidyr")
+```
+
 First, we need an implementation of the EM-algorithm to estimate transcript abundances from exon-level counts and exon lengths:
 
 
@@ -41,16 +49,31 @@ performEM <- function(M, k, len, NITER){
 		#The M-step (find maximum likelihood estimate of mu)
 		mu.trace[[iter]] = apply(X,2,sum)/len
 	}
-	return(do.call(rbind, mu.trace))
+	results = as.data.frame(do.call(rbind, mu.trace))
+	colnames(results) = paste0("Transcript_", 1:ncol(results))
+	return(results)
 }
 ```
 
-## Two correctly annotated transcripts
-
-First, let's specify the data
+And another function to plot the progress of the EM algorithm:
 
 ```r
-len <- c(200, 300) # the lengths
+plotTraces <- function(mu.em, NITER = 50){
+  plot_data = dplyr::mutate(mu.em, iter = c(1:1000)) %>% 
+    dplyr::select(iter, everything()) %>%
+      tidyr::gather("tx", "expression", -iter)
+  plot = ggplot(dplyr::filter(plot_data, iter <= NITER), aes(x = iter, y = expression, group = tx, color = tx)) + 
+  geom_point() + 
+  geom_line()
+  return(plot)
+}
+```
+
+## Two correctly annotated transcripts (Scenario 1A)
+First, let's specify the data. Note that in this example, the `len` parameter contains the lengths of the transcripts as opposed to the the lengths of the invidual equivalence classes that we used in the slides. This is so, because for simplicity, we have decided to ignore any reads that map to exon-exon junctions.
+
+```r
+len <- c(200, 300) # Transcript lengths
 M <- matrix(c(1,1,0,1), byrow = T, ncol = 2) #the transcripts
 k <- c(200,30) # the counts for each set
 
@@ -60,11 +83,19 @@ tail(mu.em,1)
 ```
 
 ```
-##           x   x
-## [1000,] 0.7 0.3
+##      Transcript_1 Transcript_2
+## 1000          0.7          0.3
 ```
 
-## Two correctly annotated transcripts + 1 unexpressed transcript
+We can now visualize the progress of the algorithm:
+
+```r
+plotTraces(mu.em)
+```
+
+![](EM-algorithm_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
+## Two correctly annotated transcripts + 1 unexpressed transcript (Scenario 1B)
 
 
 ```r
@@ -78,11 +109,19 @@ tail(mu.em,1)
 ```
 
 ```
-##           x   x             x
-## [1000,] 0.7 0.3 3.454496e-126
+##      Transcript_1 Transcript_2  Transcript_3
+## 1000          0.7          0.3 3.454496e-126
 ```
 
-## One of the true transcripts is missing, reads are captured by the transcript that is actually not expressed
+And make the plot
+
+```r
+plotTraces(mu.em)
+```
+
+![](EM-algorithm_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+
+## One of the true transcripts is missing, reads are captured by the transcript that is actually not expressed (Scenario 1C)
 
 ```r
 len <- c(200, 400) # the lengths
@@ -95,7 +134,14 @@ tail(mu.em,1)
 ```
 
 ```
-##            x    x
-## [1000,] 0.85 0.15
+##      Transcript_1 Transcript_2
+## 1000         0.85         0.15
 ```
 
+And make the plot
+
+```r
+plotTraces(mu.em)
+```
+
+![](EM-algorithm_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
