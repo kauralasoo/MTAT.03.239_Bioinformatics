@@ -22,7 +22,7 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
  1. How many genes undergo differential transcript usage in these two conditions (FDR < 0.01)? What fraction of total genes tested is it?
  2. What are the three genes with the smallest DTU p-values? Report both the Ensembl gene ids as well as the their friendly names.
  3. Using the plotProportions function, visualise the transcript proportions before and after Salmonella infection for each of the top 3 genes. What do you see? Report the names of the transcript whose proportion changed the most. Is it only one transcript that changes or are there many transcript that change simultaneously?
- 4. Repeat the same analysis for naive vs IFNg conditions and answer quetions 
+ 4. Repeat the same analysis for naive vs IFNg conditions and answer the same questions. Are the top 3 with smalles DTU p-values the same or different?
 
 ## Task 3: Visualise differentially used transcripts using IGV (1 point)
 
@@ -30,5 +30,5 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODU2MDAzOV19
+eyJoaXN0b3J5IjpbLTIxNDU5ODcxMDddfQ==
 -->
