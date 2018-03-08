@@ -25,11 +25,13 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
  4. Repeat the same analysis for naive vs IFNg conditions and answer the same questions. Are the top 3 with smallestDTU p-values the same or different?
 
 ## Task 3: Visualise differentially used transcripts using IGV (1 point)
-**Learning objective:** Understand how differential transcript usage manifest at the level of RNA-seq read coverage and how these changes can be detected using 
+**Learning objective:** Understand how differential transcript usage manifest at the level of RNA-seq read coverage and how these changes can be detected using visual inspection.
+
+
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MTA4MDYzXX0=
+eyJoaXN0b3J5IjpbLTYxMDY5NDExMV19
 -->
