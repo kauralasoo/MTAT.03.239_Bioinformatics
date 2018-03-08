@@ -17,7 +17,7 @@ Your are given the following three transcripts with corresponding exon-level rea
 
 **Software:** [DRIMSeq R package](http://bioconductor.org/packages/release/bioc/html/DRIMSeq.html), IGV
 
-Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/vignettes/DRIMSeq/inst/doc/DRIMSeq.pdf) and example code provided in [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/DRIMSeq_test.R), perform differential transcript usage analysis on all 
+Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/vignettes/DRIMSeq/inst/doc/DRIMSeq.pdf) and example code provided in [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/DRIMSeq_test.R), perform differential transcript usage (DTU) analysis on naive vs Salmonella condition. To limit 
 
 
 
@@ -27,5 +27,5 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0Mzg1MDk1Nl19
+eyJoaXN0b3J5IjpbLTEyMzg2MDUwMF19
 -->
