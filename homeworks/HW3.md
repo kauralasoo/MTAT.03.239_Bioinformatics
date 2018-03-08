@@ -27,11 +27,12 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 ## Task 3: Visualise differentially used transcripts using IGV (1 point)
 **Learning objective:** Understand how differential transcript usage manifest at the level of RNA-seq read coverage and how these changes can be detected using visual inspection.
 
- 1. First, download the BigWig files containing the RNA-seq read coverage from four of the samples found in the original dataset.
+ 1. First, download the [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) containing the RNA-seq read coverage from four of the samples found in the original dataset.
+ 2. Start IGV, make sure that the reference genome version is GRCh38 and open al
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMDc1MDQ5XX0=
+eyJoaXN0b3J5IjpbMTk1NjE2NzkyMV19
 -->
