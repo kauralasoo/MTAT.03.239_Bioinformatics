@@ -17,6 +17,8 @@ Your are given the following three transcripts with corresponding exon-level rea
 
 **Software:** [DRIMSeq R package](http://bioconductor.org/packages/release/bioc/html/DRIMSeq.html), IGV
 
+Following the DRIMSeq tutorial and example code p
+
 
 
 ## Task 3: Visualise differentially used transcripts using IGV
@@ -25,5 +27,5 @@ Your are given the following three transcripts with corresponding exon-level rea
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODQ0MDM3M119
+eyJoaXN0b3J5IjpbLTE5MjcxMjI1NjBdfQ==
 -->
