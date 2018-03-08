@@ -6,7 +6,7 @@
 Your are given the following three transcripts with corresponding exon-level read counts. You can assume that all exons have equal length of 100 nucleotides. With the help of the EM algorithm tutorial, answer the following questions:
 ![](HW3_transcripts.png)<!-- -->
 
- 1. Write down the the M
+ 1. Write down the the transcript compatibility matrix M and the corresponding read count vector k. 
 
 ## Task 2: Identify transcripts that are differentially used between conditions
 **Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how these changes can be visualized using IGV.
@@ -20,5 +20,5 @@ Your are given the following three transcripts with corresponding exon-level rea
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MTQ1MzU3NF19
+eyJoaXN0b3J5IjpbMTI4NDM3NTE1OV19
 -->
