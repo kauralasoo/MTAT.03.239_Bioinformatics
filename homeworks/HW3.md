@@ -27,11 +27,11 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 ## Task 3: Visualise differentially used transcripts using IGV (1 point)
 **Learning objective:** Understand how differential transcript usage manifest at the level of RNA-seq read coverage and how these changes can be detected using visual inspection.
 
-
+First,  download the RNA-seq read coverage in BigWig format for four of the samples found in the original dataset.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMDY5NDExMV19
+eyJoaXN0b3J5IjpbLTI3Njk5NDAxMV19
 -->
