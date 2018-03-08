@@ -12,7 +12,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
 
  1. Following the gene expression tutorial, identify genes that are significantly differentially expressed between the naive and interferon-gamma (IFNg) conditions (false discovery rate (FDR) < 0.01). How many genes are there? How many genes have absolute log2 fold-change > 1? How many genes are upregulated (increase in expression) by IFNg stimulation at these fold-change and FDR thresholds? How many genes are downregulated (decrease in expression)? (NOTE: the sign of the log2 fold-change depends on the factor levels of the conditions that you put into the model, always check that the sign is what you expect it to be using raw counts!)
  2.  Repeat the same differential expression analysis on the naive *versus* *Salmonella* (SL1344) conditions. Answer the same questions that you answered in point 1. 
- 3. Make a scatter plot of the shrunken log2 fold changes from the two comparisons (naive vs IFNg on one axis and naive vs SL1344 on the other axis) and add it to your report. What is the correlation? Are there any other patterns of interest?
+ 3. Make a scatter plot of the shrunken log2 fold changes from the two comparisons (naive vs IFNg on one axis and naive vs SL1344 on the other axis) and add it to your report. Make sure to include all gene in the scatter plot. What is the correlation? Are there any other patterns of interest?
 
 ## Task 3: Functional enrichment analysis (1.5 points)
 **Learning objective:** Learn how to interpret the differentially expressed gene lists that you generated in Task 2.
@@ -26,5 +26,5 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMDIyNTMyMl19
+eyJoaXN0b3J5IjpbMTcwODcwNzI1NV19
 -->
