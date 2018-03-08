@@ -8,7 +8,7 @@ Your are given the following three transcripts with corresponding exon-level rea
 
  1. Write down the transcript compatibility matrix `M` and the corresponding read count vector `k`. See the example in the slides for reference.
  2. Using the EM-algorithm implemented in the tutorial, estimate the expression of all three transcripts. In our report, provide these final estimates after 1000 iterations as well as a visualisation of how these estimates evolved.
- 3. 
+ 3. Now, remove Transcript 2 from the annotations, construct a new transcript compatibility matrix 'M' and count vector 
 
 ## Task 2: Identify transcripts that are differentially used between conditions
 **Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how these changes can be visualized using IGV.
@@ -22,5 +22,5 @@ Your are given the following three transcripts with corresponding exon-level rea
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ1MTA4NTYzXX0=
+eyJoaXN0b3J5IjpbMTU4NDExMjAxN119
 -->
