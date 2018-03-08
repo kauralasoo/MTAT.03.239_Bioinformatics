@@ -21,7 +21,7 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
  1. How many genes undergo differential transcript usage in these two conditions (FDR < 0.01)? What fraction of total genes tested is it?
  2. What are the three genes with the smallest DTU p-values? Report both the Ensembl gene ids as well as the their friendly names.
- 3. Make 
+ 3. Using the plotProportions function, visualise the transcript proportions before aft
 
 ## Task 3: Visualise differentially used transcripts using IGV (1 point)
 
@@ -29,5 +29,5 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODI2MjM5MTZdfQ==
+eyJoaXN0b3J5IjpbMzgxMTE2NTM4XX0=
 -->
