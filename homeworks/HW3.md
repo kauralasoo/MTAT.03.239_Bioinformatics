@@ -20,7 +20,8 @@ Your are given the following three transcripts with corresponding exon-level rea
 Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/vignettes/DRIMSeq/inst/doc/DRIMSeq.pdf) and example code provided in [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/DRIMSeq_test.R), perform differential transcript usage (DTU) analysis on naive vs Salmonella condition. To limit computational time required, only include genes from chromosome 6 in your analysis. Answer the following questions.
 
  1. How many genes undergo differential transcript usage in these two conditions (FDR < 0.01)? What fraction of total genes tested is it?
- 2. What are the three genes with the smallest DTU p-values? Report both the Ensembl gene ids as well as the 
+ 2. What are the three genes with the smallest DTU p-values? Report both the Ensembl gene ids as well as the their friendly names.
+ 3. Make 
 
 ## Task 3: Visualise differentially used transcripts using IGV
 
@@ -28,5 +29,5 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2OTYwMjQ4Nl19
+eyJoaXN0b3J5IjpbMjAzODQ3MTIzNl19
 -->
