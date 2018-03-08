@@ -30,11 +30,11 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
  1. First, download the [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) containing the RNA-seq read coverage from four of the samples found in the original dataset. The `aipt_A` and `auim_A` samples are from the naive condition and the `aipt_C` and `auim_C` samples are from the *Salmonella* condition. 
  2. Open these four bigWig files in IGV and make sure that the reference genome version is set to GRCh38.
  3. Use the search box in IGV to locate the top 3 genes with the smallest differential transcript usage p-values from the naive vs *Salmonella* comparison that you identified in Task 2. 
- 4. Make screenshots of RNA-seq read coverage from these three genes and include them in your report. Also, highlight the specific exons or parts of transcript whose usage changes between naive vs `Salmonella` conditions. 
+ 4. Make screenshots of RNA-seq read coverage from these three genes and include them in your report. Also, highlight (e.g. with a red rectangle) the specific exons or parts of transcript whose usage changes between naive vs `Salmonella` conditions. 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NjI5MzRdfQ==
+eyJoaXN0b3J5IjpbLTQ4MTg0MzU4MF19
 -->
