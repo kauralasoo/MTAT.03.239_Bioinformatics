@@ -3,7 +3,7 @@
 ## Task 1: Estimating transcript expression using the EM algorithm (2 points)
 **Learning objective**: Understand how the EM algorithm can be used to estimate transcript expression and how it can be influenced by missing transcript annotations.
 
-Your are given the following three transcripts with corresponding exon-level read counts. You can assume that all exons have equal length of 100 nucleotides. With the help of the EM algorithm tutorial, answer the following questions:
+Your are given the following three transcripts with corresponding exon-level read counts. You can assume that all exons have equal length of 100 nucleotides. With the help of the [EM algorithm tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/EM-algorithm.md), answer the following questions:
 ![](HW3_transcripts.png)<!-- -->
 
  1. Write down the transcript compatibility matrix `M` and the corresponding read count vector `k`. See the example in the slides for reference.
@@ -36,5 +36,5 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MTg0MzU4MF19
+eyJoaXN0b3J5IjpbLTE1NTUwNjYyMzZdfQ==
 -->
