@@ -13,13 +13,13 @@ Your are given the following three transcripts with corresponding exon-level rea
 ## Task 2: Identify transcripts that are differentially used between conditions (2 points)
 **Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how these changes can be visualized using IGV.
 
-**Dataset:** [SummarizedExperiment object](https://www.dropbox.com/s/hwl30are5g6k3ka/salmon_SummarizedExperiment_subset.rds?dl=0) ([alternative link](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG)) containing transcript expression levels estimated using Salmon. [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) for visualisation.
+**Dataset:** [SummarizedExperiment object](https://www.dropbox.com/s/hwl30are5g6k3ka/salmon_SummarizedExperiment_subset.rds?dl=0) ([alternative link](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG)) containing transcript expression levels estimated using [Salmon](https://combine-lab.github.io/salmon/). [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) for visualisation.
 
 **Software:** [DRIMSeq R package](http://bioconductor.org/packages/release/bioc/html/DRIMSeq.html), IGV
 
-Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/vignettes/DRIMSeq/inst/doc/DRIMSeq.pdf) and example code provided in [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/DRIMSeq_test.R), perform differential transcript usage (DTU) analysis on naive vs Salmonella condition. To limit computational time required, only include genes from chromosome 6 in your analysis. Answer the following questions.
+Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/vignettes/DRIMSeq/inst/doc/DRIMSeq.pdf) and example code provided in [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/DRIMSeq_test.R), perform differential transcript usage (DTU) analysis on naive vs Salmonella condition. To limit the computational time required, only include genes from chromosome 6 in your analysis. Answer the following questions.
 
- 1. How many genes undergo differential transcript usage in these two conditions (FDR < 0.01)? What fraction of total genes tested is it?
+ 1. How many genes undergo differential transcript usage (DTU) in these two conditions (FDR < 0.01)? What fraction of total genes tested is it?
  2. What are the three genes with the smallest DTU p-values? Report both the Ensembl gene ids as well as the their friendly names.
  3. Using the plotProportions function, visualise the transcript proportions before and after Salmonella infection for each of the top 3 genes. What do you see? Report the names of the transcript whose proportion changed the most. Is it only one transcript that changes or are there many transcript that change simultaneously?
  4. Repeat the same analysis for naive vs IFNg conditions and answer the same questions. Are the top 3 with smallestDTU p-values the same or different?
@@ -36,5 +36,5 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjYyOTE5ODFdfQ==
+eyJoaXN0b3J5IjpbLTUwNzU5OTEwXX0=
 -->
