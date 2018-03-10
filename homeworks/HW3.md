@@ -22,7 +22,7 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
  1. How many genes undergo differential transcript usage (DTU) in these two conditions (FDR < 0.01)? What fraction of total genes tested is it?
  2. What are the three genes with the smallest DTU p-values? Report both the Ensembl gene ids as well as the their friendly names.
  3. Using the `plotProportions` function, visualise the transcript proportions before and after *Salmonella* infection for each of the top 3 genes. What do you see? Report the names of the transcript whose proportion changed the most. Is it only one transcript that changes or are there many transcript that change simultaneously?
- 4. Repeat the same analysis for naive vs IFNg conditions and answer the same questions. Are the top 3 with smallestDTU p-values the same or different?
+ 4. Repeat the same analysis for naive vs IFNg conditions and answer the same questions. Are the top 3 genes with smallest DTU p-values the same or different?
 
 ## Task 3: Visualise differentially used transcripts using IGV (1 point)
 **Learning objective:** Understand how differential transcript usage manifest at the level of RNA-seq read coverage and how these changes can be detected using visual inspection.
@@ -30,11 +30,11 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
  1. First, download the [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) containing the RNA-seq read coverage from four of the samples found in the original dataset. The `aipt_A` and `auim_A` samples are from the naive condition and the `aipt_C` and `auim_C` samples are from the *Salmonella* condition. 
  2. Open these four bigWig files in IGV and make sure that the reference genome version is set to GRCh38.
  3. Use the search box in IGV to locate the top 3 genes with the smallest differential transcript usage p-values from the naive vs *Salmonella* comparison that you identified in Task 2. 
- 4. Make screenshots of RNA-seq read coverage from these three genes and include them in your report. Also, highlight (e.g. with a red rectangle) the specific exons or parts of transcript whose usage changes between naive vs `Salmonella` conditions. 
+ 4. Make screenshots of RNA-seq read coverage from these three genes and include them in your report. Also, highlight (e.g. with a red rectangle) the specific exons or parts of transcript whose usage changes between naive vs *Salmonella* conditions. 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU0MjAyNDk0XX0=
+eyJoaXN0b3J5IjpbMTE3MzEzOTQ4OF19
 -->
