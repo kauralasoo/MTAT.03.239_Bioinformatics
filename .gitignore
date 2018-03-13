@@ -6,3 +6,4 @@ results/*
 data/*
 .snakemake
 *.Rproj
+transcript_expression/EM-algorithm.html

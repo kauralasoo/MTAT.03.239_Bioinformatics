@@ -1,9 +1,10 @@
 library("SummarizedExperiment")
 library("DESeq2")
-library("ExpressionSet")
+library("dplyr")
 
 #Import gene expression
 counts = as.matrix(read.table("data/RNA_count_matrix.txt.gz"))
+cqns = as.matrix(read.table("data/RNA_cqn_matrix.txt.gz"))
 
 #Import metadata
 gene_metadata = read.table("data/RNA_gene_metadata.txt.gz", stringsAsFactors = FALSE, header = TRUE) %>%
@@ -15,10 +16,17 @@ rownames(sample_metadata) = sample_metadata$gene_id
 
 #Construct SummarizedExperiment object
 se = SummarizedExperiment(
-  assays = list(counts = counts), 
+  assays = list(counts = counts, cqn = cqns), 
   colData = sample_metadata, 
   rowData = gene_metadata)
 saveRDS(se, "data/RNA_SummarizedExperiment.rds")
+
+#Export full dataset for funcExplorer
+sample_metadata$condition_name = factor(sample_metadata$condition_name, levels = c("naive", "IFNg", "SL1344", "IFNg_SL1344"))
+data = dplyr::arrange(sample_metadata, condition_name)
+se_ordered = se[,data$sample_id]
+ordered_cqn = assays(se_ordered)$cqn
+write.table(ordered_cqn, "data/RNA_full_cqn_matrix.txt", sep = "\t", quote = FALSE)
 
 #Sample random 8 donors
 se = readRDS("data/RNA_SummarizedExperiment.rds")
