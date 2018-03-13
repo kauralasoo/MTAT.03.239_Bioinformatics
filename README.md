@@ -14,6 +14,7 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
  1. [RNA-seq alignment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)
  2. [Exploring gene expression data](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Exploring_gene_expression.md)
+ 3. [EM algorithm](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/EM-algorithm.md)
 
 ## Homeworks
 
@@ -30,5 +31,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDcxMTk0MjFdfQ==
+eyJoaXN0b3J5IjpbLTE1MDQ4MzU2MjFdfQ==
 -->
