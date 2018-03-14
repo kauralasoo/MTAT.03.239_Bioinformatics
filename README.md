@@ -9,12 +9,15 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  4. [Setting up RStudio for gene expression analysis](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Gene_expression_environment.md).
  5. [RNA-seq tutorial from Galaxy](https://galaxyproject.org/tutorials/rb_rnaseq/)
  6. [Introduction to R](https://courses.cs.ut.ee/2017/DM/fall/Main/RTutorial)
+ 7. [An Introduction to Hierarchical Modeling](http://mfviz.com/hierarchical-models/)
+ 8. [Plotting partial pooling in mixed-effects models](https://tjmahr.github.io/plotting-partial-pooling-in-mixed-effects-models/)
 
 ## Topics
 
  1. [RNA-seq alignment](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md)
  2. [Exploring gene expression data](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Exploring_gene_expression.md)
  3. [EM algorithm](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/EM-algorithm.md)
+ 4. [Variance component analysis](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md)
 
 ## Homeworks
 
@@ -31,5 +34,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDQ4MzU2MjFdfQ==
+eyJoaXN0b3J5IjpbLTE4MjQ1NzYzODhdfQ==
 -->
