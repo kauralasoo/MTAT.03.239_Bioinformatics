@@ -7,6 +7,7 @@ Using the variance component analysis [tutorial](https://github.com/kauralasoo/f
 
 
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjQzMzM5NjBdfQ==
+eyJoaXN0b3J5IjpbMTIxNzc4NTk4XX0=
 -->
