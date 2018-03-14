@@ -9,6 +9,8 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  4. [Setting up RStudio for gene expression analysis](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/gene_expression/Gene_expression_environment.md).
  5. [RNA-seq tutorial from Galaxy](https://galaxyproject.org/tutorials/rb_rnaseq/)
  6. [Introduction to R](https://courses.cs.ut.ee/2017/DM/fall/Main/RTutorial)
+ 7. [An Introduction to Hierarchical Modeling](http://mfviz.com/hierarchical-models/)
+ 8. 
 
 ## Topics
 
@@ -31,5 +33,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDQ4MzU2MjFdfQ==
+eyJoaXN0b3J5IjpbMzM5Nzk4MjY4XX0=
 -->
