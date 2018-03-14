@@ -21,7 +21,7 @@ First, you can import the data into R using to following command:
 
 
 ```r
-	dataset = readRDS("data/RNA_SummarizedExperiment.rds")
+	dataset = readRDS("../data/RNA_SummarizedExperiment.rds")
 ```
 
 
@@ -364,5 +364,107 @@ filtered_genes
 Save the results to disk:
 
 ```r
-write.table(filtered_genes, "naive_vs_IFNg_gene_list.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+write.table(filtered_genes, "../data/naive_vs_IFNg_gene_list.txt", sep = "\t", quote = FALSE, row.names = FALSE)
 ```
+
+
+#Now, let's repeat the same analysis for naive vs Salmonella condition
+
+
+```r
+naive_SL1344 = data_subset[,data_subset$condition_name %in% c("naive", "SL1344")]
+dds <- DESeqDataSet(naive_SL1344, design = ~ condition_name)
+```
+
+```
+## Warning in DESeqDataSet(naive_SL1344, design = ~condition_name): some
+## variables in design formula are characters, converting to factors
+```
+
+```r
+dds$condition_name = relevel(dds$condition_name, ref = "naive")
+
+#Keep expressed genes
+keep <- rowSums(counts(dds)) >= 10
+dds <- dds[keep,]
+
+#Run DEseq2
+dds <- DESeq(dds)
+```
+
+```
+## estimating size factors
+```
+
+```
+## estimating dispersions
+```
+
+```
+## gene-wise dispersion estimates
+```
+
+```
+## mean-dispersion relationship
+```
+
+```
+## final dispersion estimates
+```
+
+```
+## fitting model and testing
+```
+
+```
+## -- replacing outliers and refitting for 117 genes
+## -- DESeq argument 'minReplicatesForReplace' = 7 
+## -- original counts are preserved in counts(dds)
+```
+
+```
+## estimating dispersions
+```
+
+```
+## fitting model and testing
+```
+
+```r
+res_true <- results(dds)
+res_shrunken_SL1344 = lfcShrink(dds, res = res_true, coef = 2)
+```
+
+
+```r
+#Now, let compare the log2FoldChanges
+lfc_SL1344 = dplyr::mutate(as.data.frame(res_shrunken_SL1344), gene_id = row.names(res_shrunken_SL1344)) %>% dplyr::tbl_df()
+lfc_IFNg = dplyr::mutate(as.data.frame(res_shrunken), gene_id = row.names(res_shrunken)) %>% 
+  dplyr::tbl_df()
+joint_lfc = dplyr::inner_join(lfc_IFNg, lfc_SL1344, by = "gene_id")
+
+ggplot(joint_lfc, aes(x = log2FoldChange.x, y = log2FoldChange.y)) + geom_point() +
+  xlab("naive vs IFNg") + 
+  ylab("naive vs Salmonella")
+```
+
+![](Exploring_gene_expression_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
+
+```r
+cor.test(joint_lfc$log2FoldChange.x, joint_lfc$log2FoldChange.y)
+```
+
+```
+## 
+## 	Pearson's product-moment correlation
+## 
+## data:  joint_lfc$log2FoldChange.x and joint_lfc$log2FoldChange.y
+## t = 83.143, df = 19994, p-value < 2.2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.4964970 0.5170971
+## sample estimates:
+##       cor 
+## 0.5068694
+```
+

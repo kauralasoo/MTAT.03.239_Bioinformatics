@@ -32,7 +32,7 @@ library("ggplot2")
 First, you can import the data into R using to following command:
 
 ```{r}
-	dataset = readRDS("data/RNA_SummarizedExperiment.rds")
+	dataset = readRDS("../data/RNA_SummarizedExperiment.rds")
 ```
 
 
@@ -165,5 +165,38 @@ filtered_genes
 
 Save the results to disk:
 ```{r}
-write.table(filtered_genes, "naive_vs_IFNg_gene_list.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+write.table(filtered_genes, "../data/naive_vs_IFNg_gene_list.txt", sep = "\t", quote = FALSE, row.names = FALSE)
 ```
+
+
+#Now, let's repeat the same analysis for naive vs Salmonella condition
+
+```{r}
+naive_SL1344 = data_subset[,data_subset$condition_name %in% c("naive", "SL1344")]
+dds <- DESeqDataSet(naive_SL1344, design = ~ condition_name)
+dds$condition_name = relevel(dds$condition_name, ref = "naive")
+
+#Keep expressed genes
+keep <- rowSums(counts(dds)) >= 10
+dds <- dds[keep,]
+
+#Run DEseq2
+dds <- DESeq(dds)
+res_true <- results(dds)
+res_shrunken_SL1344 = lfcShrink(dds, res = res_true, coef = 2)
+```
+
+```{r}
+#Now, let compare the log2FoldChanges
+lfc_SL1344 = dplyr::mutate(as.data.frame(res_shrunken_SL1344), gene_id = row.names(res_shrunken_SL1344)) %>% dplyr::tbl_df()
+lfc_IFNg = dplyr::mutate(as.data.frame(res_shrunken), gene_id = row.names(res_shrunken)) %>% 
+  dplyr::tbl_df()
+joint_lfc = dplyr::inner_join(lfc_IFNg, lfc_SL1344, by = "gene_id")
+
+ggplot(joint_lfc, aes(x = log2FoldChange.x, y = log2FoldChange.y)) + geom_point() +
+  xlab("naive vs IFNg") + 
+  ylab("naive vs Salmonella")
+
+cor.test(joint_lfc$log2FoldChange.x, joint_lfc$log2FoldChange.y)
+```
+
