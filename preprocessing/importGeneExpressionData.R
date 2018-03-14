@@ -21,18 +21,34 @@ se = SummarizedExperiment(
   rowData = gene_metadata)
 saveRDS(se, "data/RNA_SummarizedExperiment.rds")
 
-#Export full dataset for funcExplorer
+#### Export full dataset for funcExplorer
+#Reorder columns
 sample_metadata$condition_name = factor(sample_metadata$condition_name, levels = c("naive", "IFNg", "SL1344", "IFNg_SL1344"))
 data = dplyr::arrange(sample_metadata, condition_name)
 se_ordered = se[,data$sample_id]
-ordered_cqn = assays(se_ordered)$cqn
+
+#Keep protein coding genes only
+protein_coding = dplyr::filter(gene_metadata, gene_biotype == "protein_coding")
+se_filtered = se_ordered[protein_coding$gene_id, ]
+
+ordered_cqn = assays(se_filtered)$cqn
 write.table(ordered_cqn, "data/RNA_full_cqn_matrix.txt", sep = "\t", quote = FALSE)
+
+#Subsample smaller dataset for funcExplorer
+set.seed(1)
+random8 = unique(colData(se)$donor) %>% sample(8)
+se_subset = se_filtered[,se_filtered$donor %in% random8]
+subset_cqn = assays(se_subset)$cqn
+write.table(ordered_cqn, "data/RNA_32samples.txt", sep = "\t", quote = FALSE)
+
 
 #Sample random 8 donors
 se = readRDS("data/RNA_SummarizedExperiment.rds")
 set.seed(1)
 random8 = unique(colData(se)$donor) %>% sample(8)
 subset_se = se[,se$donor %in% random8]
+
+
 
 #Switch two samples
 old_col_data = colData(subset_se)
@@ -79,4 +95,14 @@ set.seed(1)
 donors_subset = colData(dataset)$donor %>% unique() %>% sample(8)
 data_subset = dataset[,dataset$donor %in% donors_subset]
 saveRDS(data_subset, "data/salmon_SummarizedExperiment_subset.rds")
+
+
+
+eigengene = read.table("~/Downloads/RNA_full_cqn_matrix_eigengene (1).tsv", sep = "\t", header = TRUE)
+ecm_cluster = dplyr::filter(eigengene, ID == "1126")
+ecm_df = tidyr::gather(ecm_cluster, "sample_id", "eigengene", aipt_A:zuta_D)
+
+df = dplyr::left_join(sample_metadata, ecm_df, by = "sample_id") %>% dplyr::filter(condition_name == "naive")
+
+
 
