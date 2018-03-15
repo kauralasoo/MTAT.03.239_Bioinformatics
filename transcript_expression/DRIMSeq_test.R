@@ -32,7 +32,7 @@ dm_data <- dmDSdata(counts = as.data.frame(counts_df), samples = sample_data)
 dm_data <- dmFilter(dm_data, min_samps_gene_expr = 16, min_samps_feature_expr = 8, min_gene_expr = 10, min_feature_expr = 10)
 
 #Make a design matrix
-design_full <- model.matrix(~ condition_name, data = samples(dm_data))
+design_full <- model.matrix(~ condition_name, data = DRIMSeq::samples(dm_data))
 
 ## To make the analysis reproducible
 set.seed(123)
