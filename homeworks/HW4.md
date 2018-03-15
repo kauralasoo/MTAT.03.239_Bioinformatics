@@ -12,7 +12,7 @@ Open the [full macrophage RNA-seq dataset](https://biit.cs.ut.ee/funcexplorer/li
 
 ## Task 2: 
 
-In cluster 4119 (enriched for extracellular matrix organisation) the genes are not differential expressed between conditions, but instead they seem to be differentially expressed between samples from the same donor. 
+In cluster 4119 (enriched for extracellular matrix organisation) the genes are not differential expressed between conditions, but instead they seem to be differentially expressed between samples from the same donor. Extract the eigengene values for this cluster from funcExplorer
  
 
 ## Task 3: Variance component analysis (2 points)
@@ -20,5 +20,5 @@ In cluster 4119 (enriched for extracellular matrix organisation) the genes are n
 
 Using the variance component analysis [tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md), repeat the the variance component analysis for the CD16 and CD206 markers on both the full and replicated datasets. Do they give the same result as CD14, where most of the variance was explained by cell line?  If not, can you explain why? (HINT: you can use the same dot plots that were used under the section "Visualising sources of variation" to prove your point).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODk0NjgyOF19
+eyJoaXN0b3J5IjpbMTUyMTk4ODgyOV19
 -->
