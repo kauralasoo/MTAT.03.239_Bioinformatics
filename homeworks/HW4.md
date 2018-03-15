@@ -10,15 +10,15 @@ Open the [full macrophage RNA-seq dataset](https://biit.cs.ut.ee/funcexplorer/li
  3. Is there a group of genes that is upregulated only when both of the stimuli are present? What is it enriched for?
  4. Can you find a group of genes that is specifically downregulated by IFNg (conditons B and D) but not Salmonella (C). What is this cluster enriched for?
 
-## Task 3: 
+## Task 2: 
 
-In cluster 4119 (enriched for extracellular matrix organisation), instead of b
+In cluster 4119 (enriched for extracellular matrix organisation), instead of being differentially expressed between conditions, the genes are differentially expressed between donors from the 
  
 
-## Task 2: Variance component analysis (2 points)
+## Task 3: Variance component analysis (2 points)
 **Learning objective:** Understand how hierarchical models (aka linear mixed models) can be used to estimate the proportion of total of variance explained by different factors.
 
 Using the variance component analysis [tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md), repeat the the variance component analysis for the CD16 and CD206 markers on both the full and replicated datasets. Do they give the same result as CD14, where most of the variance was explained by cell line?  If not, can you explain why? (HINT: you can use the same dot plots that were used under the section "Visualising sources of variation" to prove your point).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA4MDI3NDIzXX0=
+eyJoaXN0b3J5IjpbLTE3MTAzODQyNjVdfQ==
 -->
