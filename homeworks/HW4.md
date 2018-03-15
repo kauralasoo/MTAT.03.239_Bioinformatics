@@ -12,7 +12,7 @@ Open the [full macrophage RNA-seq dataset](https://biit.cs.ut.ee/funcexplorer/li
 
 ## Task 3: 
 
-In cluster 4119
+In cluster 4119, the 
  
 
 ## Task 2: Variance component analysis (2 points)
@@ -20,5 +20,5 @@ In cluster 4119
 
 Using the variance component analysis [tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md), repeat the the variance component analysis for the CD16 and CD206 markers on both the full and replicated datasets. Do they give the same result as CD14, where most of the variance was explained by cell line?  If not, can you explain why? (HINT: you can use the same dot plots that were used under the section "Visualising sources of variation" to prove your point).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njk4NTQ4MjNdfQ==
+eyJoaXN0b3J5IjpbLTIwMTYyMTE0NjZdfQ==
 -->
