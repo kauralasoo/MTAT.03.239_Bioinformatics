@@ -7,7 +7,8 @@ Open the [full macrophage RNA-seq dataset](https://biit.cs.ut.ee/funcexplorer/li
 
  1. Can you find clusters of gene that are upregulated by interferon-gamma (conditions B and D)? What are terms that these genes are enriched for?
  2. Your scatter plot of log2 fold-changes between naive vs IFNg and naive vs Salmonella highlighted that there was a modest correlation (Pearson's r = 0.5) between differentially expressed genes in these two conditions. This suggests that some genes are  activated by both stimuli. Can you find a cluster of genes that is upregulated in all stimulated conditions (B, C and D)? What terms is it enriched for?
- 3. Can you find a group of genes that is specifically downregulated by IFNg (conditons B and D) but not Salmonella (C). What i
+ 3. Can you find a group of genes that is specifically downregulated by IFNg (conditons B and D) but not Salmonella (C). What is this cluster enriched for?
+ 4. 
 
  
 
@@ -16,5 +17,5 @@ Open the [full macrophage RNA-seq dataset](https://biit.cs.ut.ee/funcexplorer/li
 
 Using the variance component analysis [tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md), repeat the the variance component analysis for the CD16 and CD206 markers on both the full and replicated datasets. Do they give the same result as CD14, where most of the variance was explained by cell line?  If not, can you explain why? (HINT: you can use the same dot plots that were used under the section "Visualising sources of variation" to prove your point).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTExMjM3MTA5XX0=
+eyJoaXN0b3J5IjpbLTE0Mzg0OTA5MzhdfQ==
 -->
