@@ -14,12 +14,12 @@ Open the [full macrophage RNA-seq dataset](https://biit.cs.ut.ee/funcexplorer/li
 ## Task 2: Interpreting co-expressed genes (1 point)
 **Learning objective**: Learn how you can interpret an unknown group of co-expressed genes by comparing their summarised expression values (eigengene values) to sample annotations.
 
-In cluster 4119 (enriched for extracellular matrix organisation) the genes are not differential expressed between conditions, but instead they seem to be differentially expressed between samples from the same donor. Extract the eigengene values for this cluster from funcExplorer (Summary -> Eigengene data) and compare those values to the sample metadata columns of the original dataset (you can find this in the SummarizedExperiment object). Which column is most highly correlated with the eigengene values? Report the correlation coefficient and make the scatterplot. Can you guess what these genes in cluster 4119 might represent?
+In cluster 4119 (enriched for extracellular matrix organisation) the genes are not differential expressed between conditions, but instead they seem to be differentially expressed between samples from the same donor. Extract the eigengene values for this cluster from funcExplorer (Summary -> Eigengene data) and compare those values to the sample metadata columns of the original dataset (you can find this in the SummarizedExperiment object). Which column is most highly correlated with the eigengene values? Report the correlation coefficient and make a scatterplot. Can you guess what these genes in cluster 4119 might represent?
 
 ## Task 3: Variance component analysis (2 points)
 **Learning objective:** Understand how hierarchical models (aka linear mixed models) can be used to estimate the proportion of total of variance explained by different factors.
 
 Using the variance component analysis [tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md), repeat the the variance component analysis for the CD16 and CD206 markers on both the full and replicated datasets. Do they give the same result as CD14, where most of the variance was explained by cell line?  If not, can you explain why? (HINT: you can use the same dot plots that were used under the section "Visualising sources of variation" to prove your point).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NzUxODM4MV19
+eyJoaXN0b3J5IjpbLTIwMTg5MzExNjVdfQ==
 -->
