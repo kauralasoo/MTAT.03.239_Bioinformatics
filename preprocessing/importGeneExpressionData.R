@@ -39,7 +39,7 @@ set.seed(1)
 random8 = unique(colData(se)$donor) %>% sample(8)
 se_subset = se_filtered[,se_filtered$donor %in% random8]
 subset_cqn = assays(se_subset)$cqn
-write.table(ordered_cqn, "data/RNA_32samples.txt", sep = "\t", quote = FALSE)
+write.table(subset_cqn, "data/RNA_32samples.txt", sep = "\t", quote = FALSE)
 
 
 #Sample random 8 donors
