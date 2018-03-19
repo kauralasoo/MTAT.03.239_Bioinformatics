@@ -1,7 +1,6 @@
+# Homework 5
 
 
-
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NDQ4MjIzN119
+eyJoaXN0b3J5IjpbLTExNTUyMzc0MzVdfQ==
 -->
