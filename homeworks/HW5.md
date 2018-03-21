@@ -7,9 +7,9 @@ How many variants are in high linkage disequilibrium with the lead CD14 QTL vari
 Permutation testing.
 
 ## Task 3: Understanding the mechanism of the CD14 QTL (1.5 points)
-There are many possi
+There are many possible ways how a genetic variant could change CD14 protein cell surface expression. 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyOTgzNjY0NF19
+eyJoaXN0b3J5IjpbLTg3MzYzMTk3NV19
 -->
