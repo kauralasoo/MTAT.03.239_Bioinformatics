@@ -1,7 +1,7 @@
 # Homework 5
 
 ## Task 1: Understanding linkage disequilibrium (1.5 point)
-High linkage disequilibrium (LD) between genetic variants means that it is challenging to identify which of the many associated variants is the causal variant. One way to quantify LD between two genetic variants is to calculate the square of the Pearson's correlation coefficient (r<sup>2</sup>). Based on the flow cytometry 
+High linkage disequilibrium (LD) between genetic variants means that it is challenging to identify which of the many associated variants is the causal variant. One way to quantify LD between two genetic variants is to calculate the square of the Pearson's correlation coefficient (r<sup>2</sup>). Based on the genotype data presented in the [flow cytometry tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md),  estimate the number of genetic variants 
 
 How many variants are in high linkage disequilibrium with the lead CD14 QTL variant (R2 > 0.8)?
 
@@ -13,5 +13,5 @@ There are many possible ways how a genetic variant could change protein cell sur
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc1NDQyOTUyXX0=
+eyJoaXN0b3J5IjpbMTM1NzM0NjMzOV19
 -->
