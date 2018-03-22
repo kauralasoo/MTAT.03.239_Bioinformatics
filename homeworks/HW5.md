@@ -1,7 +1,7 @@
 # Homework 5
 
 ## Task 1: Understanding linkage disequilibrium (1.5 point)
-One way to quantify linkage disequilibrium (LD) between two genetic variants is to calculate the square of the Pearson's correlation coefficient (r<sup>2</sup>). High LD between genetic variants means that it is challenging to identify 
+High LD between genetic variants means that it is challenging to identify which of the many associated variants is the causal variant. One way to quantify linkage disequilibrium (LD) between two genetic variants is to calculate the square of the Pearson's correlation coefficient (r<sup>2</sup>). 
 
 How many variants are in high linkage disequilibrium with the lead CD14 QTL variant (R2 > 0.8)?
 
@@ -13,5 +13,5 @@ There are many possible ways how a genetic variant could change protein cell sur
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzExODg4Nl19
+eyJoaXN0b3J5IjpbNDg4MjU4NjddfQ==
 -->
