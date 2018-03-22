@@ -1,7 +1,9 @@
 # Homework 5
 
 ## Task 1: Understanding linkage disequilibrium (1 point)
-High linkage disequilibrium (LD) between genetic variants means that it is challenging to identify which of the many associated variants is the causal variant. One way to quantify LD between two genetic variants is to calculate the square of the Pearson's correlation coefficient (r<sup>2</sup>). Based on the genotype data presented in the [flow cytometry tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md),  estimate the number of genetic variants that are in high LD (r<sup>2</sup> > 0.8) with the lead CD14 QTL variant (rs778587). In your report, include the code that you used to calculate LD as well es the number of genetic variants with r<sup>2</sup> > 0.8 with rs778587. Note that the flow cytometry data is in its ow
+High linkage disequilibrium (LD) between genetic variants means that it is challenging to identify which of the many associated variants is the causal variant. One way to quantify LD between two genetic variants is to calculate the square of the Pearson's correlation coefficient (r<sup>2</sup>). Based on the genotype data presented in the [flow cytometry tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md),  estimate the number of genetic variants that are in high LD (r<sup>2</sup> > 0.8) with the lead CD14 QTL variant (rs778587). In your report, include the code that you used to calculate LD as well es the number of genetic variants with r<sup>2</sup> > 0.8 with rs778587. 
+
+Note that the flow cytometry data is in its own GitHub repository: https://github.com/kauralasoo/flow_cytomtery_genetics.
 
 ## Task 2: Calculating empirical p-values (2 points)
 One of the consequences of LD between genetic variants is that when we test associations between genetic variants and a phenotype, then it is difficult to accurately estimate how many independent tests are being performed. For example, in the [CD14 tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md%29), we tested the association between 541 genetic variants and CD14 expression. If the variants were all independent from each other, then we could use Bonferroni correction to correct for the number of test that we performed. However, as you can see from the Manhattan plot in the tutorial as well as from Task 1, many of the variants are in high LD with each other and therefore not independent. In this scenario, we could still use Bonferroni correction, but it is going to be over-conservation.
@@ -15,5 +17,5 @@ There are many possible ways how a genetic variant could change protein cell sur
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODgzNjg4MjBdfQ==
+eyJoaXN0b3J5IjpbMzA2MDM2OTRdfQ==
 -->
