@@ -1,6 +1,7 @@
 # Homework 5
 
 ## Task 1: Understanding linkage disequilibrium (1.5 point)
+One way to quantify linka
 How many variants are in high linkage disequilibrium with the lead CD14 QTL variant (R2 > 0.8)?
 
 ## Task 2: Calculating empirical p-values (2 points)
@@ -11,5 +12,5 @@ There are many possible ways how a genetic variant could change protein cell sur
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3ODU2MjkyXX0=
+eyJoaXN0b3J5IjpbMzY4MzQyMjI2XX0=
 -->
