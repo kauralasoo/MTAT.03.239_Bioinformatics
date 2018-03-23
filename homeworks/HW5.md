@@ -12,7 +12,7 @@ Alternatively, if we want to test if the smallest p-value observed in a region (
 
  1. Using the strategy described above, permute the labels (individuals) of the genotype dataset 100 times and redo the associations testing for CD14 expression using each of the permuted dataset. (HINT: `runMatrixEQTL` function has a `permute` flag that allows you to do that).
  2. From each permutation run, store the minimal association p-value across all tested variants. Finally, report report how often is the minimal p-value from the permutation runs smaller then the minimal p-value that you observed on the original dataset. Is the associations between CD14 cell surface expression rs778587 significant at 10% empirical FDR level?
- 3. Repeat the same permutation analysis for CD16 and CD206 proteins. For both of these proteins, report how often is the minimal p-value from the permutation run smaller than the minimal p-value calculated on the original dataset.
+ 3. Repeat the same permutation analysis for CD16 and CD206 proteins. For both of these proteins, report how often is the minimal p-value from the permutation run smaller than the minimal p-value calculated on the original dataset. Are the associations that you detect for CD16 and CD206 statistically significant?
  
 ## Task 3: Understanding the mechanism of the CD14 QTL (2 points)
 There are many possible ways how a genetic variant could change protein cell surface expression. One possibility is that the genetic variant changes the expression of the gene at the mRNA level and this in turn influences how much protein is made. Alternatively, the genetic variant could directly regulate the rate of protein translation or its stability with no effect on the mRNA. 
@@ -20,5 +20,5 @@ Can you find out, which of these two mechanisms is more likely to be true in the
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDYwMzM0MThdfQ==
+eyJoaXN0b3J5IjpbMTU1NDQ3MjIxMV19
 -->
