@@ -10,8 +10,8 @@ One of the consequences of LD between genetic variants is that when we test asso
 
 Alternatively, if we want to test if the smallest p-value observed in a region (such as in the region +/-200 kb from CD14 gene) is smaller than expected by chance, then instead of using Bonferroni correction, we can also use an empirical approach in which we permute the genotypes between individual multiple times, recalculate all correlations and then record the minimal p-value that we observed in the permuted data. By repeating this procedure multiple times (e.g. 100-10000), we can ask how often is the minimal p-value from permuted data smaller than than minimal p-value in our original dataset. If this is sufficiently rare then we conclude that our initial associations was statistically significant.
 
- 1. Using the strategy described above, permute the labels (individuals) of the genotype dataset 100 times and redo the associations testing for CD14 expression using each of the permuted dataset. (HINT: runMatrixEQTL function has a permute flag that allows you to do that
- 2. From each permutation run, store the minimal association p-value. Finally, report report how often is the minimal p-value from the permutation runs smaller then the minimal p-value that you observed on the original dataset. Is the associations between CD14 cell surface expression rs778587 significant at 10% empirical FDR level?
+ 1. Using the strategy described above, permute the labels (individuals) of the genotype dataset 100 times and redo the associations testing for CD14 expression using each of the permuted dataset. (HINT: `runMatrixEQTL` function has a `permute` flag that allows you to do that).
+ 2. From each permutation run, store the minimal association p-value across all tested variants. Finally, report report how often is the minimal p-value from the permutation runs smaller then the minimal p-value that you observed on the original dataset. Is the associations between CD14 cell surface expression rs778587 significant at 10% empirical FDR level?
  3. Repeat the same permutation analysis for CD16 and CD206 proteins. For both of these proteins, report how often is the minimal p-value from the permutation run smaller than the minimal p-value calculated on the original dataset.
  
 ## Task 3: Understanding the mechanism of the CD14 QTL (2 points)
@@ -20,5 +20,5 @@ Can you find out, which of these two mechanisms is more likely to be true in the
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1MDE3NzcwXX0=
+eyJoaXN0b3J5IjpbLTE3MDYwMzM0MThdfQ==
 -->
