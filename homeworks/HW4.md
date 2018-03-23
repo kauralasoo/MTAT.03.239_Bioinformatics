@@ -16,7 +16,7 @@ Open the [full macrophage RNA-seq dataset](https://biit.cs.ut.ee/funcexplorer/li
 
 In cluster 4119 (enriched for extracellular matrix organisation) the genes are not differential expressed between conditions. Instead, the genes seem to have similar expression values in all samples from the same donor and different expression values in different donors (i.e. the genes are differentially expressed between different donors, but not between different conditions). Extract the eigengene values for all clusters from funcExplorer (Summary -> Eigengene data) (or download from [here](https://courses.cs.ut.ee/2018/bioinfo/spring/uploads/Main/RNA_336_samples_protein_coding_eigengene.txt)) and compare the the eigengene values of cluster 4119 to the sample metadata columns of the original dataset that you used in Homework 2 ([download link](https://courses.cs.ut.ee/2018/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip)). You can view the sample metadata using the colData() function of the SummarizedExperiment class and you can find a longer description of the metadata columns in [here](https://zenodo.org/record/1188300/files/RNA_metadata_columns.txt).
 
-Which *numerical* metadata column is most highly correlated with the eigengene values of cluster 4119 across samples? Report the correlation coefficient and make a scatterplot. Based on these results, can you guess what the genes in cluster 4119 might represent?
+Which *numerical* metadata column has the highest absolute correlation with the eigengene values of cluster 4119 across samples? Report the correlation coefficient and make a scatterplot. Based on these results, can you guess what the genes in cluster 4119 might represent?
 
 ## Task 3: Variance component analysis (1 point)
 **Learning objective:** Understand how hierarchical models (aka linear mixed models) can be used to estimate the proportion of total of variance explained by different factors.
@@ -25,5 +25,5 @@ Using the variance component analysis [tutorial](https://github.com/kauralasoo/f
 
 Note that the flow cytometry data is in its own GitHub repository: https://github.com/kauralasoo/flow_cytomtery_genetics.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MDY0NDQ5XX0=
+eyJoaXN0b3J5IjpbLTE2NTE2OTI2MDhdfQ==
 -->
