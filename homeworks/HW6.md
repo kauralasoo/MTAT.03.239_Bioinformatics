@@ -1,4 +1,3 @@
-
 # Homework 6
 
 ## Task 1: Implement Gibbs sampler motif discovery
@@ -14,5 +13,5 @@ Submit:
    of the real datasets (can be SeqLogo) and PFM
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMjQ2NTAwMF19
+eyJoaXN0b3J5IjpbMTU0ODAxMDM5MF19
 -->
