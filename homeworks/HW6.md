@@ -5,9 +5,12 @@
 
 Lecture slides contain two 'hint' slides, make use of them.
 
-Example sequences from rosalind contain up to 20 sequences. The code example from practice session will work fine on smaller data. But to use it on the real data, you need to optimise the code and possibly sampling process.  
+Example sequences from [Rosalind](http://rosalind.info/problems/ba2g/) contain up to 20 sequences. The code example from practice session will work fine on smaller data. But to use it on the real data, you need to optimise the code and possibly sampling process. Otherwise it will take too long time to run.  
+
 To optimise:  
-* You can modify source code to reduce loops  
+
+ - List item
+You can modify source code to reduce loops  
 * optimise how data is handled, some repetitive tasks can be cached or skipped entirely.  
 * real data is annotated with scores ([https://genome.ucsc.edu/FAQ/FAQformat.html#format12](https://genome.ucsc.edu/FAQ/FAQformat.html#format12)), you can greatly reduce the search space, by choosing some top of more trustworthy peaks.
 You can validate your solution at: http://rosalind.info/problems/ba2g/
@@ -21,5 +24,5 @@ Submit:
    of the real datasets (can be SeqLogo) and PFM
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE4NTg2MDEzXX0=
+eyJoaXN0b3J5IjpbLTk2ODkyNzIwNF19
 -->
