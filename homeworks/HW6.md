@@ -15,14 +15,14 @@ To optimise:
 
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
-Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18 
+Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18. 
 
 Submit: 
  - your clean commented source code 
  - running time 
- - median motif for one
+ - median motif for one (either PU.1 or CTCF)
    of the real datasets (can be SeqLogo) and PFM
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NzczMDc1XX0=
+eyJoaXN0b3J5IjpbMjgwMDQ0MzBdfQ==
 -->
