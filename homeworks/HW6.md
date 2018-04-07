@@ -12,10 +12,11 @@ To optimise:
 - You can modify source code to reduce loops  
 - Optimise how data is handled, some repetitive tasks can be cached or skipped entirely.  
 - The real data in narrowPeak is annotated with scores: ([https://genome.ucsc.edu/FAQ/FAQformat.html#format12](https://genome.ucsc.edu/FAQ/FAQformat.html#format12)). You can greatly reduce the search space, by choosing a subset of top peaks with the largest score. 
+- You might also filter out very long peaks.
 
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
-Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18. The real dataset is derived from ChIP-seq data for two transcription factors: PU.1 (SPI1) and CTCF. The .narrowPeak files contain the peaks identified by MACS2 and the .fa (FASTA) files contain the sequences of each peak. You can match the sequences in the .fa files to the scores in the narrow peak files using the genomic coordinates of the peaks. To verify that the motifs that you discover are correct, you can compare them to the known motifs of these transcription factors present in databases such as HOCOMOCO (http://hocomoco11.autosome.ru/. 
+Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18. The real dataset is derived from ChIP-seq data for two transcription factors: PU.1 (SPI1) and CTCF. The .narrowPeak files contain the peaks identified by MACS2 and the .fa (FASTA) files contain the sequences of each peak. You can match the sequences in the .fa files to the scores in the narrow peak files using the genomic coordinates of the peaks. To verify that the motifs that you discover are correct, you can compare them to the known motifs of these transcription factors present in databases such as HOCOMOCO (http://hocomoco11.autosome.ru/). Search for either SPI1 or CTCF.
 
 Submit: 
  - your clean commented source code 
@@ -24,5 +25,5 @@ Submit:
    of the real datasets (can be SeqLogo) and a position frequency matrix (PFM). See lecture slides or [Wikipedia](https://en.wikipedia.org/wiki/Position_weight_matrix).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MjI5MTM5OV19
+eyJoaXN0b3J5IjpbLTQzNDM2MDQxNF19
 -->
