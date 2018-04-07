@@ -12,7 +12,7 @@ To optimise:
 - You can modify source code to reduce loops  
 - Optimise how data is handled, some repetitive tasks can be cached or skipped entirely.  
 - The real data in narrowPeak is annotated with scores: ([https://genome.ucsc.edu/FAQ/FAQformat.html#format12](https://genome.ucsc.edu/FAQ/FAQformat.html#format12)). You can greatly reduce the search space, by choosing a subset of top peaks with the largest score. 
-- You might also filter out very long peaks.
+- You might also want to filter out very long peaks.
 
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
@@ -25,5 +25,5 @@ Submit:
    of the real datasets (can be SeqLogo) and a position frequency matrix (PFM). See lecture slides or [Wikipedia](https://en.wikipedia.org/wiki/Position_weight_matrix).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNDM2MDQxNF19
+eyJoaXN0b3J5IjpbNjYzNzE3NTkxXX0=
 -->
