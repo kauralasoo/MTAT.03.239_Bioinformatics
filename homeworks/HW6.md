@@ -1,6 +1,7 @@
 # Homework 6
 
 ## Task 1: Implement Gibbs sampler motif discovery
+**Learning objective:** Learn how Gibbs sampling can be used to discover sequence moti
 
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
@@ -13,5 +14,5 @@ Submit:
    of the real datasets (can be SeqLogo) and PFM
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODAxMDM5MF19
+eyJoaXN0b3J5IjpbMTI5MTY0OTc4MV19
 -->
