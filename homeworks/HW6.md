@@ -11,7 +11,8 @@ To optimise:
 
 - You can modify source code to reduce loops  
 - Optimise how data is handled, some repetitive tasks can be cached or skipped entirely.  
-- Teal data is annotated with scores ([https://genome.ucsc.edu/FAQ/FAQformat.html#format12](https://genome.ucsc.edu/FAQ/FAQformat.html#format12)). you can greatly reduce the search space, by choosing some top of more trustworthy peaks.
+- The real data is annotated with scores ([https://genome.ucsc.edu/FAQ/FAQformat.html#format12](https://genome.ucsc.edu/FAQ/FAQformat.html#format12)). you can greatly reduce the search space, by choosing a subset of peaks with the largest score. 
+
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
 Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18 
@@ -23,5 +24,5 @@ Submit:
    of the real datasets (can be SeqLogo) and PFM
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMjQ2NzQ5XX0=
+eyJoaXN0b3J5IjpbMjE0NzczMDc1XX0=
 -->
