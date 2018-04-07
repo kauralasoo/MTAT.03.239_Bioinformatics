@@ -9,10 +9,9 @@ Example sequences from [Rosalind](http://rosalind.info/problems/ba2g/) contain u
 
 To optimise:  
 
- - List item
-You can modify source code to reduce loops  
-* optimise how data is handled, some repetitive tasks can be cached or skipped entirely.  
-* real data is annotated with scores ([https://genome.ucsc.edu/FAQ/FAQformat.html#format12](https://genome.ucsc.edu/FAQ/FAQformat.html#format12)), you can greatly reduce the search space, by choosing some top of more trustworthy peaks.
+- You can modify source code to reduce loops  
+- Optimise how data is handled, some repetitive tasks can be cached or skipped entirely.  
+- Teal data is annotated with scores ([https://genome.ucsc.edu/FAQ/FAQformat.html#format12](https://genome.ucsc.edu/FAQ/FAQformat.html#format12)). you can greatly reduce the search space, by choosing some top of more trustworthy peaks.
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
 Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18 
@@ -24,5 +23,5 @@ Submit:
    of the real datasets (can be SeqLogo) and PFM
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2ODkyNzIwNF19
+eyJoaXN0b3J5IjpbLTgxMjQ2NzQ5XX0=
 -->
