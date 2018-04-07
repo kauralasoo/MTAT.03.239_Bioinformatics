@@ -21,8 +21,8 @@ Submit:
  - your clean commented source code 
  - running time 
  - median motif for one (either PU.1 or CTCF)
-   of the real datasets (can be SeqLogo) and PFM
+   of the real datasets (can be SeqLogo) and a position frequency matrix (PFM). See lecture slides or [Wikipedia](https://en.wikipedia.org/wiki/Position_weight_matrix).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgwMDQ0MzBdfQ==
+eyJoaXN0b3J5IjpbOTg2MDgwMTA1XX0=
 -->
