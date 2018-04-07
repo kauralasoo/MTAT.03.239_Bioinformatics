@@ -15,7 +15,7 @@ To optimise:
 
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
-Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18. The real dataset contains 
+Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18. The real dataset is derived from ChIP-seq data for two transcription factors (PU.1 and C
 
 Submit: 
  - your clean commented source code 
@@ -24,5 +24,5 @@ Submit:
    of the real datasets (can be SeqLogo) and a position frequency matrix (PFM). See lecture slides or [Wikipedia](https://en.wikipedia.org/wiki/Position_weight_matrix).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjIxMDU3OV19
+eyJoaXN0b3J5IjpbLTk2ODU0MTU1Ml19
 -->
