@@ -15,7 +15,7 @@ To optimise:
 
 You can validate your solution at: http://rosalind.info/problems/ba2g/
 
-Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18. The real dataset is derived from ChIP-seq data for two transcription factors: PU.1 (SPI1) and CTCF. The .narrowPeak files contain the peaks identified by MACS2 and the .fa (FASTA) files contain the sequences of each peak. You can match the sequences in the .fa files to the scores in the narrow peak files using the genomic coordinates of the peaks. To verify that the motifs that you discover are correct, you c
+Get real data from [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd), motif length to search for is k = 18. The real dataset is derived from ChIP-seq data for two transcription factors: PU.1 (SPI1) and CTCF. The .narrowPeak files contain the peaks identified by MACS2 and the .fa (FASTA) files contain the sequences of each peak. You can match the sequences in the .fa files to the scores in the narrow peak files using the genomic coordinates of the peaks. To verify that the motifs that you discover are correct, you can compare them to the known motifs of these transcription factors present in databases such as HOCOMOCO (http://hocomoco11.autosome.ru/. 
 
 Submit: 
  - your clean commented source code 
@@ -24,5 +24,5 @@ Submit:
    of the real datasets (can be SeqLogo) and a position frequency matrix (PFM). See lecture slides or [Wikipedia](https://en.wikipedia.org/wiki/Position_weight_matrix).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NTk3MTgyOF19
+eyJoaXN0b3J5IjpbMTA2MjI5MTM5OV19
 -->
