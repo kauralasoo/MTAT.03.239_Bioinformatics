@@ -3,7 +3,7 @@
 ## Task 1: Implement Gibbs sampler motif discovery
 **Learning objective:** Learn how Gibbs sampling can be used to discover sequence motifs recognised by transcription factors from real world data.
 
-Lecture slides contain two 'hint' slides, make use of them.
+Lecture slides contain two 'hint' slides, make use of them. You might also find this [video lecture](https://www.youtube.com/playlist?list=PLQ-85lQlPqFMEcdAi0yF015RgmowtsvwT) useful.
 
 Example sequences from [Rosalind](http://rosalind.info/problems/ba2g/) contain up to 20 sequences. The code example from practice session will work fine on smaller data. But to use it on the real data, you need to optimise the code and possibly sampling process. Otherwise it will take too long time to run.  
 
@@ -25,5 +25,5 @@ Submit:
    of the real datasets (can be SeqLogo) and a position frequency matrix (PFM). See lecture slides or [Wikipedia](https://en.wikipedia.org/wiki/Position_weight_matrix).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYzNzE3NTkxXX0=
+eyJoaXN0b3J5IjpbMTE5NzcyNjEwOSw2NjM3MTc1OTFdfQ==
 -->
