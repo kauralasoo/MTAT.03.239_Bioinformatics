@@ -11,6 +11,7 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  6. [Introduction to R](https://courses.cs.ut.ee/2017/DM/fall/Main/RTutorial)
  7. [An Introduction to Hierarchical Modeling](http://mfviz.com/hierarchical-models/)
  8. [Plotting partial pooling in mixed-effects models](https://tjmahr.github.io/plotting-partial-pooling-in-mixed-effects-models/)
+ 9. [Statistics for biologists](https://www.nature.com/collections/qghhqm/pointsofsignificance) 
 
 ## Topics
 
@@ -25,6 +26,9 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  2. [Homework 2](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW2.md)
  3. [Homework 3](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW3.md)
  4. [Homework 4](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW4.md)
+ 5. [Homework 5](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW5.md)
+ 6. [Homework 6](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW6.md)
+ 7. [Homework 7](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW7.md)
 
 ## Related courses
 
@@ -35,5 +39,6 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM4NDU0OTk1XX0=
+eyJoaXN0b3J5IjpbMTc3NTc4NzY0LC0yMDQwMTcyODAwLDI4Mj
+U1OTEyMl19
 -->
