@@ -165,7 +165,7 @@ filtered_genes
 
 Save the results to disk:
 ```{r}
-write.table(filtered_genes, "../data/naive_vs_IFNg_gene_list.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+write.table(filtered_genes, "naive_vs_IFNg_gene_list.txt", sep = "\t", quote = FALSE, row.names = FALSE)
 ```
 
 
