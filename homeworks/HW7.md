@@ -10,12 +10,14 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
 
 For all three analyses, report the posterior probabilities for all 5 hypothesis (H0-H4). To remind yourself what the hypotheses  were, have a look at the [original paper](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383). 
 
+In all three cases, make two manha 
+
 ## Task 2: Understanding the impact of prior probabilities on colocalisation.
 
 ## Task 3: How sensitive is colocalisation to prior probabilities? Explore this at the PTK2B and TRAF1 loci.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNTExMDc3OCwtODc2MTQxMDc2LDIwMz
-EzMzcxLC0xNTI3ODI1MDAxXX0=
+eyJoaXN0b3J5IjpbLTEwNTgzMTc2NzAsLTg3NjE0MTA3NiwyMD
+MxMzM3MSwtMTUyNzgyNTAwMV19
 -->
