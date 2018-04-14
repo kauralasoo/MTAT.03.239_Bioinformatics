@@ -1,6 +1,8 @@
 # Homework 7
 
-## Task 1: Colocalisation between CD14 gene and protein expression
+## Task 1: Estimating colocalisation between gene expression and disease associations.
+
+
 
 ## Task 2: PTK2B and ICOSLG: Do chromatin accessibility and gene expression QTLs colocalises with diease risk loci?
 
@@ -8,6 +10,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NjE0MTA3NiwyMDMxMzM3MSwtMTUyNz
-gyNTAwMV19
+eyJoaXN0b3J5IjpbNDM2NzY0NTA0LC04NzYxNDEwNzYsMjAzMT
+MzNzEsLTE1Mjc4MjUwMDFdfQ==
 -->
