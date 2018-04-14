@@ -10,7 +10,7 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
 
 For all three analyses, report the posterior probabilities for all 5 hypothesis (H0-H4). To remind yourself what the hypotheses  were, have a look at the [original paper](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383).  Which of these three gene expression signals colocalise with the disease association?
 
-In all three cases, make also Manhattan plots for both the disease and gene expression associations. On both plots, mark the lead eQTL variant in red and the lead GWAS variant in blue. Also, report t
+In all three cases, make also Manhattan plots for both the disease and gene expression associations. On both plots, mark the lead eQTL variant in red and the lead GWAS variant in blue. Also, report the p-values for these two variants for both of the traits (4 p-values in total). For a given trait (gene expression or disease) are the p-values simila 
 
 ## Task 2: Understanding the impact of prior probabilities on colocalisation.
 
@@ -18,6 +18,6 @@ In all three cases, make also Manhattan plots for both the disease and gene expr
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NjgxMzg0OSwtODc2MTQxMDc2LDIwMz
+eyJoaXN0b3J5IjpbMTk3MTY5Mjc5MCwtODc2MTQxMDc2LDIwMz
 EzMzcxLC0xNTI3ODI1MDAxXX0=
 -->
