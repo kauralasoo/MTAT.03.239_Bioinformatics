@@ -2,7 +2,7 @@
 
 ## Task 1: Estimating colocalisation between gene expression and disease associations.
 
-Based on the colocalisation tutorial available [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/colocalisation/Introduction_to_coloc.md) and using the default prior probabilites of coloc (p1 = p2 = 1e-4, p12 = 1e-5), estimate the posterior probability of colocalisation between the following traits:
+Based on the colocalisation tutorial available [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/colocalisation/Introduction_to_coloc.md) and using the default prior probabilites of coloc (p1 = p2 = 1e-4, p12 = 1e-5), estimate the posterior probability of colocalisation (PP4) of genetic associations for the following traits:
 
  - Expression of PTK2B gene in the naive condition and Alzheimer's disease (AD).
  - Expression of ICOSLG gene in the naive condition and ulcerative colitis (UC).
@@ -14,6 +14,6 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MjUwMjQwNiwtODc2MTQxMDc2LDIwMz
-EzMzcxLC0xNTI3ODI1MDAxXX0=
+eyJoaXN0b3J5IjpbLTE3MTY3NDQ0NDIsLTg3NjE0MTA3NiwyMD
+MxMzM3MSwtMTUyNzgyNTAwMV19
 -->
