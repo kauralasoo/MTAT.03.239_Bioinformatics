@@ -19,11 +19,11 @@ Repeat the colocalisation analyses that you did in Task 1, but now change the pr
 How do the results for the three colocalisations from Task 1 change? Are the TRAF1 and PTK2B associations influenced differently the the change in prior probabilities? If yes, can you understand why?  (HINT: Reading case studies in the [original paper](%28http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383)) might again be helpful. 
 
 ## Task 3: How does the length of the genomic region influence colocalisation results?
-Repe
+Repeat the colocalisation analysis with the priors that you used in Task 2 but 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjU5NzE3MDYsLTg3NjE0MTA3NiwyMD
-MxMzM3MSwtMTUyNzgyNTAwMV19
+eyJoaXN0b3J5IjpbMzgwNjg1MDc0LC04NzYxNDEwNzYsMjAzMT
+MzNzEsLTE1Mjc4MjUwMDFdfQ==
 -->
