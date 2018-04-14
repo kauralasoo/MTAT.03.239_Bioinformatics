@@ -12,16 +12,16 @@ For all three analyses, report the posterior probabilities for all 5 hypothesis 
 
 In all three cases, make also Manhattan plots for both the disease and gene expression associations. On both plots, mark the lead eQTL variant in red and the lead GWAS variant in blue. Also, report the p-values for these two variants for both of the traits (4 p-values in total). For a given trait (gene expression or disease) are the p-values similar or different? Does this reflect the colocalisation posterior probabilities (PP4)?
 
-## Task 2: How do the prior probabilities influence colocalisation? (1.5 points)
+## Task 2: How do the prior probabilities influence colocalisation results? (1.5 points)
 
 Repeat the colocalisation analyses that you did in Task 1, but now change the prior probabilites to the ones recommended in the paper (p1 = p2 = 1e-4, p12 = **1e-6**). Note that although the paper and the software were written by the same authors, they recommend different prior probabilities. How can this new lower p12 prior probability be interpreted? (HINT: Read the [original paper](%28http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383)). 
 
 How do the results for the three colocalisations from Task 1 change? Are the TRAF1 and PTK2B associations influenced differently the the change in prior probabilities? If yes, can you understand why?  (HINT: Reading case studies in the [original paper](%28http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383)) might again be helpful. 
 
-## Task 3: How does the length of the g
+## Task 3: How does the length of the genomic region influence colocalisation results?
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODAxMDUzOCwtODc2MTQxMDc2LDIwMz
+eyJoaXN0b3J5IjpbMTU3NzcyMDE2NywtODc2MTQxMDc2LDIwMz
 EzMzcxLC0xNTI3ODI1MDAxXX0=
 -->
