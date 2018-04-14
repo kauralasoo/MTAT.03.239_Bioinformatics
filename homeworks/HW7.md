@@ -14,12 +14,14 @@ In all three cases, make also Manhattan plots for both the disease and gene expr
 
 ## Task 2: Understanding the impact of prior probabilities on colocalisation.
 
-Repeat the colocalisation analyses that you did in Task 2, but now change the prior probabilites to the ones recommended in the paper (p1 = p2 = 1e-4, p12 = 1e-6). Note that the paper and the soft How can this new lower p12 prior probability be interpreted? (HINT: Read the [original paper](%28http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383)). 
+Repeat the colocalisation analyses that you did in Task 2, but now change the prior probabilites to the ones recommended in the paper (p1 = p2 = 1e-4, p12 = **1e-6**). Note that although the paper and the software were written by the same authors, they recommend different prior probabilities. How can this new lower p12 prior probability be interpreted? (HINT: Read the [original paper](%28http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383)). 
+
+How do the re
 
 ## Task 3: How sensitive is colocalisation to prior probabilities? Explore this at the PTK2B and TRAF1 loci.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTQxNTkyNywtODc2MTQxMDc2LDIwMz
-EzMzcxLC0xNTI3ODI1MDAxXX0=
+eyJoaXN0b3J5IjpbODkzMTg2NDIzLC04NzYxNDEwNzYsMjAzMT
+MzNzEsLTE1Mjc4MjUwMDFdfQ==
 -->
