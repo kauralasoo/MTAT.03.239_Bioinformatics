@@ -8,7 +8,7 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
  - Expression of ICOSLG gene in the naive condition and ulcerative colitis (UC).
  - Expression of the TRAF1 gene and rheumatoid arthritis, both in the naive as well as in the IFNg + Salmonella condition.
 
-For all three analyses, report the posterior probabilites for 
+For all three analyses, report the posterior probabilities for for all 5 hypothesis. To remind yourself what they were, have a look at the original paper. 
 
 ## Task 2: Understanding the impact of prior probabilities on colocalisation.
 
@@ -16,6 +16,6 @@ For all three analyses, report the posterior probabilites for
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NTkwMjY1MSwtODc2MTQxMDc2LDIwMz
+eyJoaXN0b3J5IjpbLTYxNDU1Mjk1OCwtODc2MTQxMDc2LDIwMz
 EzMzcxLC0xNTI3ODI1MDAxXX0=
 -->
