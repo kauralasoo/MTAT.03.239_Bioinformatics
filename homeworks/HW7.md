@@ -6,7 +6,7 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
 
  - Expression of PTK2B gene in the naive condition and Alzheimer's disease (AD).
  - Expression of ICOSLG gene in the naive condition and ulcerative colitis (UC).
- - Expression of the TRAF1 gene and 
+ - Expression of the TRAF1 gene and rheumatoid arthritis, b
 
 ## Task 2: Understanding the impact of prior probabilities on colocalisation.
 
@@ -14,6 +14,6 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTY3NDQ0NDIsLTg3NjE0MTA3NiwyMD
-MxMzM3MSwtMTUyNzgyNTAwMV19
+eyJoaXN0b3J5IjpbLTY3ODU1MjIwMiwtODc2MTQxMDc2LDIwMz
+EzMzcxLC0xNTI3ODI1MDAxXX0=
 -->
