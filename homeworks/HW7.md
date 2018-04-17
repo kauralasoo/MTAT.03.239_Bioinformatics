@@ -10,7 +10,8 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
 
 You can find all of the data here:
 
- 1. eQTL summary statistics
+ 1. [eQTL summary statistics](https://zenodo.org/record/1158560)
+ 2. Disease associatio
 
 In all three cases, use the region +/- 200 kb from the lead eQTL variant. For all three analyses, report the posterior probabilities for all 5 hypothesis (H0-H4). To remind yourself what the hypotheses  were, have a look at the [original paper](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383).  Which of these three gene expression signals colocalise with the disease association?
 
@@ -28,7 +29,7 @@ Repeat the colocalisation analysis with the priors that you used in Task 2 but n
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTIwMjMwMTUsMTM1ODA5MjA2MiwxMT
-M5NzA1MjYwLC04NzYxNDEwNzYsMjAzMTMzNzEsLTE1Mjc4MjUw
-MDFdfQ==
+eyJoaXN0b3J5IjpbLTM0NTU4MjQwOCwxMzU4MDkyMDYyLDExMz
+k3MDUyNjAsLTg3NjE0MTA3NiwyMDMxMzM3MSwtMTUyNzgyNTAw
+MV19
 -->
