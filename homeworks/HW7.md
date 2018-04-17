@@ -8,6 +8,10 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
  2. Expression of ICOSLG gene in the naive condition and ulcerative colitis (UC).
  3. Expression of the TRAF1 gene and rheumatoid arthritis, both in the naive as well as in the IFNg + Salmonella condition.
 
+You can find all of the data here:
+
+ 1. eQTL summary statistics
+
 In all three cases, use the region +/- 200 kb from the lead eQTL variant. For all three analyses, report the posterior probabilities for all 5 hypothesis (H0-H4). To remind yourself what the hypotheses  were, have a look at the [original paper](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383).  Which of these three gene expression signals colocalise with the disease association?
 
 In all three cases, make also Manhattan plots for both the disease and gene expression associations. On both plots, mark the lead eQTL variant in red and the lead GWAS variant in blue. Also, report the p-values for these two variants for both of the traits (4 p-values in total). For a given trait (gene expression or disease) are the p-values similar or different? Does this reflect the colocalisation posterior probabilities (PP4)?
@@ -24,6 +28,7 @@ Repeat the colocalisation analysis with the priors that you used in Task 2 but n
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1ODA5MjA2MiwxMTM5NzA1MjYwLC04Nz
-YxNDEwNzYsMjAzMTMzNzEsLTE1Mjc4MjUwMDFdfQ==
+eyJoaXN0b3J5IjpbLTEzNTIwMjMwMTUsMTM1ODA5MjA2MiwxMT
+M5NzA1MjYwLC04NzYxNDEwNzYsMjAzMTMzNzEsLTE1Mjc4MjUw
+MDFdfQ==
 -->
