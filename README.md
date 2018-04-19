@@ -41,6 +41,5 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjczNjM4ODUsLTIwNDAxNzI4MDAsMjgyNT
-U5MTIyXX0=
+eyJoaXN0b3J5IjpbNjczNjM4ODVdfQ==
 -->
