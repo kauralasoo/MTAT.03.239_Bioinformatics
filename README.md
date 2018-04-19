@@ -29,6 +29,8 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  5. [Homework 5](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW5.md)
  6. [Homework 6](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW6.md)
  7. [Homework 7](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW7.md)
+ 8. [Homework 8](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW8.md)
+
 
 ## Related courses
 
@@ -39,6 +41,6 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTc4NzY0LC0yMDQwMTcyODAwLDI4Mj
-U1OTEyMl19
+eyJoaXN0b3J5IjpbNjczNjM4ODUsLTIwNDAxNzI4MDAsMjgyNT
+U5MTIyXX0=
 -->
