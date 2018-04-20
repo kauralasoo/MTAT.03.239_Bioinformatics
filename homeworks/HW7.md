@@ -6,7 +6,7 @@ Based on the colocalisation tutorial available [here](https://github.com/kaurala
 
  1. Expression of PTK2B gene in the naive condition and Alzheimer's disease (AD)
  2. Expression of ICOSLG gene in the naive condition and ulcerative colitis (UC).
- 3. Expression of the TRAF1 gene and rheumatoid arthritis, both in the naive as well as in the IFNg + Salmonella condition.
+ 3. Expression of the TRAF1 gene in the IFNg + Salmonella condition and rheumatoid arthritis (RA).
 
 You can find all of the data here:
 
@@ -29,7 +29,7 @@ Repeat the colocalisation analysis with the priors that you used in Task 2 but n
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMyMDc2MDEyLDEzNTgwOTIwNjIsMTEzOT
-cwNTI2MCwtODc2MTQxMDc2LDIwMzEzMzcxLC0xNTI3ODI1MDAx
-XX0=
+eyJoaXN0b3J5IjpbLTE5MTE5MTA5MzIsMzMyMDc2MDEyLDEzNT
+gwOTIwNjIsMTEzOTcwNTI2MCwtODc2MTQxMDc2LDIwMzEzMzcx
+LC0xNTI3ODI1MDAxXX0=
 -->
