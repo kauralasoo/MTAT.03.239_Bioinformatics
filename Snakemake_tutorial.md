@@ -94,8 +94,19 @@ Finally, you need to specify the configuration file when running Snakemake:
 	snakemake -p out.txt --configfile config.yaml
 
 ## Using Snakemake to submit jobs on the HPC
-To submit jobs to the HPC, you need to specify the maximum amount of memory that your job requires as well as the number CPU cores. Fortunately, you specify those easily for each Snakemake rule. You just need to add the `threads` and `resources` directives. You can read more about these options in the Snakemake documentation.
+To submit jobs to the HPC, you need to specify the maximum amount of memory that your job requires as well as the number CPU cores. Fortunately, you specify those easily for each Snakemake rule. You just need to add the `threads` and `resources` directives. You can read more about these options in the [Snakemake documentation](http://snakemake.readthedocs.io/en/stable/tutorial/advanced.html).
+
+	#Rule that performs the alignments
+	rule align_reads:
+		input:
+			fastq1 = "data/{sample}.1.fastq.gz",
+			fastq2 = "data/{sample}.2.fastq.gz"
+		output:
+			bam = "results/{sample}.bam"
+			
+		shell:
+			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMjE3NzYxOSw2MDIxMzM1NTQsLTEyMj
+eyJoaXN0b3J5IjpbLTY0OTEzNzEyNCw2MDIxMzM1NTQsLTEyMj
 kwNzIyOTNdfQ==
 -->
