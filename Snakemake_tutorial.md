@@ -67,7 +67,7 @@ First let's create a configuration file called `config.yaml` with the following 
 
 	samples: [eipl_A, eipl_C, fikt_A, fikt_C]
 
-Next, you need to just tell Snakemake to find sample list from the configuration file:
+Next, you need to modify the Snakefile so that it would now take the sample list from the configuration file:
 	
 	#Rule that performs the alignments
 	rule align_reads:
@@ -89,7 +89,8 @@ Next, you need to just tell Snakemake to find sample list from the configuration
 		shell:
 			"echo 'Done!' > {output}"
 
+Finally, you need to 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkwMjg0ODEsLTEyMjkwNzIyOTNdfQ
-==
+eyJoaXN0b3J5IjpbMjA1NjgxODU5LC0xMjI5MDcyMjkzXX0=
 -->
