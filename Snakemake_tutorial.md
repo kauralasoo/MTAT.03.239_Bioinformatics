@@ -65,11 +65,10 @@ Instead of specifying the list of sample names in the Snakefile, you can also pu
 
 First let's create a configuration file called `config.yaml` with the following content:
 
-	samples: ['eipl_A', 'eipl_C', 'fikt_A', 'fikt_C']
+	samples: [eipl_A, eipl_C, fikt_A, fikt_C]
 
-
+Next, you need to just thel
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDgzNDg0MTIsLTEyMjkwNzIyOTNdfQ
-==
+eyJoaXN0b3J5IjpbNzExMTM1NTEyLC0xMjI5MDcyMjkzXX0=
 -->
