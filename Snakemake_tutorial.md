@@ -59,8 +59,10 @@ The simplest option is to specify the list of samples at the top of your Snakema
 You can now execute this Snakefile using the following command:
 
 	snakemake -p out.txt
-		
+
+## Using configuration files
+Instead of specifying the list of sample names in the Snakefile, you can also 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjkwNzIyOTNdfQ==
+eyJoaXN0b3J5IjpbLTY3NTg2NzAxNiwtMTIyOTA3MjI5M119
 -->
