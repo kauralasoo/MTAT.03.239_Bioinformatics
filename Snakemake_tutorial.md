@@ -96,7 +96,7 @@ Finally, you need to specify the configuration file when running Snakemake:
 ## Using Snakemake to submit jobs on the HPC
 To submit jobs to the HPC, you need to specify the maximum amount of memory that your job requires as well as the number CPU cores. Fortunately, you specify those easily for each Snakemake rule. You just need to add the `threads` and `resources` directives. You can read more about these options in the [Snakemake documentation](http://snakemake.readthedocs.io/en/stable/tutorial/advanced.html).
 
-Finally, HP
+Finally, HPC at the University of Tartu has a lot of software installed using the module 
 
 	#Rule that performs the alignments
 	rule align_reads:
@@ -114,6 +114,6 @@ Finally, HP
 			hisat2 -p {threads} -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}
 			"""
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMzAxMzI5MCwxMzA4MzAyMTg1LDYwMj
-EzMzU1NCwtMTIyOTA3MjI5M119
+eyJoaXN0b3J5IjpbLTIwNjMxMjUyNzUsMTMwODMwMjE4NSw2MD
+IxMzM1NTQsLTEyMjkwNzIyOTNdfQ==
 -->
