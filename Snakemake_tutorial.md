@@ -129,8 +129,10 @@ Remember to **always run Snakemake with the `--cluster` option** when you are us
 
 Finally, to make sure that your Snakemake process is not killed when you log out of the head node, I usually run it within a `screen` session. [Click here](https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) to learn how to use `screen`. 
 
+All of the example files to run Snakemake on the HPC are here:
+https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/tree/master/Snakemake_example
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI5MTgxNTY1LDE1MTE4Nzk2MjUsLTQyMj
-M2ODM2MiwxMzA4MzAyMTg1LDYwMjEzMzU1NCwtMTIyOTA3MjI5
-M119
+eyJoaXN0b3J5IjpbLTM5MDg0MjEwNiwyMjkxODE1NjUsMTUxMT
+g3OTYyNSwtNDIyMzY4MzYyLDEzMDgzMDIxODUsNjAyMTMzNTU0
+LC0xMjI5MDcyMjkzXX0=
 -->
