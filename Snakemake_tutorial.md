@@ -96,7 +96,7 @@ Finally, you need to specify the configuration file when running Snakemake:
 ## Using Snakemake to submit jobs on the HPC
 To submit jobs to the HPC, you need to specify the maximum amount of memory that your job requires as well as the number CPU cores. Fortunately, you specify those easily for each Snakemake rule. You just need to add the `threads` and `resources` directives. You can read more about these options in the [Snakemake documentation](http://snakemake.readthedocs.io/en/stable/tutorial/advanced.html).
 
-Finally, HPC at the University of Tartu has a lot of software installed using the modules system and you can add them to your path using the `module load` command. For example, to add HISAT2 to your path, you can run  `module load hisat-2.0.4`. More information is available [here](https://hpc.ut.ee/en_US/web/guest/using-modules).
+HPC at the University of Tartu has a lot of software installed using the modules system and you can add them to your path using the `module load` command. For example, to add HISAT2 to your path, you can run  `module load hisat-2.0.4`. More information is available [here](https://hpc.ut.ee/en_US/web/guest/using-modules).
 
 	#Rule that performs the alignments
 	rule align_reads:
@@ -113,8 +113,8 @@ Finally, HPC at the University of Tartu has a lot of software installed using th
 			module load hisat-2.0.4
 			hisat2 -p {threads} -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}
 			"""
-
+Next, you need to tell Snakemake how to submit SLURM jobs. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMjM2ODM2MiwxMzA4MzAyMTg1LDYwMj
-EzMzU1NCwtMTIyOTA3MjI5M119
+eyJoaXN0b3J5IjpbMTUxMTg3OTYyNSwtNDIyMzY4MzYyLDEzMD
+gzMDIxODUsNjAyMTMzNTU0LC0xMjI5MDcyMjkzXX0=
 -->
