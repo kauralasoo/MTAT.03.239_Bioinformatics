@@ -103,10 +103,12 @@ To submit jobs to the HPC, you need to specify the maximum amount of memory that
 			fastq2 = "data/{sample}.2.fastq.gz"
 		output:
 			bam = "results/{sample}.bam"
-			
+		resources:
+			mem = 8000
+		threads: 1
 		shell:
 			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0OTEzNzEyNCw2MDIxMzM1NTQsLTEyMj
-kwNzIyOTNdfQ==
+eyJoaXN0b3J5IjpbOTI1MjYxMTQ3LDYwMjEzMzU1NCwtMTIyOT
+A3MjI5M119
 -->
