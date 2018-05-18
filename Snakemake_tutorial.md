@@ -120,11 +120,13 @@ We are now ready to run Snakemake on the HPC
 	module load python-3.6.0 #Snakemake is installed under Python 3.6
 	snakemake --cluster snakemake_submit_UT.py -p out.txt --configfile config.yaml --jobs 100
 
-The --jobs option tells Snakemake how many parallel SLURM jobs to submit at 
+The `--jobs` option tells Snakemake how many parallel SLURM jobs to run at any one time.
+
+Remember to always run sna
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMjQyNzMzOCwxNTExODc5NjI1LC00Mj
-IzNjgzNjIsMTMwODMwMjE4NSw2MDIxMzM1NTQsLTEyMjkwNzIy
-OTNdfQ==
+eyJoaXN0b3J5IjpbLTIwMTYyOTExNTgsMTUxMTg3OTYyNSwtND
+IyMzY4MzYyLDEzMDgzMDIxODUsNjAyMTMzNTU0LC0xMjI5MDcy
+MjkzXX0=
 -->
