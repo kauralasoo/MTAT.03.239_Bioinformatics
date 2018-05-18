@@ -93,8 +93,9 @@ Finally, you need to specify the configuration file when running Snakemake:
 
 	snakemake -p out.txt --configfile config.yaml
 
-##
+## Using Snakemake to submit jobs on the HPC
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MTYxMzc3OCw2MDIxMzM1NTQsLTEyMj
+eyJoaXN0b3J5IjpbLTQ5OTY2MTQ3Niw2MDIxMzM1NTQsLTEyMj
 kwNzIyOTNdfQ==
 -->
