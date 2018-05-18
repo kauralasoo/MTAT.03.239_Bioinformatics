@@ -63,9 +63,12 @@ You can now execute this Snakefile using the following command:
 ## Using configuration files
 Instead of specifying the list of sample names in the Snakefile, you can also put them into a configuration file. This helps to separate workflow logic (which tools to run and in which order) from dataset specific parameters (list of samples, etc.). 
 
-First let's create a configuration file called 
+First let's create a configuration file called `config.yaml` with the following content:
+samples: ['eipl_A', 'eipl_C', 'fikt_A', 'fikt_C']
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjkyOTMzMTMsLTEyMjkwNzIyOTNdfQ
+eyJoaXN0b3J5IjpbLTE0OTczNDQ4MDYsLTEyMjkwNzIyOTNdfQ
 ==
 -->
