@@ -107,8 +107,8 @@ To submit jobs to the HPC, you need to specify the maximum amount of memory that
 			mem = 8000
 		threads: 1
 		shell:
-			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
+			"hisat2 -p {threads} -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI1MjYxMTQ3LDYwMjEzMzU1NCwtMTIyOT
-A3MjI5M119
+eyJoaXN0b3J5IjpbMTMwODMwMjE4NSw2MDIxMzM1NTQsLTEyMj
+kwNzIyOTNdfQ==
 -->
