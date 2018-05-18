@@ -93,7 +93,8 @@ Finally, you need to specify the configuration file when running Snakemake:
 
 	snakemake -p out.txt --configfile config.yaml
 
-
+##
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAyMTMzNTU0LC0xMjI5MDcyMjkzXX0=
+eyJoaXN0b3J5IjpbMTE2MTYxMzc3OCw2MDIxMzM1NTQsLTEyMj
+kwNzIyOTNdfQ==
 -->
