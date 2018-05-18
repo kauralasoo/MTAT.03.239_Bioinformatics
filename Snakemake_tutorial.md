@@ -61,9 +61,11 @@ You can now execute this Snakefile using the following command:
 	snakemake -p out.txt
 
 ## Using configuration files
-Instead of specifying the list of sample names in the Snakefile, you can also put them into a configuration file. This helps to separate workflow logic from dataset specific parame
+Instead of specifying the list of sample names in the Snakefile, you can also put them into a configuration file. This helps to separate workflow logic (which tools to run and in which order) from dataset specific parameters (list of samples, etc.). 
+
+First let's create a configuration file called 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzczMjQwMTUsLTEyMjkwNzIyOTNdfQ
+eyJoaXN0b3J5IjpbLTE1NjkyOTMzMTMsLTEyMjkwNzIyOTNdfQ
 ==
 -->
