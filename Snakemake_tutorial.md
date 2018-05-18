@@ -115,9 +115,13 @@ HPC at the University of Tartu has a lot of software installed using the modules
 			"""
 Next, you need to tell Snakemake how to submit SLURM jobs. I have written a short [Python script](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Snakemake_example/snakemake_submit_UT.py) for that and you should be able to use if without modifications.
 
+We are now ready to run Snakemake on the HPC
+
+	module load python-3.6.0 #Snakemake is installed under Python 3.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjI0OTYzMCwxNTExODc5NjI1LC00Mj
+eyJoaXN0b3J5IjpbMTcyNTMyODk0MiwxNTExODc5NjI1LC00Mj
 IzNjgzNjIsMTMwODMwMjE4NSw2MDIxMzM1NTQsLTEyMjkwNzIy
 OTNdfQ==
 -->
