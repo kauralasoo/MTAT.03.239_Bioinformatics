@@ -89,8 +89,11 @@ Next, you need to modify the Snakefile so that it would now take the sample list
 		shell:
 			"echo 'Done!' > {output}"
 
-Finally, you need to 
+Finally, you need to specify the configuration file when running Snakemake:
+
+	snakemake -p out.txt --configfile config.yaml
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NjgxODU5LC0xMjI5MDcyMjkzXX0=
+eyJoaXN0b3J5IjpbNjAyMTMzNTU0LC0xMjI5MDcyMjkzXX0=
 -->
