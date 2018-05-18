@@ -124,10 +124,12 @@ The `--jobs` option tells Snakemake how many parallel SLURM jobs to run at any o
 
 Remember to **always run Snakemake with the `--cluster` option** when you are using it on the HPC, because otherwise it will run all of the computations on the head node (and you will very quickly get a very angry email from someone). 
 
-Finally, to make sure that your Snakemake process is not killed when you log out of the head node, I usually run it within a screen session. See here to learn how to use screen. 
+You also need to have folder with the name SlurmOut in your 
+
+Finally, to make sure that your Snakemake process is not killed when you log out of the head node, I usually run it within a `screen` session. [Click here](https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) to learn how to use `screen`. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjkzNzg3NjYsMTUxMTg3OTYyNSwtND
+eyJoaXN0b3J5IjpbLTEwMzQxNjI0NDQsMTUxMTg3OTYyNSwtND
 IyMzY4MzYyLDEzMDgzMDIxODUsNjAyMTMzNTU0LC0xMjI5MDcy
 MjkzXX0=
 -->
