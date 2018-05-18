@@ -94,8 +94,8 @@ Finally, you need to specify the configuration file when running Snakemake:
 	snakemake -p out.txt --configfile config.yaml
 
 ## Using Snakemake to submit jobs on the HPC
-
+To submit jobs to the HPC, you need to specify the maximum amount of memory that your job requires as well as the number CPU cores. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5OTY2MTQ3Niw2MDIxMzM1NTQsLTEyMj
-kwNzIyOTNdfQ==
+eyJoaXN0b3J5IjpbLTEwODc5Nzc4MzUsNjAyMTMzNTU0LC0xMj
+I5MDcyMjkzXX0=
 -->
