@@ -122,11 +122,10 @@ We are now ready to run Snakemake on the HPC
 
 The `--jobs` option tells Snakemake how many parallel SLURM jobs to run at any one time.
 
-Remember to **always run Snakemake with the `--cluster` option** when you are using it on the HPC, because otherwise it will run all of the computations on the head node (and you will very quickly get a very angry email from someone).
-
+Remember to **always run Snakemake with the `--cluster` option** when you are using it on the HPC, because otherwise it will run all of the computations on the head node (and you will very quickly get a very angry email from someone). Finally, to make sure that your snakemake process is not killed when you log out of the HPC, I usually run it within a screen session. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTI1OTk5NjksMTUxMTg3OTYyNSwtND
-IyMzY4MzYyLDEzMDgzMDIxODUsNjAyMTMzNTU0LC0xMjI5MDcy
-MjkzXX0=
+eyJoaXN0b3J5IjpbMTMzOTU1NTg1OSwxNTExODc5NjI1LC00Mj
+IzNjgzNjIsMTMwODMwMjE4NSw2MDIxMzM1NTQsLTEyMjkwNzIy
+OTNdfQ==
 -->
