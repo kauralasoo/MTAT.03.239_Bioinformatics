@@ -113,8 +113,9 @@ HPC at the University of Tartu has a lot of software installed using the modules
 			module load hisat-2.0.4
 			hisat2 -p {threads} -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}
 			"""
-Next, you need to tell Snakemake how to submit SLURM jobs. 
+Next, you need to tell Snakemake how to submit SLURM jobs. I have written a short Python script for that a
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTg3OTYyNSwtNDIyMzY4MzYyLDEzMD
-gzMDIxODUsNjAyMTMzNTU0LC0xMjI5MDcyMjkzXX0=
+eyJoaXN0b3J5IjpbMzI0NTU5MjQ2LDE1MTE4Nzk2MjUsLTQyMj
+M2ODM2MiwxMzA4MzAyMTg1LDYwMjEzMzU1NCwtMTIyOTA3MjI5
+M119
 -->
