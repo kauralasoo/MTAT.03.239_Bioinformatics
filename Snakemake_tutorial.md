@@ -67,8 +67,29 @@ First let's create a configuration file called `config.yaml` with the following 
 
 	samples: [eipl_A, eipl_C, fikt_A, fikt_C]
 
-Next, you need to just thel
+Next, you need to just tell Snakemake to find sample list from the configuration file:
+	
+	#Rule that performs the alignments
+	rule align_reads:
+		input:
+			fastq1 = "data/{sample}.1.fastq.gz",
+			fastq2 = "data/{sample}.2.fastq.gz"
+		output:
+			bam = "results/{sample}.bam"
+		shell:
+			"hisat2 -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}"
+	
+	#One meta rule whose input files are all 
+	#of the desired output files
+	rule make_all:
+		input:
+			expand("results/{sample}.bam", sample=config["samples"])
+		output:
+			"out.txt"
+		shell:
+			"echo 'Done!' > {output}"
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExMTM1NTEyLC0xMjI5MDcyMjkzXX0=
+eyJoaXN0b3J5IjpbLTIxMTkwMjg0ODEsLTEyMjkwNzIyOTNdfQ
+==
 -->
