@@ -123,7 +123,7 @@ And then run Snakemake:
 	module load python-3.6.0 #Snakemake is installed under Python 3.6
 	snakemake --cluster snakemake_submit_UT.py -p out.txt --configfile config.yaml --jobs 20
 
-The `--jobs` option tells Snakemake how many parallel SLURM jobs to run at any one time. If your jobs involve reading large imput files form the disk, you should probably limit the number of concurrent jobs to something 
+The `--jobs` option tells Snakemake how many parallel SLURM jobs to run at any one time. **If your jobs involve reading large input files form the disk, you should probably limit the number of concurrent jobs to something relatively small (eg 10-20).**
 
 Remember to **always run Snakemake with the `--cluster` option** when you are using it on the HPC, because otherwise it will run all of the computations on the head node (and you will very quickly get a very angry email from someone). 
 
@@ -132,7 +132,7 @@ Finally, to make sure that your Snakemake process is not killed when you log out
 All of the example files to run Snakemake on the HPC are here:
 https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/tree/master/Snakemake_example
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQ3MTkzMTAsLTM5MDg0MjEwNiwyMj
-kxODE1NjUsMTUxMTg3OTYyNSwtNDIyMzY4MzYyLDEzMDgzMDIx
-ODUsNjAyMTMzNTU0LC0xMjI5MDcyMjkzXX0=
+eyJoaXN0b3J5IjpbODYxNzAwMzY2LC0zOTA4NDIxMDYsMjI5MT
+gxNTY1LDE1MTE4Nzk2MjUsLTQyMjM2ODM2MiwxMzA4MzAyMTg1
+LDYwMjEzMzU1NCwtMTIyOTA3MjI5M119
 -->
