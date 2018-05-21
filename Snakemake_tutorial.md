@@ -113,8 +113,26 @@ HPC at the University of Tartu has a lot of software installed using the modules
 			module load hisat-2.0.4
 			hisat2 -p {threads} -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}
 			"""
-Next, you need to tell Snakemake how to submit SLURM jobs. 
+Next, you need to tell Snakemake how to submit SLURM jobs. I have written a short [Python script](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Snakemake_example/snakemake_submit_UT.py) for that and you should be able to use if without modifications.
+
+We are now almost ready to run Snakemake on the HPC, but first we need to make a directory for the SLURM log files:
+	
+	mkdir SlurmOut
+And then run Snakemake:
+
+	module load python-3.6.0 #Snakemake is installed under Python 3.6
+	snakemake --cluster snakemake_submit_UT.py -p out.txt --configfile config.yaml --jobs 20
+
+The `--jobs` option tells Snakemake how many parallel SLURM jobs to run at any one time. **If your jobs involve reading large input files form the disk, you should probably limit the number of concurrent jobs to something relatively small (eg 10-20).**
+
+Remember to **always run Snakemake with the `--cluster` option** when you are using it on the HPC, because otherwise it will run all of the computations on the head node (and you will very quickly get a very angry email from someone). 
+
+Finally, to make sure that your Snakemake process is not killed when you log out of the head node, I usually run it within a `screen` session. [Click here](https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) to learn how to use `screen`. 
+
+All of the example files to run Snakemake on the HPC are here:
+https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/tree/master/Snakemake_example
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTg3OTYyNSwtNDIyMzY4MzYyLDEzMD
-gzMDIxODUsNjAyMTMzNTU0LC0xMjI5MDcyMjkzXX0=
+eyJoaXN0b3J5IjpbODYxNzAwMzY2LC0zOTA4NDIxMDYsMjI5MT
+gxNTY1LDE1MTE4Nzk2MjUsLTQyMjM2ODM2MiwxMzA4MzAyMTg1
+LDYwMjEzMzU1NCwtMTIyOTA3MjI5M119
 -->
