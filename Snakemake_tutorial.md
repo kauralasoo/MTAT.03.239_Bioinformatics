@@ -115,7 +115,7 @@ HPC at the University of Tartu has a lot of software installed using the modules
 			"""
 Next, you need to tell Snakemake how to submit SLURM jobs. I have written a short [Python script](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Snakemake_example/snakemake_submit_UT.py) for that and you should be able to use if without modifications.
 
-We are now almost ready to run Snakemake on the HPC, but first we need to make a directory named **SlurmOut** for the SLURM log files. This directory has to exist, because otherwise S is not able to write SLURM output files to disk.
+We are now almost ready to run Snakemake on the HPC, but first we need to make a directory named **SlurmOut** for the SLURM log files. This directory has to exist, because otherwise Snakemake is not able to write SLURM output files to disk.
 	
 	mkdir SlurmOut
 And then run Snakemake:
@@ -132,7 +132,7 @@ Finally, to make sure that your Snakemake process is not killed when you log out
 All of the example files to run Snakemake on the HPC are here:
 https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/tree/master/Snakemake_example
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwMTUzODg1LDg2MTcwMDM2NiwtMzkwOD
+eyJoaXN0b3J5IjpbNTQ1Mjc5NDI2LDg2MTcwMDM2NiwtMzkwOD
 QyMTA2LDIyOTE4MTU2NSwxNTExODc5NjI1LC00MjIzNjgzNjIs
 MTMwODMwMjE4NSw2MDIxMzM1NTQsLTEyMjkwNzIyOTNdfQ==
 -->
