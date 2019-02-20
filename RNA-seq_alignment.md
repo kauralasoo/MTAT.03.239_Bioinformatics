@@ -23,7 +23,7 @@ First you need to get the HISAT2 software. If you are using the [University of T
 
     module load hisat-2.0.4
 
-**Remember that you should NEVER run any code on the head node of the HPC**. You should use the SLURM queue system instead. Before proceeding to the next step, you should first familiarise yourself with the SLURM system and how to submit jobs using the documentation found [here](https://hpc.ut.ee/en/slurm/).
+**Remember that you should NEVER run any code on the head node of the HPC**. You should use the SLURM queue system instead. Before proceeding to the next steps, you should first familiarise yourself with the SLURM system and how to submit jobs using the documentation found [here](https://hpc.ut.ee/en/slurm/).
 
 We can now use the FASTA file that we downloaded above to build an index of the reference genome.
 
@@ -31,7 +31,7 @@ We can now use the FASTA file that we downloaded above to build an index of the 
 	hisat2-build annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
 
 ### Download RNA-seq reads
-I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/1173306) repository. Let's download both pairs of a single paired-end RNA-seq sample (fikt_A). These fastq files only contains reads from chromosome 21.
+I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/1173306) repository. Let's download both pairs of a single paired-end RNA-seq sample (fikt_A). These fastq files only contain reads from chromosome 21.
 
 	mkdir data
 	cd data
@@ -85,6 +85,6 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3OTUxMTgyNSwtMTkwNDg1NzIwMCw2Nz
-Y4NTg1NTNdfQ==
+eyJoaXN0b3J5IjpbNTk0NDY1MjUsLTE5MDQ4NTcyMDAsNjc2OD
+U4NTUzXX0=
 -->
