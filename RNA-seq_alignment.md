@@ -19,11 +19,13 @@ Let's download the sequence for chromosme 21:
 	cd ..
 
 ### Build the HISAT2 index
-We can now use the FASTA and GFF3 filesFirst you need to get the HISAT2 software. If you are using the [University of Tartu High Performance Computing Center](https://hpc.ut.ee/en/home/), then HISAT2 is already installed for you and you can add it to your path using the modules system. Click [here](https://hpc.ut.ee/en/guides/using-modules/) to read more about modules.
+First you need to get the HISAT2 software. If you are using the [University of Tartu High Performance Computing Center](https://hpc.ut.ee/en/home/), then HISAT2 is already installed for you and you can add it to your path using the modules system. Click [here](https://hpc.ut.ee/en/guides/using-modules/) to read more about modules.
 
     module load hisat-2.0.4
 
-We can now use the FASTA file that we downloaded above to build an index of the reference genome. Remember that you should NEVER run any code on the head node of the HPC. You should use the SLURM queue system instead. Before proceeding to the next step, you should first familiarise yo
+**Remember that you should NEVER run any code on the head node of the HPC**. You should use the SLURM queue system instead. Before proceeding to the next step, you should first familiarise yourself with the SLURM system and how to submit jobs using the documentation found [here](https://hpc.ut.ee/en/slurm/).
+
+We can now use the FASTA file that we downloaded above to build an index of the reference genome.
 
 	mkdir hisat2_index
 	hisat2-build annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
@@ -83,6 +85,6 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDU5NTQ1NiwtMTkwNDg1NzIwMCw2Nz
+eyJoaXN0b3J5IjpbMTQ3OTUxMTgyNSwtMTkwNDg1NzIwMCw2Nz
 Y4NTg1NTNdfQ==
 -->
