@@ -26,7 +26,7 @@ We can now use the FASTA and GFF3 filesFirst you need to get the HISAT2 software
 We can now use the FASTA file that we downloaded above to build an index of the reference genome:
 
 	mkdir hisat2_index
-	hisat2-build Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
+	hisat2-build annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
 
 ### Download RNA-seq reads
 I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/1173306) repository. Let's download both pairs of a single paired-end RNA-seq sample (fikt_A). These fastq files only contains reads from chromosome 21.
@@ -83,5 +83,5 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0ODIwODUwNyw2NzY4NTg1NTNdfQ==
+eyJoaXN0b3J5IjpbLTE5MDQ4NTcyMDAsNjc2ODU4NTUzXX0=
 -->
