@@ -56,6 +56,10 @@ By default, HISAT2 outputs results as uncompressed SAM to the standard output. S
 
 First add samtools to your path:
 
+    module load samtools-1.9
+
+Then align with HISAT2:
+
 	mkdir results
 	hisat2 -x hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
@@ -87,6 +91,6 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwODE3NjUxNiw1OTQ0NjUyNSwtMTkwND
+eyJoaXN0b3J5IjpbLTUxOTM5MjE2MCw1OTQ0NjUyNSwtMTkwND
 g1NzIwMCw2NzY4NTg1NTNdfQ==
 -->
