@@ -54,6 +54,8 @@ Now, let's align all of the reads in these two files to the reference genome usi
 
 By default, HISAT2 outputs results as uncompressed SAM to the standard output. Since these files can be very large, it makes sense to convert them directly into binary compressed BAM format using samtools. See [wikipedia](https://en.wikipedia.org/wiki/SAMtools) and [SAM format specification](https://samtools.github.io/hts-specs/SAMv1.pdf) for more detail.
 
+First add samtools to your path:
+
 	mkdir results
 	hisat2 -x hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
@@ -85,6 +87,6 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODg4MTIxODQsNTk0NDY1MjUsLTE5MD
-Q4NTcyMDAsNjc2ODU4NTUzXX0=
+eyJoaXN0b3J5IjpbMTIwODE3NjUxNiw1OTQ0NjUyNSwtMTkwND
+g1NzIwMCw2NzY4NTg1NTNdfQ==
 -->
