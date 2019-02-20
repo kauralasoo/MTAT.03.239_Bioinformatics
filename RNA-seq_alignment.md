@@ -81,7 +81,7 @@ From the Ensembl website we need to download the gene annotations in GTF format:
 	wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz
 	cd ..
 
-Now, lets's uncompress them and extract only those genes that are on chromosome 21:
+Now, let's uncompress them and extract only those genes that are on chromosome 21:
 
 	gunzip annotations/Homo_sapiens.GRCh38.91.gtf.gz
 	grep ^21 annotations/Homo_sapiens.GRCh38.91.gtf > annotations/Homo_sapiens.GRCh38.91.chr21.gtf
@@ -91,6 +91,6 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxOTM5MjE2MCw1OTQ0NjUyNSwtMTkwND
-g1NzIwMCw2NzY4NTg1NTNdfQ==
+eyJoaXN0b3J5IjpbLTE0NTk3MTE0MTUsLTUxOTM5MjE2MCw1OT
+Q0NjUyNSwtMTkwNDg1NzIwMCw2NzY4NTg1NTNdfQ==
 -->
