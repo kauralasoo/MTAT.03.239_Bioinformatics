@@ -23,7 +23,7 @@ We can now use the FASTA and GFF3 filesFirst you need to get the HISAT2 software
 
     module load hisat-2.0.4
 
-We can now use the FASTA file that we downloaded above to build an index of the reference genome:
+We can now use the FASTA file that we downloaded above to build an index of the reference genome. Remember that you should NEVER run any code on the head n
 
 	mkdir hisat2_index
 	hisat2-build annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
@@ -83,5 +83,6 @@ We can now proceed with read counting with featureCounts
 	
 	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQ4NTcyMDAsNjc2ODU4NTUzXX0=
+eyJoaXN0b3J5IjpbNzkzNjI4OTgsLTE5MDQ4NTcyMDAsNjc2OD
+U4NTUzXX0=
 -->
