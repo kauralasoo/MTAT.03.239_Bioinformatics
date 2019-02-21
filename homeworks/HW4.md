@@ -25,5 +25,5 @@ Using the variance component analysis [tutorial](https://github.com/kauralasoo/f
 
 Note that the flow cytometry data is in its own GitHub repository: https://github.com/kauralasoo/flow_cytomtery_genetics.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTE2OTI2MDhdfQ==
+eyJoaXN0b3J5IjpbMTUyMzc2NDA0NCwtMTY1MTY5MjYwOF19
 -->
