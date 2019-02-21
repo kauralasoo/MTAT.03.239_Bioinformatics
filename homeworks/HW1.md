@@ -12,7 +12,8 @@
 ## Task 2: Using the High Performance Computing Center (1 point)
 **Learning objective:** The aim of this task is to learn how to use the [University of Tartu High Performance Computing (HPC) Center](https://hpc.ut.ee/en/home/) to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the [SLURM](https://hpc.ut.ee/en/slurm/) system when you want to run computations.
 
- 1. If you have never used the HPC before, 
+ 1. If you have never used the HPC before, go through the [introductory slides](https://docs.google.com/presentation/d/1XhA4YnnZ-Gzuyo-_PghMcu_X-fXe_EUhiW2bHoABwgI/edit#slide=id.g3308ddf0d8_2_160) to learn what it's all about. 
+ 2. Log into the HPC head node using ssh. If you are using Mac or Linux, you can do it straight from the command line. On wi
 
 ## Task 2: RNA-seq alignment (2 points)
 **Learning objective:** You will learn how RNA sequencing is used to measure gene expression and what computational steps are needed to do that. First, you will understand what the raw RNA sequencing reads (in FASTQ format) look like and how you can use alignment software (HISAT2) to find the locations in the reference genome where these reads come from. Counting the number of reads overlapping gene annotations will also show you how gene expression is measured using RNA-seq. 
@@ -35,5 +36,6 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NTcxNjU3OSwxNjQzNzQyODQ1XX0=
+eyJoaXN0b3J5IjpbMTc3NzEzMzcxOSwtOTQ1NzE2NTc5LDE2ND
+M3NDI4NDVdfQ==
 -->
