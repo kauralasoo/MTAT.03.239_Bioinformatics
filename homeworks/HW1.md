@@ -13,7 +13,7 @@
 **Learning objective:** The aim of this task is to learn how to use the [University of Tartu High Performance Computing (HPC) Center](https://hpc.ut.ee/en/home/) to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the [SLURM](https://hpc.ut.ee/en/slurm/) system when you want to run computations.
 
  1. If you have never used the HPC before, go through the [introductory slides](https://docs.google.com/presentation/d/1XhA4YnnZ-Gzuyo-_PghMcu_X-fXe_EUhiW2bHoABwgI/edit#slide=id.g3308ddf0d8_2_160) to learn what it's all about. 
- 2. Log into the head node of the rocket cluster using ssh. If you are using Mac or Linux, you can do it straight from the command line. On Windows you might need to install Putty. More instructions are available [here](https://hpc.ut.ee/en/using-ssh/). 
+ 2. Log into the head node of the rocket cluster using ssh. If you are using Mac or Linux, you can do it straight from the command line: `ssh <user_name>@rocket.hpc.ut.ee.` On Windows you might need to install Putty. More instructions are available [here](https://hpc.ut.ee/en/using-ssh/). 
  3. Submit your first jobs to the cluster by following the [SLURM](https://hpc.ut.ee/en/slurm/) tutorial and look at it's output.
  4. Learn how to transfer files between your computer and the HPC system. On Mac I prefer to use the [Cyberduck](https://cyberduck.io/) sftp client and it might work on Windows as well. Another option is [FileZilla](https://filezilla-project.org/), which should also work on all three platforms. 
 
@@ -38,6 +38,7 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDY4ODQ2MSwtNzc2NjAxOTkxLDU3MT
-c2ODM0OCwtOTQ1NzE2NTc5LDE2NDM3NDI4NDVdfQ==
+eyJoaXN0b3J5IjpbMTU2NTk3ODk4LDE4MDQ2ODg0NjEsLTc3Nj
+YwMTk5MSw1NzE3NjgzNDgsLTk0NTcxNjU3OSwxNjQzNzQyODQ1
+XX0=
 -->
