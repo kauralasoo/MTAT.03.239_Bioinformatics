@@ -13,7 +13,8 @@
 **Learning objective:** The aim of this task is to learn how to use the [University of Tartu High Performance Computing (HPC) Center](https://hpc.ut.ee/en/home/) to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the [SLURM](https://hpc.ut.ee/en/slurm/) system when you want to run computations.
 
  1. If you have never used the HPC before, go through the [introductory slides](https://docs.google.com/presentation/d/1XhA4YnnZ-Gzuyo-_PghMcu_X-fXe_EUhiW2bHoABwgI/edit#slide=id.g3308ddf0d8_2_160) to learn what it's all about. 
- 2. Log into the head node of the rocket clust using ssh. If you are using Mac or Linux, you can do it straight from the command line. On Windows you might need to install Putty. More instructions are available [here](https://hpc.ut.ee/en/using-ssh/). 
+ 2. Log into the head node of the rocket cluster using ssh. If you are using Mac or Linux, you can do it straight from the command line. On Windows you might need to install Putty. More instructions are available [here](https://hpc.ut.ee/en/using-ssh/). 
+ 3. 
 
 ## Task 2: RNA-seq alignment (2 points)
 **Learning objective:** You will learn how RNA sequencing is used to measure gene expression and what computational steps are needed to do that. First, you will understand what the raw RNA sequencing reads (in FASTQ format) look like and how you can use alignment software (HISAT2) to find the locations in the reference genome where these reads come from. Counting the number of reads overlapping gene annotations will also show you how gene expression is measured using RNA-seq. 
@@ -36,6 +37,6 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzMTQyNTYwLC05NDU3MTY1NzksMTY0Mz
+eyJoaXN0b3J5IjpbNTcxNzY4MzQ4LC05NDU3MTY1NzksMTY0Mz
 c0Mjg0NV19
 -->
