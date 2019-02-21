@@ -1,6 +1,8 @@
 # Homework 1
+## Task 1: Burrows-Wheeler Transform (BWT) (1 point)
 
-## Task 1: Getting familiar with the IGV genome browser (1 point)
+
+## Task 2: Getting familiar with the IGV genome browser (1 point)
 **Learning objective:** Gain an intuitive feeling of what the human genome looks like. How long are the genes, where they are located and what fraction of the genome codes for proteins.
 
  1. Download and run the [Integrative Genomics Viewer](http://software.broadinstitute.org/software/igv/).
@@ -38,7 +40,7 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2OTAyNzkzNSwxNDgyNDk3OTcyLDE4MD
-Q2ODg0NjEsLTc3NjYwMTk5MSw1NzE3NjgzNDgsLTk0NTcxNjU3
-OSwxNjQzNzQyODQ1XX0=
+eyJoaXN0b3J5IjpbLTQyODA0NDQ1NSwtNDY5MDI3OTM1LDE0OD
+I0OTc5NzIsMTgwNDY4ODQ2MSwtNzc2NjAxOTkxLDU3MTc2ODM0
+OCwtOTQ1NzE2NTc5LDE2NDM3NDI4NDVdfQ==
 -->
