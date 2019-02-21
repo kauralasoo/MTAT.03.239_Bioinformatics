@@ -36,5 +36,5 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MzEzOTQ4OF19
+eyJoaXN0b3J5IjpbLTIxMTIzMjI1MzQsMTE3MzEzOTQ4OF19
 -->
