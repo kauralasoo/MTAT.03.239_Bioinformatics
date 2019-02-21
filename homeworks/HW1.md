@@ -15,7 +15,7 @@
  1. If you have never used the HPC before, go through the [introductory slides](https://docs.google.com/presentation/d/1XhA4YnnZ-Gzuyo-_PghMcu_X-fXe_EUhiW2bHoABwgI/edit#slide=id.g3308ddf0d8_2_160) to learn what it's all about. 
  2. Log into the head node of the rocket cluster using ssh. If you are using Mac or Linux, you can do it straight from the command line. On Windows you might need to install Putty. More instructions are available [here](https://hpc.ut.ee/en/using-ssh/). 
  3. Submit your first jobs to the cluster by following the [SLURM](https://hpc.ut.ee/en/slurm/) tutorial and look at it's output.
- 4. Learn how to transfer files between your computer and the HPC system. On Mac I prefer to use the Cyberduck sftp cl
+ 4. Learn how to transfer files between your computer and the HPC system. On Mac I prefer to use the [Cyberduck](https://cyberduck.io/) sftp client and it might work on Windows as well. 
 
 ## Task 2: RNA-seq alignment (2 points)
 **Learning objective:** You will learn how RNA sequencing is used to measure gene expression and what computational steps are needed to do that. First, you will understand what the raw RNA sequencing reads (in FASTQ format) look like and how you can use alignment software (HISAT2) to find the locations in the reference genome where these reads come from. Counting the number of reads overlapping gene annotations will also show you how gene expression is measured using RNA-seq. 
@@ -38,6 +38,6 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwMDM5NDEyLDU3MTc2ODM0OCwtOTQ1Nz
-E2NTc5LDE2NDM3NDI4NDVdfQ==
+eyJoaXN0b3J5IjpbLTk5NjE4OTY2NSw1NzE3NjgzNDgsLTk0NT
+cxNjU3OSwxNjQzNzQyODQ1XX0=
 -->
