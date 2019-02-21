@@ -9,6 +9,8 @@
  4. How long is the longest transcript? How far is it from closest neighbouring genes on the left and right?
  5. Now go to the lactase (LCT) gene (it's the gene that allows us to drink milk). How long is this on? How far is it from its neigbours?
 
+## Task 2: Learning to use the 
+
 ## Task 2: RNA-seq alignment (2 points)
 **Learning objective:** You will learn how RNA sequencing is used to measure gene expression and what computational steps are needed to do that. First, you will understand what the raw RNA sequencing reads (in FASTQ format) look like and how you can use alignment software (HISAT2) to find the locations in the reference genome where these reads come from. Counting the number of reads overlapping gene annotations will also show you how gene expression is measured using RNA-seq. 
 
@@ -30,5 +32,5 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0Mzc0Mjg0NV19
+eyJoaXN0b3J5IjpbLTEwNTU3NzA4MTMsMTY0Mzc0Mjg0NV19
 -->
