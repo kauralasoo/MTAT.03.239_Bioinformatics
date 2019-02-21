@@ -18,7 +18,7 @@ Here's an entertaining video explaining how Burrows-Wheeler Transform works: [li
  2. Log into the head node of the rocket cluster using ssh. If you are using Mac or Linux, you can do it straight from the command line: `ssh <your_user_name>@rocket.hpc.ut.ee.` On Windows you might need to install [Putty](https://www.putty.org/). More instructions are available [here](https://hpc.ut.ee/en/using-ssh/). 
  3. Submit your first jobs to the cluster by following the [SLURM](https://hpc.ut.ee/en/slurm/) tutorial and look at it's output.
  4. Learn how to transfer files between your computer and the HPC system. On Mac I prefer to use the [Cyberduck](https://cyberduck.io/) sftp client and it might work on Windows as well. Another option is [FileZilla](https://filezilla-project.org/), which should also work on all three platforms. 
- 5. Demonsg
+ 5. Demonstrate the you have managed to successfully execute your first job by copying the contents of the SLURM output file into your report.
 
 ## Task 4: RNA-seq alignment (2 points)
 **Learning objective:** You will learn how RNA sequencing is used to measure gene expression and what computational steps are needed to do that. First, you will understand what the raw RNA sequencing reads (in FASTQ format) look like and how you can use alignment software (HISAT2) to find the locations in the reference genome where these reads come from. Counting the number of reads overlapping gene annotations will also show you how gene expression is measured using RNA-seq. 
@@ -42,8 +42,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NDU3MzU0LC03MTg5MzM4OTgsLTc0MD
-M5MDUxMywtNDY5MDI3OTM1LDE0ODI0OTc5NzIsMTgwNDY4ODQ2
-MSwtNzc2NjAxOTkxLDU3MTc2ODM0OCwtOTQ1NzE2NTc5LDE2ND
-M3NDI4NDVdfQ==
+eyJoaXN0b3J5IjpbMTk1ODE2MjE1OSwtNzE4OTMzODk4LC03ND
+AzOTA1MTMsLTQ2OTAyNzkzNSwxNDgyNDk3OTcyLDE4MDQ2ODg0
+NjEsLTc3NjYwMTk5MSw1NzE3NjgzNDgsLTk0NTcxNjU3OSwxNj
+QzNzQyODQ1XX0=
 -->
