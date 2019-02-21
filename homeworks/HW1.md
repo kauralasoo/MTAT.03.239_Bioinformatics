@@ -30,7 +30,7 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  6. Find the number of paired-end fragments overlapping the PFKL and AIRE genes from the featureCounts file (last column). Do these broadly match what you observed in the IGV? (No need to count fragments manually from IGV) (HINT: You can use the search box on the [Ensembl website](http://www.ensembl.org/) to find the gene ids for both gens).
 
 ## Bonus task. Constructing a data analysis workflow with Snakemake (2 points)
-**Learning objective:** In Task 2, you learned how to measure gene expression (count the number of RNA-seq reads overlapping a gene) in one sample. You saw, that this process involved multiple steps - alignment, sorting, indexing and counting. This a typical of many real-world bioinformatics workflows where you have to run tens of data processing steps on hundreds of samples. In this task, you will learn how to automate these steps using Snakemake. A key advantage of Snakemake is that the same pipeline works equally well on your own computer as well as on a cloud environment or a [high performance computing](https://hpc.ut.ee/en_US) infrastructure with only minor modifications needed.
+**Learning objective:** In Task 2, you learned how to measure gene expression (count the number of RNA-seq reads overlapping a gene) in one sample. You saw that this process involved multiple steps - alignment, sorting, indexing and counting. This a typical of many real-world bioinformatics workflows where you have to run tens of data processing steps on hundreds of samples. In this task, you will learn how to automate these steps using Snakemake. A key advantage of Snakemake is that the same pipeline works equally well on your own computer as well as on a cloud environment or a [high performance computing](https://hpc.ut.ee/en_US) infrastructure with only minor modifications needed.
 
 **Assignment**: Use [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html) to automate the RNA-seq analysis that you perfomed in Task 2. Expand this to all four RNA-seq samples available from [Zenodo](https://zenodo.org/record/1173306). Snakemake can be a bit daunting to get started initially, but has an excellent [tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html).
 
@@ -38,7 +38,7 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MjQ5Nzk3MiwxODA0Njg4NDYxLC03Nz
-Y2MDE5OTEsNTcxNzY4MzQ4LC05NDU3MTY1NzksMTY0Mzc0Mjg0
-NV19
+eyJoaXN0b3J5IjpbLTE3Njk2MDI1NzgsMTQ4MjQ5Nzk3MiwxOD
+A0Njg4NDYxLC03NzY2MDE5OTEsNTcxNzY4MzQ4LC05NDU3MTY1
+NzksMTY0Mzc0Mjg0NV19
 -->
