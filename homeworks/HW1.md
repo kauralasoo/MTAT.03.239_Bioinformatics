@@ -10,7 +10,9 @@
  5. Now go to the lactase (LCT) gene (it's the gene that allows us to drink milk). How long is this on? How far is it from its neigbours?
 
 ## Task 2: Using the High Performance Computing Center (1 point)
-**Learning objective:** The aim of this task is to learn how to use the University of Tartu High Performance Computing (HPC) Center to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the SLURM system when you want to run compuations.
+**Learning objective:** The aim of this task is to learn how to use the [University of Tartu High Performance Computing (HPC) Center](https://hpc.ut.ee/en/home/) to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the [SLURM](https://hpc.ut.ee/en/slurm/) system when you want to run computations.
+
+ 1. If you have never used the HPC before, 
 
 ## Task 2: RNA-seq alignment (2 points)
 **Learning objective:** You will learn how RNA sequencing is used to measure gene expression and what computational steps are needed to do that. First, you will understand what the raw RNA sequencing reads (in FASTQ format) look like and how you can use alignment software (HISAT2) to find the locations in the reference genome where these reads come from. Counting the number of reads overlapping gene annotations will also show you how gene expression is measured using RNA-seq. 
@@ -33,5 +35,5 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcxNTc2NDc0LDE2NDM3NDI4NDVdfQ==
+eyJoaXN0b3J5IjpbLTk0NTcxNjU3OSwxNjQzNzQyODQ1XX0=
 -->
