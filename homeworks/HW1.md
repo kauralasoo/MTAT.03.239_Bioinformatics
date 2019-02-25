@@ -10,7 +10,7 @@ Given the Borrows-Wheeler transformed string 'ACTCA$TA'.
 Additional reading
 
  - Here's an entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
- - 
+ - Explantation of the FM index from Ben Langmead: [link](https://www.youtube.com/watch?v=kvVGj5V65io&t=1195s)
 
 ## Task 2: Getting familiar with the IGV genome browser (1 point)
 **Learning objective:** Gain an intuitive feeling of what the human genome looks like. How long are the genes, where they are located and what fraction of the genome codes for proteins.
@@ -52,8 +52,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTAwODcxMTcsMTk1ODE2MjE1OSwtNz
-E4OTMzODk4LC03NDAzOTA1MTMsLTQ2OTAyNzkzNSwxNDgyNDk3
-OTcyLDE4MDQ2ODg0NjEsLTc3NjYwMTk5MSw1NzE3NjgzNDgsLT
-k0NTcxNjU3OSwxNjQzNzQyODQ1XX0=
+eyJoaXN0b3J5IjpbOTE1NzU0NzcwLC0xMTUwMDg3MTE3LDE5NT
+gxNjIxNTksLTcxODkzMzg5OCwtNzQwMzkwNTEzLC00NjkwMjc5
+MzUsMTQ4MjQ5Nzk3MiwxODA0Njg4NDYxLC03NzY2MDE5OTEsNT
+cxNzY4MzQ4LC05NDU3MTY1NzksMTY0Mzc0Mjg0NV19
 -->
