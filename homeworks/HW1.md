@@ -1,7 +1,16 @@
 # Homework 1
 ## Task 1: Burrows-Wheeler Transform (BWT) (1 point)
-**Learning objective:** Learn how Burrows-Wheeler Transform and FM-index work and how they can be used to perform sequence matching and alignment extremely d
-Here's an entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
+**Learning objective:** Learn how Burrows-Wheeler Transform and FM-index work and how they can be used to perform sequence matching and alignment extremely fast.
+
+Given the Borrows-Wheeler transformed string 'ACTCA$TA'.  
+* Construct the FM index  
+* Show how many times the pattern 'CA' occurs in original string using the FM index and LF(i) (Last-to-First) function
+* Does the pattern 'CATTA' appear in original string?
+
+Additional reading
+
+ - Here's an entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
+ - 
 
 ## Task 2: Getting familiar with the IGV genome browser (1 point)
 **Learning objective:** Gain an intuitive feeling of what the human genome looks like. How long are the genes, where they are located and what fraction of the genome codes for proteins.
@@ -43,8 +52,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNzc0Nzc4OSwxOTU4MTYyMTU5LC03MT
-g5MzM4OTgsLTc0MDM5MDUxMywtNDY5MDI3OTM1LDE0ODI0OTc5
-NzIsMTgwNDY4ODQ2MSwtNzc2NjAxOTkxLDU3MTc2ODM0OCwtOT
-Q1NzE2NTc5LDE2NDM3NDI4NDVdfQ==
+eyJoaXN0b3J5IjpbLTExNTAwODcxMTcsMTk1ODE2MjE1OSwtNz
+E4OTMzODk4LC03NDAzOTA1MTMsLTQ2OTAyNzkzNSwxNDgyNDk3
+OTcyLDE4MDQ2ODg0NjEsLTc3NjYwMTk5MSw1NzE3NjgzNDgsLT
+k0NTcxNjU3OSwxNjQzNzQyODQ1XX0=
 -->
