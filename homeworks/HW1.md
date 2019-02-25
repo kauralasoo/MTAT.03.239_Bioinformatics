@@ -7,9 +7,8 @@ Given the Borrows-Wheeler transformed string 'ACTCA$TA'.
 * Show how many times the pattern 'CA' occurs in original string using the FM index and LF(i) (Last-to-First) function
 * Does the pattern 'CATTA' appear in original string?
 
-Additional reading
-
- - Here's an entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
+**Additional reading**
+ - An entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
  - Explantation of the FM index from Ben Langmead: [link](https://www.youtube.com/watch?v=kvVGj5V65io&t=1195s)
 
 ## Task 2: Getting familiar with the IGV genome browser (1 point)
@@ -52,8 +51,8 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1NzU0NzcwLC0xMTUwMDg3MTE3LDE5NT
-gxNjIxNTksLTcxODkzMzg5OCwtNzQwMzkwNTEzLC00NjkwMjc5
-MzUsMTQ4MjQ5Nzk3MiwxODA0Njg4NDYxLC03NzY2MDE5OTEsNT
-cxNzY4MzQ4LC05NDU3MTY1NzksMTY0Mzc0Mjg0NV19
+eyJoaXN0b3J5IjpbLTEyMjM1MTUyNjQsLTExNTAwODcxMTcsMT
+k1ODE2MjE1OSwtNzE4OTMzODk4LC03NDAzOTA1MTMsLTQ2OTAy
+NzkzNSwxNDgyNDk3OTcyLDE4MDQ2ODg0NjEsLTc3NjYwMTk5MS
+w1NzE3NjgzNDgsLTk0NTcxNjU3OSwxNjQzNzQyODQ1XX0=
 -->
