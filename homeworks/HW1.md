@@ -34,7 +34,7 @@ Given the Borrows-Wheeler transformed string 'ACTCA$TA'.
 
 Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md), answer the following questions:
 
- 1. How many reads are there in the fikt_A.1.fastq.gz and fikt_A.1.fastq.gz FASTQ files?
+ 1. How many reads are there in the fikt_A.1.fastq.gz and fikt_A.2.fastq.gz FASTQ files?
  2. Following the instructions, align the FASTQ files to the reference genome. Sort the alignments by position and create the index.
  3. What fraction of the reads mapped to the reference genome? (HINT: use samtools flagstat).
  4. What fraction of the paired-end fragments were assigned to genes? (HINT: You can find this from the summary file created by featureCounts)
@@ -51,8 +51,9 @@ Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239
  2. Report the paired-end fragment counts for PFKL and AIRE genes in all four samples.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjM1MTUyNjQsLTExNTAwODcxMTcsMT
-k1ODE2MjE1OSwtNzE4OTMzODk4LC03NDAzOTA1MTMsLTQ2OTAy
-NzkzNSwxNDgyNDk3OTcyLDE4MDQ2ODg0NjEsLTc3NjYwMTk5MS
-w1NzE3NjgzNDgsLTk0NTcxNjU3OSwxNjQzNzQyODQ1XX0=
+eyJoaXN0b3J5IjpbMjg2NDEwOTExLC0xMjIzNTE1MjY0LC0xMT
+UwMDg3MTE3LDE5NTgxNjIxNTksLTcxODkzMzg5OCwtNzQwMzkw
+NTEzLC00NjkwMjc5MzUsMTQ4MjQ5Nzk3MiwxODA0Njg4NDYxLC
+03NzY2MDE5OTEsNTcxNzY4MzQ4LC05NDU3MTY1NzksMTY0Mzc0
+Mjg0NV19
 -->
