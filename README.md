@@ -38,8 +38,11 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  - Aaron Quinlan's [Applied Computational Genomics Course](https://github.com/quinlan-lab/applied-computational-genomics)
  - Mike Love's [Introduction to Computational Biology](https://biodatascience.github.io/compbio/)
  - [Bioinformatics Algorithms](http://bioinformaticsalgorithms.com/index.htm)
+ - Manolis Kellis's [MIT Computational Biology: Genomes, Networks, Evolution, Health](https://www.youtube.com/watch?v=sX4cMu9Azgs&list=PLypiXJdtIca6GBQwDTo4bIEDV8F4RcAgt)
+ - Rafael A. Irizarry's [Introduction to Data Science](https://rafalab.github.io/dsbook/)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjczNjM4ODVdfQ==
+eyJoaXN0b3J5IjpbNjA3MDY3NDY3LDQ4MzcxNjg5Nyw2NzM2Mz
+g4NV19
 -->

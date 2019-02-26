@@ -115,13 +115,13 @@ HPC at the University of Tartu has a lot of software installed using the modules
 			"""
 Next, you need to tell Snakemake how to submit SLURM jobs. I have written a short [Python script](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/Snakemake_example/snakemake_submit_UT.py) for that and you should be able to use if without modifications.
 
-We are now almost ready to run Snakemake on the HPC, but first we need to make a directory for the SLURM log files:
+We are now almost ready to run Snakemake on the HPC, but first we need to make a directory named **SlurmOut** for the SLURM log files. This directory has to exist, because otherwise Snakemake is not able to write SLURM output files to disk.
 	
 	mkdir SlurmOut
 And then run Snakemake:
 
 	module load python-3.6.0 #Snakemake is installed under Python 3.6
-	snakemake --cluster snakemake_submit_UT.py -p out.txt --configfile config.yaml --jobs 20
+	snakemake --cluster ./snakemake_submit_UT.py -p out.txt --configfile config.yaml --jobs 20
 
 The `--jobs` option tells Snakemake how many parallel SLURM jobs to run at any one time. **If your jobs involve reading large input files form the disk, you should probably limit the number of concurrent jobs to something relatively small (eg 10-20).**
 
@@ -132,7 +132,5 @@ Finally, to make sure that your Snakemake process is not killed when you log out
 All of the example files to run Snakemake on the HPC are here:
 https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/tree/master/Snakemake_example
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYxNzAwMzY2LC0zOTA4NDIxMDYsMjI5MT
-gxNTY1LDE1MTE4Nzk2MjUsLTQyMjM2ODM2MiwxMzA4MzAyMTg1
-LDYwMjEzMzU1NCwtMTIyOTA3MjI5M119
+eyJoaXN0b3J5IjpbOTQyNDU5NTc4LDU0NTI3OTQyNl19
 -->

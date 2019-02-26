@@ -19,13 +19,19 @@ Let's download the sequence for chromosme 21:
 	cd ..
 
 ### Build the HISAT2 index
-We can now use the FASTA and GFF3 files to build an index of the reference genome:
+First you need to get the HISAT2 software. If you are using the [University of Tartu High Performance Computing Center](https://hpc.ut.ee/en/home/), then HISAT2 is already installed for you and you can add it to your path using the modules system. Click [here](https://hpc.ut.ee/en/guides/using-modules/) to read more about modules.
+
+    module load hisat-2.0.4
+
+**Remember that you should NEVER run any code on the head node of the HPC**. You should use the SLURM queue system instead. Before proceeding to the next steps, you should first familiarise yourself with the SLURM system and how to submit jobs using the documentation found [here](https://hpc.ut.ee/en/slurm/).
+
+We can now use the FASTA file that we downloaded above to build an index of the reference genome.
 
 	mkdir hisat2_index
-	hisat2-build Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
+	hisat2-build annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
 
 ### Download RNA-seq reads
-I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/1173306) repository. Let's download both pairs of a single paired-end RNA-seq sample (fikt_A). These fastq files only contains reads from chromosome 21.
+I have uploaded some RNA-seq data to this [Zenodo](https://zenodo.org/record/1173306) repository. Let's download both pairs of a single paired-end RNA-seq sample (fikt_A). These fastq files only contain reads from chromosome 21.
 
 	mkdir data
 	cd data
@@ -48,8 +54,14 @@ Now, let's align all of the reads in these two files to the reference genome usi
 
 By default, HISAT2 outputs results as uncompressed SAM to the standard output. Since these files can be very large, it makes sense to convert them directly into binary compressed BAM format using samtools. See [wikipedia](https://en.wikipedia.org/wiki/SAMtools) and [SAM format specification](https://samtools.github.io/hts-specs/SAMv1.pdf) for more detail.
 
+First add samtools to your path:
+
+    module load samtools-1.9
+
+Then align with HISAT2:
+
 	mkdir results
-	hisat2 -x annotations/hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
+	hisat2 -x hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
 
 ### Sort and index the BAM file
 Next, we can sort the BAM file according to the position of each read in the reference genome and create a binary index to allow fast random access to the file.
@@ -69,15 +81,17 @@ From the Ensembl website we need to download the gene annotations in GTF format:
 	wget ftp://ftp.ensembl.org/pub/release-91/gtf/homo_sapiens/Homo_sapiens.GRCh38.91.gtf.gz
 	cd ..
 
-Now, lets's uncompress them and extract only those genes that are on chromosome 21:
+Now, let's uncompress them and extract only those genes that are on chromosome 21:
 
 	gunzip annotations/Homo_sapiens.GRCh38.91.gtf.gz
 	grep ^21 annotations/Homo_sapiens.GRCh38.91.gtf > annotations/Homo_sapiens.GRCh38.91.chr21.gtf
 
 ### Counting the number of reads overlapping gene annotations 
-We can now proceed with read counting with featureCounts
+We can now proceed with read counting with [featureCounts](http://bioinf.wehi.edu.au/featureCounts/)
 	
-	featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
+	/gpfs/hpc/home/a72094/teaching/MTAT.03.239_Bioinformatics/software/bin/featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc2ODU4NTUzXX0=
+eyJoaXN0b3J5IjpbMzYxNzU3NjM0LC0xNDU5NzExNDE1LC01MT
+kzOTIxNjAsNTk0NDY1MjUsLTE5MDQ4NTcyMDAsNjc2ODU4NTUz
+XX0=
 -->

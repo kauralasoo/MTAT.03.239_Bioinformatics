@@ -26,5 +26,5 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjA2MjA2NDldfQ==
+eyJoaXN0b3J5IjpbNDYwODQyNDY5LC0xODIwNjIwNjQ5XX0=
 -->
