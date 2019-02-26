@@ -132,5 +132,5 @@ Finally, to make sure that your Snakemake process is not killed when you log out
 All of the example files to run Snakemake on the HPC are here:
 https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/tree/master/Snakemake_example
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ1Mjc5NDI2XX0=
+eyJoaXN0b3J5IjpbOTQyNDU5NTc4LDU0NTI3OTQyNl19
 -->
