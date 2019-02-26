@@ -1,7 +1,7 @@
 #Rule that performs the alignments
 rule align_reads:
 	input:
-    	fastq1 = "data/{sample}.1.fastq.gz",
+		fastq1 = "data/{sample}.1.fastq.gz",
 		fastq2 = "data/{sample}.2.fastq.gz"
 	output:
 		bam = "results/{sample}.bam"
@@ -11,7 +11,7 @@ rule align_reads:
 	shell:
 		"""
 		module load hisat-2.0.4
-        module load samtools-1.6
+		module load samtools-1.6
 		hisat2 -p {threads} -x annotations/hisat2_index/hisat2_index -1 {input.fastq1} -2 {input.fastq2} | samtools view -Sb > {output.bam}
 		"""
 
@@ -22,5 +22,8 @@ rule make_all:
 		expand("results/{sample}.bam", sample=config["samples"])
 	output:
 		"out.txt"
+	resources:
+		mem = 1000
+	threads: 1
 	shell:
 		"echo 'Done!' > {output}"
