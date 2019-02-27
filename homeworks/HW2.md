@@ -21,13 +21,14 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  1. Identify genes that are **upregulated** after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/), disable "Hierarchical sorting" under the options and run the analysis. Report the top 20 most strongly enriched terms. Can you find evidence that this gene list corresponds to response to interferon-gamma? 
  2. Repeat the same g:Profiler analysis for genes differentially expressed after Salmonella infection (FDR < 0.01, log2 fold-change > 1). Report the top 20 most enriched terms. How do the results compare to the IFNg response? Are there specific enrichments that you did not see in the IFNg results?
 
-## Bond
+## Bonus task: Statistical interactions
+
 # Bonus tasks 1 (deadline 16 March 2018 @ 11:59PM) 
 
  1. How many principal components of the [full gene expression dataset](https://courses.cs.ut.ee/2018/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip) (336 samples) can you 'explain' by known sample metadata? You can view the sample metadata using the colData() function of the SummarizedExperiment class and you can find a longer description of the metadata columns in [here](https://zenodo.org/record/1188300/files/RNA_metadata_columns.txt). In your report, provide evidence (e.g. scatter plot) for each principal component that you think can be explained by known metadata. (2 point)
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjg3MzIwMjUsLTc2NDI3MDY2NCw0Nj
-A4NDI0NjksLTE4MjA2MjA2NDldfQ==
+eyJoaXN0b3J5IjpbMjA3NzE4NTgzMiwtNzY0MjcwNjY0LDQ2MD
+g0MjQ2OSwtMTgyMDYyMDY0OV19
 -->
