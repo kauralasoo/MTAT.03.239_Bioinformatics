@@ -10,11 +10,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r, echo=FALSE}
-suppressMessages(library("SummarizedExperiment"))
-suppressMessages(library("dplyr"))
-suppressMessages(library("DESeq2"))
-suppressMessages(library("gplots"))
-suppressMessages(library("ggplot2"))
+suppressWarnings(suppressMessages(library("SummarizedExperiment")))
+suppressWarnings(suppressMessages(library("dplyr")))
+suppressWarnings(suppressMessages(library("DESeq2")))
+suppressWarnings(suppressMessages(library("gplots")))
+suppressWarnings(suppressMessages(library("ggplot2")))
 ```
 
 First, we need to load the libraries:
@@ -29,14 +29,16 @@ library("ggplot2")
 
 ## Importing the data
 
-First, you can import the data into R using to following command:
+First, download the full dataset from the course [website](https://courses.cs.ut.ee/2019/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip).
+
+Now you can import the dataset into R using the following command:
 
 ```{r}
 	dataset = readRDS("../data/RNA_SummarizedExperiment.rds")
 ```
 
 
-Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata. Consequently, when you subset the data, SummarizedExperiment ensures that the metadata is always synchronised with the expression data itself. For more information, have a look at the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) tutorial.
+Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata. Consequently, when you subset the data, SummarizedExperiment ensures that the metadata is always synchronised with the expression data itself. I strongly recommend you read the  [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) tutorial to learn how to perform basic operations with these objects.
 
 You can see the summary of the dataset by just printing it out:
 ```{r}
@@ -63,13 +65,13 @@ Finally, to view the raw read counts, you can use the assays command:
 ```
 
 # Subsetting
-To illustrate the power of SummarizedExperiment, let's take random subset of the data containing eight random donors. First, let's identify the donors:
+To illustrate the power of SummarizedExperiment, let's take a random subset of the data containing eight random donors. First, let's identify the donors:
 ```{r}
 	set.seed(1)
   donors_subset = colData(dataset)$donor %>% unique() %>% sample(8)
   donors_subset
 ```
-Note that I used the `%>%` (pipe) operator from the dplyr pacakge. The last command is exactly equivalent (but more readable) as the following:
+Note that I used the `%>%` (pipe) operator from the [dplyr](https://dplyr.tidyverse.org/) pacakge. The last command is exactly equivalent (but more readable) as the following:
 ```{r}
 	set.seed(1)
   donors_subset = sample(unique(colData(dataset)$donor),8)
@@ -84,6 +86,8 @@ data_subset
 Note the that we now have 8 donors x 4 conditions = 32 samples.
 
 # Expolratory data analysis
+We will use the [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) package to analyse the RNA-seq data. DESeq2 also has [excellent documentation](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html). 
+
 First, let's convert the SummarizedExperiment object into a DESeq object:
 ```{r}
 dds <- DESeqDataSet(data_subset, design = ~ condition_name)
@@ -110,11 +114,17 @@ cor_matrix = cor(assay(vsd), method = "spearman")
 gplots::heatmap.2(cor_matrix)
 ```
 
-Second approach is to perform PCA. DESeq2 has a built-in function for that:
+Second approach is to perform PCA. DESeq2 has a built-in function for that. Note that by default the plotPCA function uses only the top 500 genes with highest variance between samples.
 ```{r}
   plotPCA(vsd, intgroup=c("condition_name"))
 ```
-Alternatively, you can do it manually using prcomp and ggplot2. The advantage of the manual approach is that you can customise the plot more, including adding names for individual samples:
+
+You can modify this behaviour be changing the ntop parameter:
+```{r}
+  plotPCA(vsd, intgroup=c("condition_name"), ntop = 10000)
+```
+
+Alternatively, you can do it manually using prcomp and ggplot2 functions. The advantage of the manual approach is that you can customise the plot more, including adding names for individual samples. You can also decide to include all of the genes in the analysis. 
 ```{r}
   pca = prcomp(t(assay(vsd)), center = TRUE, scale. = TRUE)
   pca_matrix = dplyr::mutate(as.data.frame(pca$x), sample_id = rownames(pca$x))
@@ -122,7 +132,7 @@ Alternatively, you can do it manually using prcomp and ggplot2. The advantage of
 ```
 ## Differential expression
 
-For simplicity let's first look at only two conditions - naive and interferon-gamma stimulation:
+For simplicity, let's first look at only two conditions - naive and interferon-gamma stimulation:
 
 ```{r}
 naive_IFNg = data_subset[,data_subset$condition_name %in% c("naive", "IFNg")]
@@ -143,19 +153,18 @@ dds <- dds[keep,]
 #Run DEseq2
 ```{r}
 dds <- DESeq(dds)
-res_true <- results(dds)
-res_shrunken = lfcShrink(dds, res = res_true, coef = 2)
+ifng_results <- results(dds)
 ```
 
 Make a histogram of the p-values
 ```{r}
-hist(res_true$pvalue)
+hist(ifng_results$pvalue)
 ```
 
 #Identify genes that are signficantly differentially expressed:
 ```{r}
-filtered_genes = dplyr::mutate(as.data.frame(res_shrunken), gene_id = rownames(res_shrunken)) %>% 
-  dplyr::tbl_df() %>% 
+filtered_genes = dplyr::mutate(as.data.frame(ifng_results), gene_id = rownames(ifng_results)) %>% 
+  dplyr::as_tibble() %>% 
   dplyr::filter(!is.na(padj)) %>% #Remove NA p-values
   dplyr::filter(padj < 0.01) %>% #Filter according to FDR
   dplyr::filter(abs(log2FoldChange) > 1) %>% #Filter according to fold-change
@@ -182,15 +191,15 @@ dds <- dds[keep,]
 
 #Run DEseq2
 dds <- DESeq(dds)
-res_true <- results(dds)
-res_shrunken_SL1344 = lfcShrink(dds, res = res_true, coef = 2)
+salmonella_results <- results(dds)
 ```
 
 ```{r}
 #Now, let compare the log2FoldChanges
-lfc_SL1344 = dplyr::mutate(as.data.frame(res_shrunken_SL1344), gene_id = row.names(res_shrunken_SL1344)) %>% dplyr::tbl_df()
-lfc_IFNg = dplyr::mutate(as.data.frame(res_shrunken), gene_id = row.names(res_shrunken)) %>% 
-  dplyr::tbl_df()
+lfc_SL1344 = dplyr::mutate(as.data.frame(salmonella_results), gene_id = row.names(salmonella_results)) %>% 
+  dplyr::as_tibble()
+lfc_IFNg = dplyr::mutate(as.data.frame(ifng_results), gene_id = row.names(ifng_results)) %>% 
+  dplyr::as_tibble()
 joint_lfc = dplyr::inner_join(lfc_IFNg, lfc_SL1344, by = "gene_id")
 
 ggplot(joint_lfc, aes(x = log2FoldChange.x, y = log2FoldChange.y)) + geom_point() +

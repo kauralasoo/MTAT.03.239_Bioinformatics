@@ -1,4 +1,9 @@
-# Exploring gene expression data
+---
+title: "Exploring gene expression data"
+output: 
+  html_document: 
+    keep_md: yes
+---
 
 
 
@@ -17,7 +22,9 @@ library("ggplot2")
 
 ## Importing the data
 
-First, you can import the data into R using to following command:
+First, download the full dataset from the course [website](https://courses.cs.ut.ee/2019/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip).
+
+Now you can import the dataset into R using the following command:
 
 
 ```r
@@ -25,7 +32,7 @@ First, you can import the data into R using to following command:
 ```
 
 
-Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata. Consequently, when you subset the data, SummarizedExperiment ensures that the metadata is always synchronised with the expression data itself. For more information, have a look at the [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) tutorial.
+Here, `dataset` is an [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html)  object. The key advantage of using SummarizedExperiment class is that the gene expression read count matrix is always stored together with the accompanying gene and sample metadata. Consequently, when you subset the data, SummarizedExperiment ensures that the metadata is always synchronised with the expression data itself. I strongly recommend you read the  [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html) tutorial to learn how to perform basic operations with these objects.
 
 You can see the summary of the dataset by just printing it out:
 
@@ -71,27 +78,27 @@ And you can do the same for gene metadata:
 
 ```
 ## DataFrame with 5 rows and 11 columns
-##           gene_id   gene_biotype         chr gene_strand gene_start
-##       <character>    <character> <character>   <integer>  <integer>
-## 1 ENSG00000198888 protein_coding          MT           1       3307
-## 2 ENSG00000198763 protein_coding          MT           1       4470
-## 3 ENSG00000198804 protein_coding          MT           1       5904
-## 4 ENSG00000198712 protein_coding          MT           1       7586
-## 5 ENSG00000228253 protein_coding          MT           1       8366
-##    gene_end percentage_gc_content   gene_name    length exon_starts
-##   <integer>             <numeric> <character> <integer> <character>
-## 1      4262                 47.70      MT-ND1       956        3307
-## 2      5511                 42.99      MT-ND2      1042        4470
-## 3      7445                 46.24      MT-CO1      1542        5904
-## 4      8269                 46.20      MT-CO2       684        7586
-## 5      8572                 39.61     MT-ATP8       207        8366
-##     exon_ends
-##   <character>
-## 1        4262
-## 2        5511
-## 3        7445
-## 4        8269
-## 5        8572
+##                         gene_id   gene_biotype         chr gene_strand
+##                     <character>    <character> <character>   <integer>
+## ENSG00000198888 ENSG00000198888 protein_coding          MT           1
+## ENSG00000198763 ENSG00000198763 protein_coding          MT           1
+## ENSG00000198804 ENSG00000198804 protein_coding          MT           1
+## ENSG00000198712 ENSG00000198712 protein_coding          MT           1
+## ENSG00000228253 ENSG00000228253 protein_coding          MT           1
+##                 gene_start  gene_end percentage_gc_content   gene_name
+##                  <integer> <integer>             <numeric> <character>
+## ENSG00000198888       3307      4262                  47.7      MT-ND1
+## ENSG00000198763       4470      5511                 42.99      MT-ND2
+## ENSG00000198804       5904      7445                 46.24      MT-CO1
+## ENSG00000198712       7586      8269                  46.2      MT-CO2
+## ENSG00000228253       8366      8572                 39.61     MT-ATP8
+##                    length exon_starts   exon_ends
+##                 <integer> <character> <character>
+## ENSG00000198888       956        3307        4262
+## ENSG00000198763      1042        4470        5511
+## ENSG00000198804      1542        5904        7445
+## ENSG00000198712       684        7586        8269
+## ENSG00000228253       207        8366        8572
 ```
 
 Finally, to view the raw read counts, you can use the assays command:
@@ -120,7 +127,7 @@ Finally, to view the raw read counts, you can use the assays command:
 ```
 
 # Subsetting
-To illustrate the power of SummarizedExperiment, let's take random subset of the data containing eight random donors. First, let's identify the donors:
+To illustrate the power of SummarizedExperiment, let's take a random subset of the data containing eight random donors. First, let's identify the donors:
 
 ```r
 	set.seed(1)
@@ -131,7 +138,7 @@ To illustrate the power of SummarizedExperiment, let's take random subset of the
 ```
 ## [1] "febc" "guss" "kuxp" "veqz" "eipl" "sukz" "yuze" "nibo"
 ```
-Note that I used the `%>%` (pipe) operator from the dplyr pacakge. The last command is exactly equivalent (but more readable) as the following:
+Note that I used the `%>%` (pipe) operator from the [dplyr](https://dplyr.tidyverse.org/) pacakge. The last command is exactly equivalent (but more readable) as the following:
 
 ```r
 	set.seed(1)
@@ -165,6 +172,8 @@ data_subset
 Note the that we now have 8 donors x 4 conditions = 32 samples.
 
 # Expolratory data analysis
+We will use the [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) package to analyse the RNA-seq data. DESeq2 also has [excellent documentation](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html). 
+
 First, let's convert the SummarizedExperiment object into a DESeq object:
 
 ```r
@@ -228,14 +237,23 @@ gplots::heatmap.2(cor_matrix)
 
 ![](Exploring_gene_expression_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
-Second approach is to perform PCA. DESeq2 has a built-in function for that:
+Second approach is to perform PCA. DESeq2 has a built-in function for that. Note that by default the plotPCA function uses only the top 500 genes with highest variance between samples.
 
 ```r
   plotPCA(vsd, intgroup=c("condition_name"))
 ```
 
 ![](Exploring_gene_expression_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
-Alternatively, you can do it manually using prcomp and ggplot2. The advantage of the manual approach is that you can customise the plot more, including adding names for individual samples:
+
+You can modify this behaviour be changing the ntop parameter:
+
+```r
+  plotPCA(vsd, intgroup=c("condition_name"), ntop = 10000)
+```
+
+![](Exploring_gene_expression_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+
+Alternatively, you can do it manually using prcomp and ggplot2 functions. The advantage of the manual approach is that you can customise the plot more, including adding names for individual samples. You can also decide to include all of the genes in the analysis. 
 
 ```r
   pca = prcomp(t(assay(vsd)), center = TRUE, scale. = TRUE)
@@ -243,10 +261,10 @@ Alternatively, you can do it manually using prcomp and ggplot2. The advantage of
   ggplot(pca_matrix, aes(x = PC1, y = PC2, label = sample_id)) + geom_text() + geom_point()
 ```
 
-![](Exploring_gene_expression_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+![](Exploring_gene_expression_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 ## Differential expression
 
-For simplicity let's first look at only two conditions - naive and interferon-gamma stimulation:
+For simplicity, let's first look at only two conditions - naive and interferon-gamma stimulation:
 
 
 ```r
@@ -320,23 +338,22 @@ dds <- DESeq(dds)
 ```
 
 ```r
-res_true <- results(dds)
-res_shrunken = lfcShrink(dds, res = res_true, coef = 2)
+ifng_results <- results(dds)
 ```
 
 Make a histogram of the p-values
 
 ```r
-hist(res_true$pvalue)
+hist(ifng_results$pvalue)
 ```
 
-![](Exploring_gene_expression_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
+![](Exploring_gene_expression_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
 
 #Identify genes that are signficantly differentially expressed:
 
 ```r
-filtered_genes = dplyr::mutate(as.data.frame(res_shrunken), gene_id = rownames(res_shrunken)) %>% 
-  dplyr::tbl_df() %>% 
+filtered_genes = dplyr::mutate(as.data.frame(ifng_results), gene_id = rownames(ifng_results)) %>% 
+  dplyr::as_tibble() %>% 
   dplyr::filter(!is.na(padj)) %>% #Remove NA p-values
   dplyr::filter(padj < 0.01) %>% #Filter according to FDR
   dplyr::filter(abs(log2FoldChange) > 1) %>% #Filter according to fold-change
@@ -345,20 +362,20 @@ filtered_genes
 ```
 
 ```
-## # A tibble: 3,330 x 6
-##       baseMean log2FoldChange     stat        pvalue          padj
-##          <dbl>          <dbl>    <dbl>         <dbl>         <dbl>
-##  1   8880.1010      10.654123 33.15813 4.323555e-241 9.429674e-238
-##  2   2722.6045      10.049970 34.79360 3.039808e-265 8.524056e-262
-##  3  20295.7665       9.535093 34.85597 3.457197e-266 1.131022e-262
-##  4  37561.9083       9.527324 22.21456 2.484022e-109 1.250227e-106
-##  5 154578.4962       9.268288 22.55206 1.281820e-112 7.400246e-110
-##  6   1145.9508       9.253149 26.33414 7.798646e-153 6.655636e-150
-##  7  16774.9637       8.783483 17.78067  9.978904e-71  1.780690e-68
-##  8    779.0683       8.589000 18.43823  6.482583e-76  1.398314e-73
-##  9  24491.4834       8.408930 17.16655  4.726983e-66  7.543572e-64
-## 10    238.5990       8.399524 13.89131  7.151127e-44  4.908023e-42
-## # ... with 3,320 more rows, and 1 more variables: gene_id <chr>
+## # A tibble: 3,402 x 7
+##    baseMean log2FoldChange lfcSE  stat    pvalue      padj gene_id        
+##       <dbl>          <dbl> <dbl> <dbl>     <dbl>     <dbl> <chr>          
+##  1  368450.           11.8 1.08   11.0 6.11e- 28 2.08e- 26 ENSG00000138755
+##  2   16775.           11.7 0.655  17.8 1.01e- 70 1.80e- 68 ENSG00000154451
+##  3    8880.           11.4 0.344  33.2 4.44e-241 9.68e-238 ENSG00000100336
+##  4     239.           11.2 0.803  13.9 7.16e- 44 4.91e- 42 ENSG00000253838
+##  5   37562.           11.1 0.498  22.2 2.52e-109 1.27e-106 ENSG00000162654
+##  6   66277.           11.0 0.871  12.6 2.84e- 36 1.44e- 34 ENSG00000131203
+##  7   24491.           10.9 0.633  17.2 4.77e- 66 7.62e- 64 ENSG00000169248
+##  8  154578.           10.6 0.469  22.6 1.30e-112 7.50e-110 ENSG00000169245
+##  9    2723.           10.6 0.304  34.8 3.14e-265 8.80e-262 ENSG00000174944
+## 10     150.           10.5 1.01   10.4 2.45e- 25 6.97e- 24 ENSG00000213886
+## # ... with 3,392 more rows
 ```
 
 Save the results to disk:
@@ -431,16 +448,16 @@ dds <- DESeq(dds)
 ```
 
 ```r
-res_true <- results(dds)
-res_shrunken_SL1344 = lfcShrink(dds, res = res_true, coef = 2)
+salmonella_results <- results(dds)
 ```
 
 
 ```r
 #Now, let compare the log2FoldChanges
-lfc_SL1344 = dplyr::mutate(as.data.frame(res_shrunken_SL1344), gene_id = row.names(res_shrunken_SL1344)) %>% dplyr::tbl_df()
-lfc_IFNg = dplyr::mutate(as.data.frame(res_shrunken), gene_id = row.names(res_shrunken)) %>% 
-  dplyr::tbl_df()
+lfc_SL1344 = dplyr::mutate(as.data.frame(salmonella_results), gene_id = row.names(salmonella_results)) %>% 
+  dplyr::as_tibble()
+lfc_IFNg = dplyr::mutate(as.data.frame(ifng_results), gene_id = row.names(ifng_results)) %>% 
+  dplyr::as_tibble()
 joint_lfc = dplyr::inner_join(lfc_IFNg, lfc_SL1344, by = "gene_id")
 
 ggplot(joint_lfc, aes(x = log2FoldChange.x, y = log2FoldChange.y)) + geom_point() +
@@ -448,7 +465,7 @@ ggplot(joint_lfc, aes(x = log2FoldChange.x, y = log2FoldChange.y)) + geom_point(
   ylab("naive vs Salmonella")
 ```
 
-![](Exploring_gene_expression_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
+![](Exploring_gene_expression_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
 
 ```r
 cor.test(joint_lfc$log2FoldChange.x, joint_lfc$log2FoldChange.y)
@@ -459,12 +476,12 @@ cor.test(joint_lfc$log2FoldChange.x, joint_lfc$log2FoldChange.y)
 ## 	Pearson's product-moment correlation
 ## 
 ## data:  joint_lfc$log2FoldChange.x and joint_lfc$log2FoldChange.y
-## t = 83.143, df = 19994, p-value < 2.2e-16
+## t = 84.016, df = 19994, p-value < 2.2e-16
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
-##  0.4964970 0.5170971
+##  0.5004914 0.5209804
 ## sample estimates:
 ##       cor 
-## 0.5068694
+## 0.5108085
 ```
 
