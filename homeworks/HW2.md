@@ -1,4 +1,4 @@
-# Homework 2 (deadline 9 March 2018 @ 11:59PM)
+# Homework 2
 
 ## Task 1: Exploratory data analysis (1.5  points)
 **Learning objective**: Learn how to use exploratory data analysis techniques to detect issues with data quality.
@@ -29,6 +29,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgzNzE1ODYwLDIwNzcxODU4MzIsLTc2ND
-I3MDY2NCw0NjA4NDI0NjksLTE4MjA2MjA2NDldfQ==
+eyJoaXN0b3J5IjpbNDY5OTQwOTExLDM4MzcxNTg2MCwyMDc3MT
+g1ODMyLC03NjQyNzA2NjQsNDYwODQyNDY5LC0xODIwNjIwNjQ5
+XX0=
 -->
