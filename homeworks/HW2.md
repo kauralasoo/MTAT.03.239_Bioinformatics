@@ -8,7 +8,7 @@ The [gene expression data tutorial](https://github.com/kauralasoo/MTAT.03.239_Bi
 In this exercise, your task is to download a 'dirty' [gene expression dataset](https://courses.cs.ut.ee/2018/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment_swapped.rds.gz) and use exploratory data analysis techniques (gene expression correlation heatmap, PCA) to identify which (if any) of the samples have been swapped. In your report, please include the plots that you created, the code that you used to generate these plots and the names of the samples that have been swapped and what should be their correct names.
 
 ## Task 2: Differential expression analysis (2 points)
-**Learning objective**: Learn how to identify genes that are significantly differentially expressed between two conditions and how sample size infl
+**Learning objective**: Learn how to identify genes that are significantly differentially expressed between two conditions and how sample size influences your power to detect differences.
 
  1. Following the gene expression tutorial, identify genes that are significantly differentially expressed between the naive and interferon-gamma (IFNg) conditions (false discovery rate (FDR) < 0.01). Make sure to use the [original clean dataset](https://courses.cs.ut.ee/2019/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip) for this analysis (**not** the one used in Task 1). How many genes are significantly differentially expressed at this fold change threshold? How many genes have absolute log2 fold-change > 1? How many genes are upregulated (increase in expression after stimulation) by IFNg stimulation at these log2 fold-change > 1 and FDR < 0.01 thresholds? How many genes are down-regulated (decrease in expression after stimulation)? (NOTE: the sign of the log2 fold-change depends on the factor levels of the conditions that you put into the model, always check that the sign is what you expect it to be using raw counts!)
  2.  Repeat the same differential expression analysis on the naive *versus* *Salmonella* (SL1344) conditions. Answer the same questions that you answered in point 1. 
@@ -29,7 +29,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEyMjU3MTUwLDM4MzcxNTg2MCwyMDc3MT
-g1ODMyLC03NjQyNzA2NjQsNDYwODQyNDY5LC0xODIwNjIwNjQ5
-XX0=
+eyJoaXN0b3J5IjpbLTUwNjQxMzU4MSwzODM3MTU4NjAsMjA3Nz
+E4NTgzMiwtNzY0MjcwNjY0LDQ2MDg0MjQ2OSwtMTgyMDYyMDY0
+OV19
 -->
