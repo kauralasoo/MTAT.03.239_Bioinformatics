@@ -20,7 +20,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
 ## Task 3: Functional enrichment analysis (1.5 points)
 **Learning objective:** Learn how to interpret the differentially expressed gene lists that you generated in Task 2.
 
- 1. Identify genes that are **upregulated** after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/), disable "Hierarchical sorting" under the options and run the analysis. Report the top 20 most strongly enriched terms. Can you find evidence that this gene list corresponds to response to interferon-gamma? 
+ 1. Identify genes that are **upregulated** after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/). Report the top 20 most strongly enriched Gene Ontology biological processes (GO:BP). Can you find evidence that your gene list is enriched for known genes  corresponds to response to interferon-gamma? 
  2. Repeat the same g:Profiler analysis for genes differentially expressed after *Salmonella* infection (FDR < 0.01, log2 fold-change > 1). Report the top 20 most enriched terms. How do the results compare to the IFNg response? Are there specific enrichments that you did not see in the IFNg results?
 
 ## Bonus task: Statistical interactions
@@ -31,7 +31,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMDU1MDgyNywzODM3MTU4NjAsMjA3Nz
-E4NTgzMiwtNzY0MjcwNjY0LDQ2MDg0MjQ2OSwtMTgyMDYyMDY0
-OV19
+eyJoaXN0b3J5IjpbLTE5MjI3NDQ1MywtOTAwNTUwODI3LDM4Mz
+cxNTg2MCwyMDc3MTg1ODMyLC03NjQyNzA2NjQsNDYwODQyNDY5
+LC0xODIwNjIwNjQ5XX0=
 -->
