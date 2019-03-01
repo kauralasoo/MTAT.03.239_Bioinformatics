@@ -23,9 +23,9 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  1. Identify genes that are **upregulated** after IFNg stimulation (FDR < 0.01, log2 fold-change > 1). Copy this gene list into [g:Profiler](https://biit.cs.ut.ee/gprofiler/). Report the top 20 most strongly enriched Gene Ontology biological processes (GO:BP) (HINT: Click Detailed Results to see enrichment results by annotation category). Can you find evidence that your gene list is enriched for known genes involved in response to interferon-gamma? 
  2. Repeat the same g:Profiler analysis for genes **upregulated** after *Salmonella* infection (FDR < 0.01, log2 fold-change > 1). Report the top 20 most enriched Gene Ontology biological processes (GO:BP). How do the results compare to the IFNg response? Are there shared terms between IFNg and *Salmonella* response? Are there specific enrichments that you did not see in the IFNg results?
 
-## Bonus task: Statistical interactions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDIwMDA1NjEsMTQ1MzEzNjU4NSwtOT
-AwNTUwODI3LDM4MzcxNTg2MCwyMDc3MTg1ODMyLC03NjQyNzA2
-NjQsNDYwODQyNDY5LC0xODIwNjIwNjQ5XX0=
+eyJoaXN0b3J5IjpbMTkxOTU3ODgyMSwtMjAwMjAwMDU2MSwxND
+UzMTM2NTg1LC05MDA1NTA4MjcsMzgzNzE1ODYwLDIwNzcxODU4
+MzIsLTc2NDI3MDY2NCw0NjA4NDI0NjksLTE4MjA2MjA2NDldfQ
+==
 -->
