@@ -14,7 +14,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  1. Using DESeq2 as shown in the tutorial, identify genes that significantly differentially between the naive and interferon-gamma (IFNg) conditions (false discovery rate (FDR) < 0.01). Answer the the following questions:
 	 - How many genes are significantly differentially expressed (FDR < 0.01)? How many of them are *upregulated* (increase in expression) by IFNg and how many are *downregulated* (decrease on expression)? (NOTE: the sign of the log2 fold-change depends on the factor levels of the conditions that you put into the model, always check that the sign is what you expect it to be using raw counts!)
 	 - How many differentially expressed genes have absolute log2 fold-change > 1? How many of them are upregulated and how many of them are downregulated?
-1. Repeat the the analysis done in point 1 for increasingly larger number of donors (try at least 5, 8, 16, and 24 random donors). Find the answers to the same questions highlighted in point 1. How does the number of differentially expressed genes (FDR < 0.01) change with increased sample size? What happens when you also filter the differentially expressed genes according to their effect size (absolute log2 fold-change > 2)? 
+1. Repeat the the analysis done in point 1 for increasingly larger number of donors (try at least 5, 8, 16, and 24 random donors). Find the answers to the same questions highlighted in point 1. How does the number of differentially expressed genes (FDR < 0.01) change with increased sample size? What happens when you also filter the differentially expressed genes according to their effect size (absolute log2 fold-change > 1)? Does the number of differentially expressed genes above the absolute log2 fold-change > 1 
 2.  
  - Following the gene expression tutorial, identify genes that are significantly differentially expressed between the naive and interferon-gamma (IFNg) conditions (false discovery rate (FDR) < 0.01). Make sure to use the [original clean dataset](https://courses.cs.ut.ee/2019/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip) for this analysis ). How many genes are significantly differentially expressed at this fold change threshold? How many genes have absolute log2 fold-change > 1? How many genes are upregulated (increase in expression after stimulation) by IFNg stimulation at these log2 fold-change > 1 and FDR < 0.01 thresholds? How many genes are down-regulated (decrease in expression after stimulation)? 
  -  Repeat the same differential expression analysis on the naive *versus* *Salmonella* (SL1344) conditions. Answer the same questions that you answered in point 1. 
@@ -35,7 +35,7 @@ In this exercise, your task is to download a 'dirty' [gene expression dataset](h
  3. How many biological replicates do you need to detect detect 80% of the genes that are at least 2-fold differentially expressed in the full dataset of 84 individuals (336 samples in total)? Perform this analysis both for the naive vs IFNg comparison as well as the naive vs Salmonella comparison. This task is inspired by a recently published [paper](http://rnajournal.cshlp.org/content/22/6/839). (2 points)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1NjE1MDE4LDM4MzcxNTg2MCwyMDc3MT
+eyJoaXN0b3J5IjpbNDIzMTEwNzQyLDM4MzcxNTg2MCwyMDc3MT
 g1ODMyLC03NjQyNzA2NjQsNDYwODQyNDY5LC0xODIwNjIwNjQ5
 XX0=
 -->
