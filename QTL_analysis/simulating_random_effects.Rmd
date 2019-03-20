@@ -1,0 +1,175 @@
+---
+title: "Simulating random effects"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("lme4")
+library("dplyr")
+library("ggplot2")
+```
+
+Simulate a dataset with 5 individuals, each one containing three replicates.
+
+Specify desired between-individual variance and measurement noise variance
+```{r}
+var_individual = 0.5
+var_noise = 0.25
+```
+
+```{r}
+#Specify the number of replicates per individual
+replicate_counts = c(10,10,10,10,10)
+
+#Sample individual means from the normal distribution with variance var_individual
+individual_means = rnorm(5, mean = 0, sd = sqrt(var_individual))
+ind_means = dplyr::data_frame(individual_mean = individual_means, 
+                              individual = paste0("ind_", c(1:5)))
+
+#Add replicates and sample measurement noise
+data_balanced = dplyr::data_frame(individual = paste0("ind_", rep(c(1,2,3,4,5), times = replicate_counts))) %>%
+  dplyr::left_join(ind_means, by = "individual") %>%
+  #Sample measurement noise from the normal distribution with variance var_noise
+  dplyr::mutate(noise = rnorm(length(individual), mean = 0, sd = sqrt(var_noise))) %>%
+  dplyr::mutate(expression = individual_mean + noise) %>%
+  dplyr::mutate(sample_index = c(1:length(individual)))
+data_balanced
+```
+
+Theoretical (population) variance explained by individual
+```{r}
+var_individual/(var_individual + var_noise)
+```
+
+Simulated sample variance explained by individual
+```{r}
+var(individual_means)/(var(individual_means) + var(data_balanced$noise))
+```
+
+Make a plot of the raw data
+```{r}
+ggplot(data_balanced, aes(x = sample_index, y = expression, color = individual)) + 
+  geom_point() + 
+  facet_grid(~individual, scales = "free_x")
+```
+
+Specify a helper function that extract % variance explained from the linear mixed model
+```{r}
+#' Calculate the proportion of variance explaned by different factors in a lme4 model
+varianceExplained <- function(lmer_model){
+  variance = as.data.frame(lme4::VarCorr(lmer_model))
+  var_percent = dplyr::mutate(variance, percent_variance = vcov/sum(vcov)) %>% 
+    dplyr::select(grp, percent_variance) %>% 
+    dplyr::mutate(type = "gene")
+  var_row = tidyr::spread(var_percent, grp, percent_variance)
+  return(var_row)  
+}
+```
+
+Fit a linear mixed model to the dataset estimate variance explained
+```{r}
+model = lmer(expression ~ (1|individual), data_balanced)
+varianceExplained(model)
+```
+
+To the same with a standard fixed effect linear model
+```{r}
+model_fixed = lm(expression ~ individual, data_balanced)
+#Estimate variance explained
+summary(model_fixed)$adj.r.squared
+```
+
+Extract model coefficients for random effects
+```{r}
+coefs = coef(model)$individual
+coefs_df = dplyr::data_frame(individual = rownames(coefs), coef = coefs[,1], type = "lme4")
+```
+
+Estmate individual means
+```{r}
+ind_means = dplyr::group_by(data_balanced, individual) %>% 
+  dplyr::summarize(coef = mean(expression), type = "lm")
+```
+
+```{r}
+ggplot(data_balanced, aes(x = sample_index, y = expression, color = individual)) + 
+  geom_point() + 
+  facet_grid(~individual, scales = "free_x") + 
+  geom_hline(data = coefs_df, aes(yintercept = coef, linetype = type)) +
+  geom_hline(data = ind_means, aes(yintercept = coef, linetype = type))
+```
+
+
+
+# Application on an unbalanced dataset
+
+```{r}
+#Specify the number of replicates per individual
+replicate_counts = c(20,15,13,1,1)
+
+#Sample individual means from the normal distribution with variance var_individual
+individual_means = rnorm(5, mean = 0, sd = sqrt(var_individual))
+ind_means = dplyr::data_frame(individual_mean = individual_means, 
+                              individual = paste0("ind_", c(1:5)))
+
+#Add replicates and sample measurement noise
+data_unbalanced = dplyr::data_frame(individual = paste0("ind_", rep(c(1,2,3,4,5), times = replicate_counts))) %>%
+  dplyr::left_join(ind_means, by = "individual") %>%
+  #Sample measurement noise from the normal distribution with variance var_noise
+  dplyr::mutate(noise = rnorm(length(individual), mean = 0, sd = sqrt(var_noise))) %>%
+  dplyr::mutate(expression = individual_mean + noise) %>%
+  dplyr::mutate(sample_index = c(1:length(individual)))
+data_unbalanced
+```
+
+Visualise the data
+```{r}
+ggplot(data_unbalanced, aes(x = sample_index, y = expression, color = individual)) + 
+  geom_point() + 
+  facet_grid(~individual, scales = "free_x")
+```
+
+Simulated variance explained
+```{r}
+var(individual_means)/(var(individual_means) + var(data_unbalanced$noise))
+```
+
+
+```{r}
+model = lmer(expression ~ (1|individual), data_unbalanced)
+varianceExplained(model)
+```
+
+```{r}
+model_fixed = lm(expression ~ individual, data_unbalanced)
+#Estimate variance explained
+summary(model_fixed)$adj.r.squared
+```
+
+Extract model coefficients for random effects
+```{r}
+coefs = coef(model)$individual
+coefs_df = dplyr::data_frame(individual = rownames(coefs), coef = coefs[,1], type = "lme4")
+model_df = dplyr::left_join(data_unbalanced, coefs_df, by = "individual")
+```
+
+Estmate individual means
+```{r}
+ind_means = dplyr::group_by(data_unbalanced, individual) %>% 
+  dplyr::summarize(coef = mean(expression), type = "lm")
+```
+
+```{r}
+ggplot(data_unbalanced, aes(x = sample_index, y = expression, color = individual)) + 
+  geom_point() + 
+  facet_grid(~individual, scales = "free_x") + 
+  geom_hline(data = coefs_df, aes(yintercept = coef, linetype = type)) +
+  geom_hline(data = ind_means, aes(yintercept = coef, linetype = type))
+```
+
