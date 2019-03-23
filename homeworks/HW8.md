@@ -13,5 +13,5 @@ There is a bonus exercise (2 bonus points). You need to use open Mask R-CNN impl
 eyJoaXN0b3J5IjpbLTExNTI0NDIyMThdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk5NDk0NDk1XX0=
+eyJoaXN0b3J5IjpbODcxNjIyNzM4LDM5OTQ5NDQ5NV19
 -->
