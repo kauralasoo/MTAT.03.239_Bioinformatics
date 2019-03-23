@@ -29,7 +29,7 @@ Repeat the colocalisation analysis with the priors that you used in Task 2 but n
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTE5MTA5MzIsMzMyMDc2MDEyLDEzNT
-gwOTIwNjIsMTEzOTcwNTI2MCwtODc2MTQxMDc2LDIwMzEzMzcx
-LC0xNTI3ODI1MDAxXX0=
+eyJoaXN0b3J5IjpbMzEwMTczMjgzLC0xOTExOTEwOTMyLDMzMj
+A3NjAxMiwxMzU4MDkyMDYyLDExMzk3MDUyNjAsLTg3NjE0MTA3
+NiwyMDMxMzM3MSwtMTUyNzgyNTAwMV19
 -->
