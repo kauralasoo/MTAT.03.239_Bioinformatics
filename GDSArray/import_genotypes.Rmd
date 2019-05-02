@@ -1,0 +1,45 @@
+---
+title: "Import Genotypes with GDSArray"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load packages
+```{r}
+suppressMessages(library("SNPRelate"))
+suppressMessages(library("GDSArray"))
+source("GDSArray_helpers.R")
+```
+
+## Step 1: Convert a VCF file to a binary GDS format
+
+```{r}
+SNPRelate::snpgdsVCF2GDS("GEUVADIS_genotypes.vcf.gz", "GEUVADIS_genotypes.gds", method="biallelic.only")
+```
+
+## Step 2: Import variant names and coordinates from the GDS file
+
+```{r}
+variant_info = importVariantInformationFromGDS("GEUVADIS_genotypes.gds")
+variant_info
+```
+
+## Step 3: Exptract genotypes for one specific variant
+
+```{r}
+variant_genotypes = extractVariantGenotypeFromGDS(variant_id = "chr1_1302224_T_C", variant_information = variant_info, gdsfile = "GEUVADIS_genotypes.gds")
+variant_genotypes
+```
+
+## Step 4: Extract genotypes matrix for all variants in a given region
+
+```{r}
+genotype_matrix = extractGenotypeMatrixFromGDS(chr = "1", start = 1301656, end = 1306149, variant_information = variant_info, gdsfile = "GEUVADIS_genotypes.gds")
+genotype_matrix[1:8,1:10]
+```
+
