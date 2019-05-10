@@ -40,6 +40,7 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NTkwMzc3MSwtMTIxNzMwNDA0MCw2MD
-cwNjc0NjcsNDgzNzE2ODk3LDY3MzYzODg1XX0=
+eyJoaXN0b3J5IjpbLTEwNTMwMzQzMzEsMTY3NTkwMzc3MSwtMT
+IxNzMwNDA0MCw2MDcwNjc0NjcsNDgzNzE2ODk3LDY3MzYzODg1
+XX0=
 -->
