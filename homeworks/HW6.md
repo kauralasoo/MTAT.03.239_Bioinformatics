@@ -25,5 +25,6 @@ Submit:
    of the real datasets (can be SeqLogo) and a position frequency matrix (PFM). See lecture slides or [Wikipedia](https://en.wikipedia.org/wiki/Position_weight_matrix).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NzcyNjEwOSw2NjM3MTc1OTFdfQ==
+eyJoaXN0b3J5IjpbLTkyNDU2OTYzMCwxMTk3NzI2MTA5LDY2Mz
+cxNzU5MV19
 -->
