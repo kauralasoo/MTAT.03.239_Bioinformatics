@@ -19,5 +19,5 @@ You can find out your container id using the `docker ps -a` .
 
 **Do not try to restart the container with the `docker run` command! Instead of restarting your previous container, it will create a new container from the image that your provide.** 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDU0OTA0MV19
+eyJoaXN0b3J5IjpbMTA1OTkxNDM2NSwxMDg0NTQ5MDQxXX0=
 -->
