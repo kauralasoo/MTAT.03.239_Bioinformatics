@@ -13,6 +13,7 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  8. [Plotting partial pooling in mixed-effects models](https://tjmahr.github.io/plotting-partial-pooling-in-mixed-effects-models/)
  9. [Statistics for biologists](https://www.nature.com/collections/qghhqm/pointsofsignificance) 
  10. [Importing genotype data into R with GDSArray](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/GDSArray/import_genotypes.md)
+ 11. [The Missing Semester of your CS education](https://missing.csail.mit.edu/) - good instructions for working with Linux command line
 
 ## Topics
 
