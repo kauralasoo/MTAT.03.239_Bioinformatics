@@ -1,0 +1,37 @@
+# Homework 5
+
+## Task 1: Variance explained and statistical power to detect genetic associations (2 points).
+**Learning objective**: Understand the relationships between genotype allele frequency, variance explained, sample size and the statistical power to detect genetic associations.
+
+To help you get started with this exercise, I have created a small [example](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/QTL_analysis/simulating_genetic_associations.md) in R to illustrate how we can simulate the effect of genetic variants on gene expression. In your solution you can use either my code snippets or equivalent functions in Python. 
+
+Statistical power of an hypothesis test is the probability that the test rejects the null hypothesis (H0) when a specific alternative hypothesis (H1) is true ([Wikipedia](https://en.wikipedia.org/wiki/Power_%28statistics%29)). 
+
+Please answer the following questions. 
+
+1. Using the code example provided [here](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/QTL_analysis/simulating_genetic_associations.md), estimate the number of samples needed so that the likelihood ratio test (LRT) has 80% power to reject the null hypothesis (p < 0.05) that genotype has no effect on gene expression. Assume that the minor allele frequency (MAF) of the genetic variant is 0.5 and genotype explains 50% of the variance in the gene expression data (the remaining 50% of the variance is due to measurement noise). You can estimate power at a given sample size by generating many (>100) simulated datasets, performing the likelihood ratio test and counting how often is the p-value less then the desired threshold (p<0.05).
+2. Modify the simulation so that the minor allele frequency is still 0.5, but the genotype now explains only 10% of the total variance. How much larger has the sample size to be to achieve the same statistical power of 80%?
+3. Start with the original simulation in point 1, but reduce the minor allele frequency 10%. How does this influence the fraction of variance explained by the genotype when the measurement noise remains unchanged? How large sample size will you need to achieve 80% power?
+
+## Task 2: Understanding correlation (linkage disequilibrium (LD)) between genetic variants (1 point)
+High correlation (linkage disequilibrium (LD)) between genetic variants means that it is challenging to identify which of the many associated variants is the causal variant. One way to quantify LD between two genetic variants is to calculate the square of the Pearson's correlation coefficient (r<sup>2</sup>). Based on the genotype data presented in the [flow cytometry tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md),  estimate the number of genetic variants that are in high LD (r<sup>2</sup> > 0.8) with rs778587 genetic variant. In this example, rs778587 is the genetic variants that is most strongly associated with the expression of the CD14 protein. The variant with the strongest association in a region is often referred to as the *lead* variant.
+
+The original VCF file is available from [here](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/data/genotypes/open_access_genotypes.vcf.gz)  and an R data file containing the genotype matrix where the genotypes have been converted to allele counts (0,1,2) is available from [here](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/data/genotypes/open_access_genotypes.rds). You can open the .rds file in R using the `readRDS()` command.  In your report, include the code that you used to calculate LD as well es the number of genetic variants with r<sup>2</sup> > 0.8 with rs778587. Remember that LD is the correlation between two genetic variants across individuals.
+
+Note that the flow cytometry data is in its own GitHub repository: https://github.com/kauralasoo/flow_cytomtery_genetics.
+
+## Task 3: Calculating empirical p-values (2 points)
+One of the consequences of LD between genetic variants is that when we test associations between genetic variants and a phenotype, then it is difficult to accurately estimate how many independent tests are being performed. For example, in the [CD14 tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md), we tested the association between 541 genetic variants and CD14 expression. If the variants were all independent from each other, then we could use Bonferroni correction to correct for the number of test that we performed. However, as you can see from the Manhattan plot in the tutorial as well as from Task 1, many of the variants are in high LD with each other and therefore not independent. In this scenario, we could still use Bonferroni correction, but it is going to be over-conservation.
+
+Alternatively, if we want to test if the smallest p-value observed in a region (such as in the region +/-200 kb from CD14 gene) is smaller than expected by chance, then instead of using Bonferroni correction, we can also use an empirical approach in which we permute the genotypes between individual multiple times, recalculate all correlations and then record the minimal p-value that we observed in the permuted data. By repeating this procedure multiple times (e.g. 100-10000), we can ask how often is the minimal p-value from permuted data smaller than than minimal p-value in our original dataset. If this is sufficiently rare then we conclude that our initial associations was statistically significant.
+
+ 1. Using the strategy described above, permute the labels (individuals) of the genotype dataset 100 times and redo the associations testing for CD14 expression using each of the permuted dataset. (HINT: `runMatrixEQTL` function has a `permute` flag that allows you to do that).
+ 2. From each permutation run, store the minimal association p-value across all tested variants. Finally, report report how often is the minimal p-value from the permutation runs smaller then the minimal p-value that you observed on the original dataset. Is the associations between CD14 cell surface expression rs778587 significant at 10% empirical FDR level?
+ 3. Repeat the same permutation analysis for CD16 and CD206 proteins. For both of these proteins, report how often is the minimal p-value from the permutation run smaller than the minimal p-value calculated on the original dataset. Are the associations that you detect for CD16 and CD206 statistically significant?
+ 
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTE0Mzg5MzgxMSwxNjQ2NDU1NjIzLDE0MT
+A1NTUyNzcsNzgwMzAwNjAzLC0xOTQ1NDY2ODkxLDIwMDc5MTA3
+NDgsMTkwNjg1NDc5OF19
+-->
