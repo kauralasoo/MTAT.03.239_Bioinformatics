@@ -7,6 +7,8 @@ Given the Borrows-Wheeler transformed string 'ACTCA$TA'.
 * Show how many times the pattern 'CA' occurs in original string using the FM index and LF(i) (Last-to-First) function
 * Does the pattern 'CATTA' appear in original string?
 
+Write down three things that you least understood from the lecture.
+
 **Additional reading**
  - An entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
  - Explantation of the FM index from Ben Langmead: [link](https://www.youtube.com/watch?v=kvVGj5V65io&t=1195s)
