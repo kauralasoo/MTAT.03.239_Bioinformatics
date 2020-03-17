@@ -5,7 +5,7 @@
 
 The genetic variant most commonly associated with lactose persistence (ability to drink milk) in European populations is rs4988235 located on chromosome 2 on position 135851076. The reference allele at this position is G and the alternative allele is A. The AA and AG genotypes are associated with lactose persistence while individuals who have the GG genotype are likely to be lactose intolerant. The [GEUVADIS dataset](https://www.nature.com/articles/nature12531) contains individuals from four European populations (FIN, CEU, GBR, TSI) and one African population (YRI). You can find the VCF file with the genotypes of the GEUVADIS dataset on the HPC: 
 
-	/gpfs/hpc/home/a72094/teaching/MTAT.03.239_Bioinformatics/data/GEUVADIS/GEUVADIS_GRCh38_filtered_chr2.vcf.gz
+	/gpfs/hpc/projects/MTAT.03.239_Bioinformatics/data/GEUVADIS/GEUVADIS_GRCh38_filtered_chr2.vcf.gz
 
 1. Extract the genotypes of the rs4988235 genetic variant from the the VCF file. One way to do this is to use the bcftools command line utility:
 	`module load bcftools-1.9`
@@ -18,7 +18,7 @@ The genetic variant most commonly associated with lactose persistence (ability t
 
 Using the same VCF file as in Task 1 and [QTLtools software](https://qtltools.github.io/qtltools/), perform principal component analysis fo the genotype data from the GEUVADIS dataset. QTLtools is installed in here: 
 
-    /gpfs/hpc/home/a72094/teaching/MTAT.03.239_Bioinformatics/software/bin/QTLtools
+    /gpfs/hpc/projects/MTAT.03.239_Bioinformatics/software/bin/QTLtools
 
 QTLtools allows you to perform PCA directly on VCF file without converting the dataset into 0,1,2 genotype matrix beforehand. The command that you need is something similar:
 
@@ -42,16 +42,3 @@ Using `QTLtools mbv` is easy, you just need to specify the BAM file, the VCF fil
 2. Once you have run QTLtools mbv, import the results into R (or Python) and make a scatter plot where on one axis you have the *fraction of concordant heterozygous sites* (n_het_consistent/n_het_covered from output file) and on the other axis you have the *fraction of concordant homozygous sites* (n_hom_consistent/n_hom_covered). Note that you need to calculate these ratios yourself as described above. Based on this plot, are you able to determine which individual is likely to correspond the ERR188146 RNA-seq sample? 
 
 ## Bonus task: Repeat the PCA analysis from Task 2 using the SNPRelate Bioconductor package (2 points)
-
-
-
-
-
-
-
-	
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg4NzIzNzExLC02NTI2MDQzNjksNzQ0ND
-IzMDg3LDI2NDM5NDI3Nl19
--->
