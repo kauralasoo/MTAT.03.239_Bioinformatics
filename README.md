@@ -22,14 +22,6 @@ Teaching materials and tutorials for the bioinformatics course thought at the Un
  3. [EM algorithm](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/transcript_expression/EM-algorithm.md)
  4. [Variance component analysis](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/variance_components/estimate_variance_components.md)
 
-## Homeworks
-
- 1. [Homework 1](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW1.md)
- 2. [Homework 2](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW2.md)
- 3. [Homework 3](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/HW3_2019.md)
-
-
-
 ## Related courses
 
  - Ben Langmead's [Algorithms for DNA Sequencing](https://www.youtube.com/playlist?list=PL2mpR0RYFQsBiCWVJSvVAO3OJ2t7DzoHA) (excellent video lectures on DNA alignment)
