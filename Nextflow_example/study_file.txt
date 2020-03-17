@@ -1,0 +1,5 @@
+study	fastq1	fastq2
+eipl_A	https://zenodo.org/record/1173306/files/eipl_A.1.fastq.gz	https://zenodo.org/record/1173306/files/eipl_A.2.fastq.gz
+eipl_C	https://zenodo.org/record/1173306/files/eipl_C.1.fastq.gz	https://zenodo.org/record/1173306/files/eipl_C.2.fastq.gz
+fikt_A	https://zenodo.org/record/1173306/files/fikt_A.1.fastq.gz	https://zenodo.org/record/1173306/files/fikt_A.2.fastq.gz
+fikt_C	https://zenodo.org/record/1173306/files/fikt_C.1.fastq.gz	https://zenodo.org/record/1173306/files/fikt_C.2.fastq.gz
