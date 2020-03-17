@@ -9,6 +9,11 @@ Channel
     .ifEmpty { exit 1, "HISAT2 index files not found: ${params.hisat2_index}" }
     .set { hisat2_index_ch }
 
+Channel
+    .fromPath(params.gtf_file)
+    .ifEmpty { exit 1, "Gene annotations GTF file not found: ${params.gtf_file}" } 
+    .set { gtf_ch }
+
 process hisat2Align{
     
     input:
@@ -16,7 +21,7 @@ process hisat2Align{
     file hisat2_indices from hisat2_index_ch.collect()
 
     output:
-        file "${sample_name}.bam" into hisat2_bam
+    set sample_name, file("${sample_name}.bam") into hisat2_bam
 
     script:
     index_base = hisat2_indices[0].toString() - ~/.\d.ht2/
