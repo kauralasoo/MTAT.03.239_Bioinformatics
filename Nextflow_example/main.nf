@@ -9,11 +9,6 @@ Channel
     .ifEmpty { exit 1, "HISAT2 index files not found: ${params.hisat2_index}" }
     .set { hisat2_index_ch }
 
-Channel
-    .fromPath(params.gtf_file)
-    .ifEmpty { exit 1, "Gene annotations GTF file not found: ${params.gtf_file}" } 
-    .set { gtf_ch }
-
 process hisat2Align{
     
     input:
