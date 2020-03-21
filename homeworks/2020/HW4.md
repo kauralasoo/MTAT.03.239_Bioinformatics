@@ -7,6 +7,7 @@ The genetic variant most commonly associated with lactose persistence (ability t
 
 	/gpfs/hpc/projects/MTAT.03.239_Bioinformatics/data/GEUVADIS/GEUVADIS_GRCh38_filtered_chr2.vcf.gz
 
+1. Start an interactive slurm job with `srun --pty bash`. This way you can run the following commands interactively on one of the HPC comupte nodes without submitting them as slurm jobs with sbatch.
 1. Extract the genotypes of the rs4988235 genetic variant from the the VCF file. One way to do this is to use the bcftools command line utility:
 	`module load bcftools-1.9`
     `bcftools view -r <chr>:<position> <path_to_vcf_file>`
