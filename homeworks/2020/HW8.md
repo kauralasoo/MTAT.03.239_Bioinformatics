@@ -1,0 +1,22 @@
+﻿# Homework 8
+
+## Task 1: Understand *.narrowPeak file format (1 point)
+**Learning objective**: In bioinformatics (and in general) file formats are important. Often you are given data and your first task is to **truly** understand what this data means and how is it most appropriate to interpret.
+
+Download the data from here [here](https://1drv.ms/f/s!AmCRrTXF10_MgXFZ4mpjd0btzSJd). There is ChIP-seq data for 2 transcription factors PU1 and CTCF. Download data for one of those.
+1. Study *.narrowPeak file format to learn what each column in the data represents. Submit your interpretation of how to interpret the values in each column.
+2. How does the *.narrowPeak file relate to the accompanying *.fasta file.
+
+## Task 2: Extract top hits from *.fasta file (1 point)
+With the data from Task 1, use *.narrowPeak file to filter top 10 entries from accompanying *.fasta file. It is up to you which column in the *.narrowPeak file you'll be using, but do give a reason.
+
+Submit the reason and these top 10 fasta sequences.
+
+## Task 3: Find best motif for top sequences (2 points)
+Using solution from last task, instead of top 10 entries, take top 100 (or 1000, or whatever number you see fit) and find the best motif for these sequences. Let the motif length be 15.
+
+Submit the motif count matrix or profile matrix.
+
+To complete this task you need to either:
+* implement any of the motif finding algorithms from Chapter 2 in Bioinformatics Algorithms text book ([link to video lectures](https://youtu.be/tmhmdai14oE?list=PLQ-85lQlPqFMEcdAi0yF015RgmowtsvwT)), together with the motif also submit your code and search parameters or
+* use some existing (online) tool, together with the motif also submit used tool with proper reference and used search parameters.
