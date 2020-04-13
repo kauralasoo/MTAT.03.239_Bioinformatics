@@ -1,7 +1,7 @@
 # Homework 7 - Colocalisation and statistical fine mapping
 
 ## Task 1. Understanding the basics of fine mapping
-1. Perform fine mapping on the CD14 gene expression data. Compare the the 95% credible set to the one obtained from protein expression (fuorescent intensity) data in this tutorial. Hown big are to two credible sets? How many varaints overlap? Do you think it is likely that the CD14 gene and protein expression are regulated by the same causal genetic varaint? Why or why not? How strong to you think the fine mapping evidence is? What other evidence can you take into account (think HW6).
+1. Using the flow cytometry fine mapping [tutorial](https://github.com/kauralasoo/flow_cytomtery_genetics/blob/master/analysis/fine_mapping/fine_mapping_example.md), perform fine mapping on the CD14 gene expression data. Compare the the 95% credible set to the one obtained from protein expression (fuorescent intensity) data in this tutorial. Hown big are to two credible sets? How many varaints overlap? Do you think it is likely that the CD14 gene and protein expression are regulated by the same causal genetic varaint? Why or why not? How strong to you think the fine mapping evidence is? What other evidence can you take into account (think HW6).
 
 ## Task 2. What is the effect of sample size on fine mapping accuracy?
 For this task, first download the CEDAR dataset from [here](https://drive.google.com/drive/folders/1PveWl7nJQlyYp_n2kY79qOx4LrwS9GcV?usp=sharing).
