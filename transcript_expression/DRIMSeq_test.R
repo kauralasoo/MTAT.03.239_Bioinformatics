@@ -1,6 +1,6 @@
 library("dplyr")
 library("DRIMSeq")
-library(SummarizedExperiment)
+library("SummarizedExperiment")
 
 #Import data
 dataset = readRDS("data/salmon_SummarizedExperiment_subset.rds")
