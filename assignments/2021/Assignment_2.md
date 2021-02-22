@@ -3,9 +3,9 @@
 **Learning objective:** Learn how Burrows-Wheeler Transform and FM-index work and how they can be used to perform sequence matching and alignment extremely fast.
 
 Given the Borrows-Wheeler transformed string 'ACTCA$TA'.  
-* Construct the FM index  
-* Show how many times the pattern 'CA' occurs in original string using the FM index and LF(i) (Last-to-First) function
-* Does the pattern 'CATTA' appear in original string?
+1. Construct the FM index  
+2. Show how many times the pattern 'CA' occurs in original string using the FM index and LF(i) (Last-to-First) function
+3. Does the pattern 'CATTA' appear in original string?
 
 **Additional reading**
  - An entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
