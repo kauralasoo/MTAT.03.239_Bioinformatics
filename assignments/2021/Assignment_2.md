@@ -11,7 +11,7 @@ Given the Borrows-Wheeler transformed string 'ACTCA$TA'.
  - An entertaining video explaining how Burrows-Wheeler Transform works: [link](https://www.youtube.com/watch?v=4WRANhDiSHM).
  - Explantation of the FM index from Ben Langmead: [link](https://www.youtube.com/watch?v=kvVGj5V65io&t=1195s)
 
-## Task 3: Using the High Performance Computing Center (1 point)
+## Task 2: Using the High Performance Computing Center (1 point)
 **Learning objective:** The aim of this task is to learn how to use the [University of Tartu High Performance Computing (HPC) Center](https://hpc.ut.ee/en/home/) to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the [SLURM](https://hpc.ut.ee/en/slurm/) system when you want to run computations.
 
  1. If you have never used the HPC before, go through the [introductory slides](https://docs.google.com/presentation/d/1XhA4YnnZ-Gzuyo-_PghMcu_X-fXe_EUhiW2bHoABwgI/edit#slide=id.g3308ddf0d8_2_160) to learn what it's all about. 
@@ -20,7 +20,7 @@ Given the Borrows-Wheeler transformed string 'ACTCA$TA'.
  4. Learn how to transfer files between your computer and the HPC system. On Mac I prefer to use the [Cyberduck](https://cyberduck.io/) sftp client and it might work on Windows as well. Another option is [FileZilla](https://filezilla-project.org/), which should also work on all three platforms. 
  5. Demonstrate the you have managed to successfully execute your first job by copying the contents of the SLURM output file into your report.
 
-## Task 4: RNA-seq alignment (2 points)
+## Task 3: RNA-seq alignment (2 points)
 **Learning objective:** You will learn how RNA sequencing is used to measure gene expression and what computational steps are needed to do that. First, you will understand what the raw RNA sequencing reads (in FASTQ format) look like and how you can use alignment software (HISAT2) to find the locations in the reference genome where these reads come from. Counting the number of reads overlapping gene annotations will also show you how gene expression is measured using RNA-seq. 
 
 Using the [RNA-seq alignment tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md), answer the following questions:
