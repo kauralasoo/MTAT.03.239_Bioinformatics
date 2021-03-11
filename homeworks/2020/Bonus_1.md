@@ -4,4 +4,6 @@ In Homework 2, Task 4 you had to quantify gene expression from four RNA-seq samp
 
 In this task, you goal is to implement the read alignemnt (HISAT2) and counting (featureCounts) steps as a Nextflow workflow and execute that workflow on the University of Tartu HPC. You can assume that the HISAT2 index has already been generated. Optionally, you can also merge the featureCounts output from all four samples into one file. You should be able to run the workflow an arbitrary number of samples (i.e. you should not hard code the sample names into the workflow).
 
+For assistance, see this [tutorial](https://github.com/AlasooLab/onboarding/blob/main/resources/nextflow.md) on how to execute nextflow workflows on the HPC. You can also use the minimal Nextflow [example](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/tree/master/Nextflow_example) that uses HISAT2 to perform read alignment. 
+
 
