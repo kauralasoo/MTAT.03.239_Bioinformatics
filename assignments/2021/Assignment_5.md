@@ -7,7 +7,6 @@ Using the variance component analysis [tutorial](https://github.com/kauralasoo/f
 1. Does the cell line (line_id) explain most of variance observed in the expression of these proteins as well (like CD14) or is the contribution of flow_date larger for them? 
 2. Please illustrate your conclusions by making the same dot plots that were used under the section "Visualising sources of variation" to prove your point.
 3. Do you get the same result when you fit line_id and flow_date as fixed effects in standard linear model (lm)? (Hint: Fit two separate linear models, one with line_id as a fixed effect and another one with flow_data as fixed effect, make sure that you convert flow_date to factor first (as.factor).
-4. In Task 3 of [Homework 5](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/homeworks/2020/HW5.md) you did not detect any genetic variants that were significantly associated with CD16 and CD206 expression after correcting for multiple testing? Combining this observation with your variance component analysis that you did in point 1, can you conclude that genetics does not contribute to the expression of CD16 and CD206 proteins? Why or why not? Please explain your reasoning.
 
 Note that the flow cytometry data is in its own GitHub repository: https://github.com/kauralasoo/flow_cytomtery_genetics.
 
@@ -17,8 +16,3 @@ Can you find out which of these two mechanisms is more likely to be true in the 
 
 What is the correlation between CD14 log-transformed gene expression and protein expression in naive (unstimulated) macrophages? Hint: since gene expression and protein expression were measured in the same individuals, you can use the line_id or genotype_id to match the two. 
 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDUxNzMyOTcsMTg3Mzg2NjM3NCw2Mz
-E5Mzc5NTVdfQ==
--->
