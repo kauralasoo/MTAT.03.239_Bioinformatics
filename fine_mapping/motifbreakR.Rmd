@@ -1,0 +1,118 @@
+---
+title: "motifbreakR intro"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#Importing the required packages
+```{r}
+library("motifbreakR")
+library("MotifDb")
+library("BSgenome.Hsapiens.UCSC.hg38")
+library("dplyr")
+library("GenomicRanges")
+```
+
+#Import credible sets from the eQTL Catalogue
+
+First, we need to download the eQTL fine mapping results from the Alasoo_2018 study from macrophages stimulated with interferon-gamma and Salmonella. 
+
+```{r}
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018.macrophage_IFNg+Salmonella_ge.purity_filtered.txt.gz")
+```
+
+# GP1BA
+Next, let's extract the credible set for the GP1BA gene (ENSG00000185245):
+
+```{r}
+GP1BA_cs = dplyr::filter(cs_table, phenotype_id == "ENSG00000185245")
+GP1BA_cs
+```
+
+We can see that this credible set consists of eight variants, one of which is an indel (chr17_4922449_AAAAT_A). Although motifbreakR package should in principle support indels, I could not get it to work right now, so we are going to exclude the indel for now. When performing real analysis, you should always consider indels as well, because they can often be the true causal variant. 
+
+```{r}
+GP1BA_cs_no_indel = GP1BA_cs %>%
+  dplyr::mutate(max_allele_nchar = pmax(nchar(ref), nchar(alt))) %>%
+  dplyr::filter(max_allele_nchar == 1)
+GP1BA_cs_no_indel
+```
+
+Next, we need format the credible set variant so that they will work with motifbreakR. This is a bit annoying as we need to first save the varianta into a text file in BED format and then read them back into R. 
+```{r}
+GP1BA_snps = dplyr::transmute(GP1BA_cs_no_indel, 
+                              V1 = paste0("chr",chr), 
+                              V2 = pos - 1, 
+                              V3 = pos, 
+                              V4 = paste(paste0("chr",chr), pos, ref, alt, sep = ":"), 
+                              V5 = 0, 
+                              V6 = "+")
+write.table(GP1BA_snps, "snps_bed.tsv", sep = "\t", row.names = F, quote = F, col.names = F)
+GP1BA_granges <- motifbreakR::snps.from.file(file = "snps_bed.tsv",
+                                  search.genome = BSgenome.Hsapiens.UCSC.hg38,
+                                  format = "bed")
+GP1BA_granges
+```
+
+# Overlap with ATAC-seq data
+Next, we can ask which of the seven credible set variants overlap with accessible chromatin regions in macrophage. To do this, we first need to import all of the accessible regions identified with ATAC-seq in the Alasoo_2018 study.
+
+```{r}
+peaks = rtracklayer::import.gff3("https://zenodo.org/record/1188300/files/ATAC_consensus_peaks.gff3.gz")
+seqlevelsStyle(peaks) <- "UCSC" #This make chromosome names compatible with the motifbreakR object
+peaks
+```
+
+Now we can find the variants the overlap open chromatin regions:
+```{r}
+olaps = GenomicRanges::findOverlaps(GP1BA_granges, peaks)
+GP1BA_olaps = GP1BA_granges[queryHits(olaps)]
+GP1BA_olaps
+```
+
+Finally, we can use motifbreakR together with the HOCOMOCO database to identify transcription factors whose motifs might be disrupted by these genetic variants:
+
+```{r}
+results <- motifbreakR(snpList = GP1BA_olaps, filterp = TRUE,
+                       pwmList = hocomoco,
+                       threshold = 1e-4,
+                       method = "ic",
+                       bkg = c(A=0.25, C=0.25, G=0.25, T=0.25),
+                       BPPARAM = BiocParallel::bpparam())
+results_df = dplyr::as_tibble(as.data.frame(elementMetadata(results)))
+results_df
+```
+
+To identify more potential hits, we can reduce the p-value threshold to 1e-3:
+
+```{r}
+results <- motifbreakR(snpList = GP1BA_olaps, filterp = TRUE,
+                       pwmList = hocomoco,
+                       threshold = 1e-3,
+                       method = "ic",
+                       bkg = c(A=0.25, C=0.25, G=0.25, T=0.25),
+                       BPPARAM = BiocParallel::bpparam())
+results_df = dplyr::as_tibble(as.data.frame(elementMetadata(results)))
+results_df
+```
+The NFKB transcription factor consists of multiple sub-units. In this case, we can look for both NFKB1 and RELA:
+
+```{r}
+nfkb_results = results[results$geneSymbol %in% c("NFKB1", "RELA"),]
+plotMB(results = nfkb_results, rsid = "chr17:4926809:G:A", effect = "strong")
+```
+
+
+# SPOPL
+
+```{r}
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018.macrophage_IFNg_ge.purity_filtered.txt.gz")
+SPOPL_cs = dplyr::filter(cs_table, phenotype_id == "ENSG00000144228")
+SPOPL_cs
+```
