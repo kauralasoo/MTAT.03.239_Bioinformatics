@@ -18,7 +18,7 @@ Following the [motifbreakR tutorial](https://github.com/kauralasoo/MTAT.03.239_B
 
 **Part b: SPOPL eQTL**
 
-Following the motifbreakR tutorial, answer the following the questions for the SPOPL eQTL:
+Following the [motifbreakR tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/fine_mapping/motifbreakR.md), answer the following the questions for the SPOPL eQTL:
 1. How many genetic variants belong to the 95% credible set? What is the largest observed posterior inclusion probability (PIP)?
 2. How many of those credible set variants overlap at least one open chromatin region in macrophages?
 3. Does the variant with the largest PIP value overlap an open chromatin region?
