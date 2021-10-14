@@ -89,5 +89,5 @@ Now, let's uncompress them and extract only those genes that are on chromosome 2
 ### Counting the number of reads overlapping gene annotations 
 We can now proceed with read counting with [featureCounts](http://bioinf.wehi.edu.au/featureCounts/)
 	
-	/gpfs/hpc/projects/MTAT.03.239_Bioinformatics/software/bin/featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
+	/gpfs/space/projects/MTAT.03.239_Bioinformatics/software/bin/featureCounts -p -C -D 5000 -d 50 -s2 -a annotations/Homo_sapiens.GRCh38.91.chr21.gtf -o results/fikt_A.counts results/fikt_A.sortedByCoords.bam
 
