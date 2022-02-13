@@ -12,12 +12,12 @@ Given the Borrows-Wheeler transformed string 'ACTCA$TA'.
  - Explantation of the FM index from Ben Langmead: [link](https://www.youtube.com/watch?v=kvVGj5V65io&t=1195s)
 
 ## Task 2: Using the High Performance Computing Center (1 point)
-**Learning objective:** The aim of this task is to learn how to use the [University of Tartu High Performance Computing (HPC) Center](https://hpc.ut.ee/en/home/) to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the [SLURM](https://hpc.ut.ee/en/slurm/) system when you want to run computations.
+**Learning objective:** The aim of this task is to learn how to use the [University of Tartu High Performance Computing (HPC) Center](https://hpc.ut.ee/en/home/) to run computational tasks. The main thing to remember is to **NEVER** run any computations on the head node of the HPC. You can use the head node to download and move files, but you should always use the [SLURM](https://docs.hpc.ut.ee/cluster/quickstart/) system when you want to run computations.
 
  1. If you have never used the HPC before, go through the [introductory slides](https://docs.google.com/presentation/d/1XhA4YnnZ-Gzuyo-_PghMcu_X-fXe_EUhiW2bHoABwgI/edit#slide=id.g3308ddf0d8_2_160) to learn what it's all about. 
  2. Log into the head node of the rocket cluster using ssh. If you are using Mac or Linux, you can do it straight from the command line: `ssh <your_user_name>@rocket.hpc.ut.ee.` On Windows you might need to install [Putty](https://www.putty.org/). More instructions are available [here](https://hpc.ut.ee/en/using-ssh/). 
- 3. Submit your first jobs to the cluster by following the [SLURM](https://hpc.ut.ee/en/slurm/) tutorial and look at it's output.
- 4. Learn how to transfer files between your computer and the HPC system. On Mac I prefer to use the [Cyberduck](https://cyberduck.io/) sftp client and it might work on Windows as well. Another option is [FileZilla](https://filezilla-project.org/), which should also work on all three platforms. 
+ 3. Submit your first jobs to the cluster by following the [SLURM submit job](https://docs.hpc.ut.ee/cluster/monitoring_and_managing_jobs/submit_jobs/) tutorial and look at it's output.
+ 4. Learn how to transfer files between your computer and the HPC system. On Mac I prefer to use the [Cyberduck](https://cyberduck.io/) sftp client and it might work on Windows as well. Another option is [FileZilla](https://filezilla-project.org/), which should also work on all three platforms. If you prefer command line over Graphical User Interfaces please check out the [scp usage](https://docs.hpc.ut.ee/cluster/quickstart/#copy-data).
  5. Demonstrate the you have managed to successfully execute your first job by copying the contents of the SLURM output file into your report.
 
 ## Task 3: RNA-seq alignment (2 points)
