@@ -21,9 +21,9 @@ Let's download the sequence for chromosme 21:
 ### Build the HISAT2 index
 First you need to get the HISAT2 software. If you are using the [University of Tartu High Performance Computing Center](https://hpc.ut.ee/en/home/), then HISAT2 is already installed for you and you can add it to your path using the modules system. Click [here](https://hpc.ut.ee/en/guides/using-modules/) to read more about modules.
 
-    module load hisat-2.0.4
+    module load any/hisat2/2.0.4
 
-**Remember that you should NEVER run any code on the head node of the HPC**. You should use the SLURM queue system instead. Before proceeding to the next steps, you should first familiarise yourself with the SLURM system and how to submit jobs using the documentation found [here](https://hpc.ut.ee/en/slurm/).
+**Remember that you should NEVER run any code on the head node of the HPC**. You should use the SLURM queue system instead. Before proceeding to the next steps, you should first familiarise yourself with the SLURM system and how to submit jobs using the documentation found [here](https://docs.hpc.ut.ee/cluster/monitoring_and_managing_jobs/submit_jobs/).
 
 We can now use the FASTA file that we downloaded above to build an index of the reference genome.
 
@@ -56,7 +56,7 @@ By default, HISAT2 outputs results as uncompressed SAM to the standard output. S
 
 First add samtools to your path:
 
-    module load samtools-1.9
+    module load samtools/1.9
 
 Then align with HISAT2:
 
