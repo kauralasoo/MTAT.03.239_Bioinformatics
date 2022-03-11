@@ -5,7 +5,7 @@
 
 The genetic variant most commonly associated with lactose persistence (ability to drink milk) in European populations is rs4988235 located on chromosome 2 on position 135851076. The reference allele at this position is G and the alternative allele is A. The AA and AG genotypes are associated with lactose persistence while individuals who have the GG genotype are likely to be lactose intolerant. The [GEUVADIS dataset](https://www.nature.com/articles/nature12531) contains individuals from four European populations (FIN, CEU, GBR, TSI) and one African population (YRI). You can find the VCF file with the genotypes of the GEUVADIS dataset on the HPC: 
 
-	/gpfs/hpc/projects/MTAT.03.239_Bioinformatics/data/GEUVADIS/GEUVADIS_GRCh38_filtered_chr2.vcf.gz
+	/gpfs/space/projects/MTAT.03.239_Bioinformatics/data/GEUVADIS/GEUVADIS_GRCh38_filtered_chr2.vcf.gz
 
 1. Start an interactive slurm job with `srun --pty bash`. This way you can run the following commands interactively on one of the HPC comupte nodes without submitting them as slurm jobs with sbatch.
 1. Extract the genotypes of the rs4988235 genetic variant from the the VCF file. One way to do this is to use the bcftools command line utility:
@@ -19,7 +19,7 @@ The genetic variant most commonly associated with lactose persistence (ability t
 
 Using the same VCF file as in Task 1 and [QTLtools software](https://qtltools.github.io/qtltools/), perform principal component analysis fo the genotype data from the GEUVADIS dataset. QTLtools is installed in here: 
 
-    /gpfs/hpc/projects/MTAT.03.239_Bioinformatics/software/bin/QTLtools
+    /gpfs/space/projects/MTAT.03.239_Bioinformatics/software/bin/QTLtools
 
 QTLtools allows you to perform PCA directly on VCF file without converting the dataset into 0,1,2 genotype matrix beforehand. The command that you need is something similar:
 
