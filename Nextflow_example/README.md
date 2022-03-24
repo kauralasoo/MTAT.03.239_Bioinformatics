@@ -7,6 +7,7 @@ srun --pty bash
 
 ```bash
 module load any/jdk/1.8.0_265
+module load any/singularity/3.5.3
 module load nextflow
 nextflow main.nf --studyFile study_file.txt\
     --hisat2_index hisat2_index/hisat2_index\
