@@ -26,8 +26,7 @@ se
 ## assays(1): counts
 ## rownames(33080): ILMN_1343291 ILMN_1343295 ... ILMN_3311180
 ##   ILMN_3311190
-## rowData names(12): phenotype_id quant_id ... gene_version
-##   phenotype_pos
+## rowData names(12): phenotype_id quant_id ... gene_version phenotype_pos
 ## colnames(2337): CD8IPC010 CD8IPC011 ... CD19IPC066 CD19IPC154
 ## colData names(21): sample_id genotype_id ... smoker included
 ```
@@ -73,8 +72,7 @@ filtered_se
 ## assays(1): counts
 ## rownames(33080): ILMN_1343291 ILMN_1343295 ... ILMN_3311180
 ##   ILMN_3311190
-## rowData names(12): phenotype_id quant_id ... gene_version
-##   phenotype_pos
+## rowData names(12): phenotype_id quant_id ... gene_version phenotype_pos
 ## colnames(205): PLAIPC233 PLAIPC203 ... PLAIPC297 PLAIPC306
 ## colData names(21): sample_id genotype_id ... smoker included
 ```
@@ -87,15 +85,25 @@ Since CEDAR used Illumina HumanHT12_V4 microarray to measure gene expression (in
 ```r
 #Find probe IDs for the CD14 gene
 gene_metadata = rowData(filtered_se) %>% as.data.frame() %>% as.tbl() %>% dplyr::filter(gene_name == "ARHGEF3")
+```
+
+```
+## Warning: `as.tbl()` was deprecated in dplyr 1.0.0.
+## Please use `tibble::as_tibble()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.
+```
+
+```r
 gene_metadata
 ```
 
 ```
-## # A tibble: 1 x 12
-##   phenotype_id quant_id group_id gene_id chromosome gene_start gene_end
-##   <chr>        <chr>    <chr>    <chr>   <chr>           <int>    <int>
-## 1 ILMN_1781010 ENSG000… ENSG000… ENSG00… 3            56727418 57079329
-## # … with 5 more variables: strand <int>, gene_name <chr>, gene_type <chr>,
+## # A tibble: 1 × 12
+##   phenotype_id quant_id   group_id gene_id chromosome gene_start gene_end strand
+##   <chr>        <chr>      <chr>    <chr>   <chr>           <int>    <int>  <int>
+## 1 ILMN_1781010 ENSG00000… ENSG000… ENSG00… 3            56727418 57079329     -1
+## # … with 4 more variables: gene_name <chr>, gene_type <chr>,
 ## #   gene_version <int>, phenotype_pos <int>
 ```
 Next we can extract this probe from the expression matrix
@@ -156,18 +164,18 @@ standard_genotypes[1:5,1:5]
 ```
 
 ```
-##        chr3_56079386_A_G chr3_56079528_G_A chr3_56079899_T_C
-## IPC233        -0.6097561        -0.6097561       -0.04390244
-## IPC203         0.3902439         0.3902439       -0.04390244
-## IPC204         0.3902439         0.3902439       -0.04390244
-## IPC093         0.3902439         0.3902439       -0.04390244
-## IPC120         0.3902439         0.3902439       -0.04390244
-##        chr3_56079903_A_G chr3_56079938_C_T
-## IPC233        -0.6097561        0.02439024
-## IPC203         0.3902439        0.02439024
-## IPC204         0.3902439        0.02439024
-## IPC093         0.3902439        0.02439024
-## IPC120         0.3902439        0.02439024
+##        chr3_56079386_A_G chr3_56079528_G_A chr3_56079899_T_C chr3_56079903_A_G
+## IPC233        -0.6097561        -0.6097561       -0.04390244        -0.6097561
+## IPC203         0.3902439         0.3902439       -0.04390244         0.3902439
+## IPC204         0.3902439         0.3902439       -0.04390244         0.3902439
+## IPC093         0.3902439         0.3902439       -0.04390244         0.3902439
+## IPC120         0.3902439         0.3902439       -0.04390244         0.3902439
+##        chr3_56079938_C_T
+## IPC233        0.02439024
+## IPC203        0.02439024
+## IPC204        0.02439024
+## IPC093        0.02439024
+## IPC120        0.02439024
 ```
 
 ## Perform finemapping 
@@ -183,13 +191,17 @@ fitted <- susieR::susie(standard_genotypes, expression_vector,
 ```
 
 ```
+## For an X with many columns, please consider installing  the Rfast package for more efficient credible set (CS)  calculations.
+```
+
+```
 ## [1] "objective:-155.426857168706"
-## [1] "objective:-153.338704356757"
-## [1] "objective:-153.29546961216"
-## [1] "objective:-153.290121105304"
-## [1] "objective:-153.288072517923"
-## [1] "objective:-153.28787810878"
-## [1] "objective:-153.287787803902"
+## [1] "objective:-153.338704356151"
+## [1] "objective:-153.295469612555"
+## [1] "objective:-153.290121105067"
+## [1] "objective:-153.288072517851"
+## [1] "objective:-153.287878108744"
+## [1] "objective:-153.287787803927"
 ```
 
 ```r
@@ -229,7 +241,7 @@ Visualise fine mapping results on top of -log10 p-values z-scores from univariat
 
 
 ```r
-susieR::susie_plot(fitted, y = "z", pos = pos_tbl$pos)
+susieR::susie_plot(fitted, y = "z")
 ```
 
 ![](CEDAR_finemapping_example_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
@@ -238,7 +250,7 @@ Visualise posterior inclusion probability (PIP) for each variant directly
 
 
 ```r
-susieR::susie_plot(fitted, y = "PIP", pos = pos_tbl$pos)
+susieR::susie_plot(fitted, y = "PIP")
 ```
 
 ![](CEDAR_finemapping_example_files/figure-html/unnamed-chunk-15-1.png)<!-- -->

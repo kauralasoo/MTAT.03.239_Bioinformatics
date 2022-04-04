@@ -119,13 +119,13 @@ pos_tbl = dplyr::tibble(snpid = colnames(standard_genotypes)) %>% dplyr::left_jo
 Visualise fine mapping results on top of -log10 p-values z-scores from univariate analysis:
 
 ```{r}
-susieR::susie_plot(fitted, y = "z", pos = pos_tbl$pos)
+susieR::susie_plot(fitted, y = "z")
 ```
 
 Visualise posterior inclusion probability (PIP) for each variant directly
 
 ```{r}
-susieR::susie_plot(fitted, y = "PIP", pos = pos_tbl$pos)
+susieR::susie_plot(fitted, y = "PIP")
 ```
 
 
