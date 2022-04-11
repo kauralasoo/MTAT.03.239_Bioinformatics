@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 #Importing the required packages
-```{r}
+```{r, warning=F, message=F}
 library("motifbreakR")
 library("MotifDb")
 library("BSgenome.Hsapiens.UCSC.hg38")
@@ -19,23 +19,24 @@ library("dplyr")
 library("GenomicRanges")
 ```
 
-#Import credible sets from the eQTL Catalogue
+
+# Import credible sets from the eQTL Catalogue
 
 First, we need to download the eQTL fine mapping results from the Alasoo_2018 study from macrophages stimulated with interferon-gamma and Salmonella. 
 
 ```{r}
-cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018.macrophage_IFNg+Salmonella_ge.purity_filtered.txt.gz")
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018_ge_macrophage_IFNg+Salmonella.purity_filtered.txt.gz")
 ```
 
 # GP1BA
 Next, let's extract the credible set for the GP1BA gene (ENSG00000185245):
 
 ```{r}
-GP1BA_cs = dplyr::filter(cs_table, phenotype_id == "ENSG00000185245")
+GP1BA_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000185245")
 GP1BA_cs
 ```
 
-We can see that this credible set consists of eight variants, one of which is an indel (chr17_4922449_AAAAT_A). Although motifbreakR package should in principle support indels, I could not get it to work right now, so we are going to exclude the indel for now. When performing real analysis, you should always consider indels as well, because they can often be the true causal variant. 
+We can see that this credible set consists of nine variants, two of which are indels (chr17_4922449_AAAAT_A and chr17_4952343_A_AT). Although motifbreakR package should in principle support indels, I could not get it to work right now, so we are going to exclude the indel for now. When performing real analysis, you should always consider indels as well, because they can often be the true causal variant. 
 
 ```{r}
 GP1BA_cs_no_indel = GP1BA_cs %>%
@@ -44,13 +45,13 @@ GP1BA_cs_no_indel = GP1BA_cs %>%
 GP1BA_cs_no_indel
 ```
 
-Next, we need format the credible set variant so that they will work with motifbreakR. This is a bit annoying as we need to first save the varianta into a text file in BED format and then read them back into R. 
+Next, we need format the credible set variant so that they will work with motifbreakR. This is a bit annoying as we need to first save the variants into a text file in BED format and then read them back into R. 
 ```{r}
 GP1BA_snps = dplyr::transmute(GP1BA_cs_no_indel, 
-                              V1 = paste0("chr",chr), 
-                              V2 = pos - 1, 
-                              V3 = pos, 
-                              V4 = paste(paste0("chr",chr), pos, ref, alt, sep = ":"), 
+                              V1 = paste0("chr",chromosome), 
+                              V2 = position - 1, 
+                              V3 = position, 
+                              V4 = paste(paste0("chr",chromosome), position, ref, alt, sep = ":"), 
                               V5 = 0, 
                               V6 = "+")
 write.table(GP1BA_snps, "snps_bed.tsv", sep = "\t", row.names = F, quote = F, col.names = F)
@@ -105,14 +106,15 @@ The NFKB transcription factor consists of multiple sub-units. In this case, we c
 
 ```{r}
 nfkb_results = results[results$geneSymbol %in% c("NFKB1", "RELA"),]
-plotMB(results = nfkb_results, rsid = "chr17:4926809:G:A", effect = "strong")
+nfkb_results
+#plotMB(results = nfkb_results, rsid = "chr17:4926809:G:A", effect = "strong")
 ```
 
 
 # SPOPL
 
 ```{r}
-cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018.macrophage_IFNg_ge.purity_filtered.txt.gz")
-SPOPL_cs = dplyr::filter(cs_table, phenotype_id == "ENSG00000144228")
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018_ge_macrophage_IFNg.purity_filtered.txt.gz")
+SPOPL_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000144228")
 SPOPL_cs
 ```
