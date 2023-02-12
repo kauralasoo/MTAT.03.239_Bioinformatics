@@ -9,18 +9,8 @@ Channel
     .ifEmpty { exit 1, "HISAT2 index files not found: ${params.hisat2_index}" }
     .set { hisat2_index_ch }
 
-process hisat2Align{
-    
-    input:
-    set sample_name, file(fastq1), file(fastq2) from fastq_ch
-    file hisat2_indices from hisat2_index_ch.collect()
+include { hisat2Align } from './modules/hisat2'
 
-    output:
-    set sample_name, file("${sample_name}.bam") into hisat2_bam
-
-    script:
-    index_base = hisat2_indices[0].toString() - ~/.\d.ht2/
-    """
-    hisat2 -x $index_base -1 ${fastq1} -2 ${fastq2} | samtools view -Sb > ${sample_name}.bam
-    """
+workflow {
+    hisat2Align(fastq_ch, hisat2_index_ch.collect())
 }
