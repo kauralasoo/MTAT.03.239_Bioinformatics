@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#SBATCH --time=92:00:00
+#SBATCH --time=2:00:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=4G
-#SBATCH --job-name="microarray"
-#SBATCH --partition=amd
+#SBATCH --job-name="nf-hisat2"
+#SBATCH --partition=testing
 
 # Load needed system tools (Java 8 is required, one of singularity or anaconda - python 2.7 is needed,
 # depending on the method for dependancy management). The exact names of tool modules might depend on HPC.
@@ -15,5 +15,5 @@ module load squashfs/4.4
 module load nextflow
 
 nextflow main.nf -resume\
-    --studyFile study_file.txt\
-    --hisat2_index hisat2_index/hisat2_index
+    --input study_file.txt\
+    --ref_genome annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa
