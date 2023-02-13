@@ -15,5 +15,5 @@ module load squashfs/4.4
 module load nextflow
 
 nextflow main.nf -resume\
-    --input study_file.txt\
+    --input study_file.csv\
     --ref_genome annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa
