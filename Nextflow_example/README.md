@@ -1,5 +1,7 @@
 ### Use Singularity containers to run tools manually on the HPC
 
+Note: for the commands below you might need some input files (e.g. annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa) that you can download using instructions in the [RNA-seq tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md).
+
 ```bash
 #Load required modules
 module load any/singularity/3.7.3
