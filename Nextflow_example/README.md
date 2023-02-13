@@ -1,3 +1,13 @@
+### Download the reference genome fasta (.fa) file and gene annoation .gtf file from Zenodo:
+
+```bash
+mkdir annotations
+cd annotations
+wget https://zenodo.org/record/7636289/files/Homo_sapiens.GRCh38.dna.chromosome.21.fa
+wget https://zenodo.org/record/7636289/files/Homo_sapiens.GRCh38.91.chr21.gtf
+cd ..
+```
+
 ### Use Singularity containers to run tools manually on the HPC
 
 Note: for the commands below you might need some input files (e.g. annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa) that you can download using instructions in the [RNA-seq tutorial](https://github.com/kauralasoo/MTAT.03.239_Bioinformatics/blob/master/RNA-seq_alignment.md).
