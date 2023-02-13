@@ -19,7 +19,7 @@ Let's download the sequence for chromosme 21:
 	cd ..
 
 ### Build the HISAT2 index
-First you need to get the HISAT2 software. If you are using the [University of Tartu High Performance Computing Center](https://hpc.ut.ee/en/home/), then HISAT2 is already installed for you and you can add it to your path using the modules system. Click [here](https://hpc.ut.ee/en/guides/using-modules/) to read more about modules.
+First you need to get the HISAT2 software. If you are using the [University of Tartu High Performance Computing Center](https://hpc.ut.ee/en/home/), then HISAT2 is already installed for you and you can add it to your path using the modules system. Click [here](https://docs.hpc.ut.ee/cluster/modules/) to read more about modules.
 
     module load any/hisat2/2.0.4
 
