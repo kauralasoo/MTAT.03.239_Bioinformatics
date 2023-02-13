@@ -14,7 +14,8 @@ sbatch build_hisat2_container.sh
 #Run HISAT2 via singularity
 singularity exec hisat2.img hisat2 --version
 
-#Build HISAT2 index
+#Build HISAT2 index (empy output directory is needed)
+mkdir hisat2_index
 singularity exec hisat2.img hisat2-build annotations/Homo_sapiens.GRCh38.dna.chromosome.21.fa hisat2_index/hisat2_index
 
 #Build featureCounts container
