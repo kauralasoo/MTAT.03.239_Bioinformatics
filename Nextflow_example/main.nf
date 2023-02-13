@@ -4,7 +4,7 @@ Channel.fromPath( "${params.ref_genome}" )
 
 Channel.fromPath(params.input)
     .ifEmpty { error "Cannot find study file: ${params.input}" }
-    .splitCsv(header: true, sep: '\t', strip: true)
+    .splitCsv(header: true, sep: ',', strip: true)
     .map{row -> [ row.study, file(row.fastq1), file(row.fastq2) ]}
     .set { fastq_ch }
 
