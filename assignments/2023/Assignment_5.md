@@ -10,6 +10,7 @@ The genetic variant most commonly associated with lactose persistence (ability t
 1. Start an interactive slurm job with `srun --pty bash`. This way you can run the following commands interactively on one of the HPC comupte nodes without submitting them as slurm jobs with sbatch.
 1. Extract the genotypes of the rs4988235 genetic variant from the the VCF file. One way to do this is to use the bcftools command line utility:
 	`module load bcftools`
+	
     `bcftools view -r <chr>:<position> <path_to_vcf_file>`
 2. Convert the genotypes from the numerical representation in the VCF file to reference and alternative alleles (AA, AG, or GG).
 3. Count the frequencies of the AA, AG and GG genotypes in each of the 5 populations and make a table or a barplot. You can find which sample belongs to which population from the `GEUVADIS_populations.tsv` text file located in the same folder with the VCF file in the HPC. You can ignore the one individual (NA19171) with missing population information. Which population has the largest fraction of people who are likely to be able to drink milk? Which one has the lowest?
