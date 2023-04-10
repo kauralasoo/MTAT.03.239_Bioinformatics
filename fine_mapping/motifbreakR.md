@@ -16,6 +16,7 @@ library("MotifDb")
 library("BSgenome.Hsapiens.UCSC.hg38")
 library("dplyr")
 library("GenomicRanges")
+library("tidyr")
 ```
 
 
@@ -25,15 +26,15 @@ First, we need to download the eQTL fine mapping results from the Alasoo_2018 st
 
 
 ```r
-cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018_ge_macrophage_IFNg+Salmonella.purity_filtered.txt.gz")
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000001/QTD000016/QTD000016.credible_sets.tsv.gz")
 ```
 
 ```
-## Rows: 40064 Columns: 17
+## Rows: 43744 Columns: 13
 ## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: "\t"
-## chr (8): molecular_trait_id, variant, chromosome, ref, alt, cs_id, cs_index,...
-## dbl (9): position, pip, z, cs_min_r2, cs_avg_r2, cs_size, posterior_mean, po...
+## chr (6): molecular_trait_id, gene_id, cs_id, variant, rsid, region
+## dbl (7): cs_size, pip, pvalue, beta, se, z, cs_min_r2
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -44,26 +45,30 @@ Next, let's extract the credible set for the GP1BA gene (ENSG00000185245):
 
 
 ```r
-GP1BA_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000185245")
+GP1BA_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000185245") %>%
+  dplyr::select(-rsid) %>% dplyr::distinct() %>%
+  tidyr::separate(variant, into = c("chromosome", "position", "ref", "alt"), sep = "\\_", remove = FALSE) %>%
+  dplyr::mutate(chromosome = stringr::str_replace(chromosome,"chr", replacement = "")) %>%
+  dplyr::mutate(position = as.integer(position))
 GP1BA_cs
 ```
 
 ```
-## # A tibble: 9 × 17
-##   molecular_trait_id variant      chromosome position ref   alt   cs_id cs_index
-##   <chr>              <chr>        <chr>         <dbl> <chr> <chr> <chr> <chr>   
-## 1 ENSG00000185245    chr17_49224… 17          4922449 AAAAT A     ENSG… L1      
-## 2 ENSG00000185245    chr17_49255… 17          4925554 C     G     ENSG… L1      
-## 3 ENSG00000185245    chr17_49266… 17          4926692 A     G     ENSG… L1      
-## 4 ENSG00000185245    chr17_49268… 17          4926809 G     A     ENSG… L1      
-## 5 ENSG00000185245    chr17_49300… 17          4930090 T     C     ENSG… L1      
-## 6 ENSG00000185245    chr17_49358… 17          4935854 C     T     ENSG… L1      
-## 7 ENSG00000185245    chr17_49424… 17          4942473 G     A     ENSG… L1      
-## 8 ENSG00000185245    chr17_49511… 17          4951185 C     T     ENSG… L1      
-## 9 ENSG00000185245    chr17_49523… 17          4952343 A     AT    ENSG… L1      
-## # … with 9 more variables: finemapped_region <chr>, pip <dbl>, z <dbl>,
-## #   cs_min_r2 <dbl>, cs_avg_r2 <dbl>, cs_size <dbl>, posterior_mean <dbl>,
-## #   posterior_sd <dbl>, cs_log10bf <dbl>
+## # A tibble: 9 × 16
+##   molecular_t…¹ gene_id cs_id variant chrom…² posit…³ ref   alt   cs_size    pip
+##   <chr>         <chr>   <chr> <chr>   <chr>     <int> <chr> <chr>   <dbl>  <dbl>
+## 1 ENSG00000185… ENSG00… ENSG… chr17_… 17      4922449 AAAAT A           9 0.104 
+## 2 ENSG00000185… ENSG00… ENSG… chr17_… 17      4925554 C     G           9 0.121 
+## 3 ENSG00000185… ENSG00… ENSG… chr17_… 17      4926692 A     G           9 0.112 
+## 4 ENSG00000185… ENSG00… ENSG… chr17_… 17      4926809 G     A           9 0.112 
+## 5 ENSG00000185… ENSG00… ENSG… chr17_… 17      4930090 T     C           9 0.113 
+## 6 ENSG00000185… ENSG00… ENSG… chr17_… 17      4935854 C     T           9 0.117 
+## 7 ENSG00000185… ENSG00… ENSG… chr17_… 17      4942473 G     A           9 0.146 
+## 8 ENSG00000185… ENSG00… ENSG… chr17_… 17      4951185 C     T           9 0.0754
+## 9 ENSG00000185… ENSG00… ENSG… chr17_… 17      4952343 A     AT          9 0.101 
+## # … with 6 more variables: pvalue <dbl>, beta <dbl>, se <dbl>, z <dbl>,
+## #   cs_min_r2 <dbl>, region <chr>, and abbreviated variable names
+## #   ¹​molecular_trait_id, ²​chromosome, ³​position
 ```
 
 We can see that this credible set consists of nine variants, two of which are indels (chr17_4922449_AAAAT_A and chr17_4952343_A_AT). Although motifbreakR package should in principle support indels, I could not get it to work right now, so we are going to exclude the indel for now. When performing real analysis, you should always consider indels as well, because they can often be the true causal variant. 
@@ -77,19 +82,19 @@ GP1BA_cs_no_indel
 ```
 
 ```
-## # A tibble: 7 × 18
-##   molecular_trait_id variant      chromosome position ref   alt   cs_id cs_index
-##   <chr>              <chr>        <chr>         <dbl> <chr> <chr> <chr> <chr>   
-## 1 ENSG00000185245    chr17_49255… 17          4925554 C     G     ENSG… L1      
-## 2 ENSG00000185245    chr17_49266… 17          4926692 A     G     ENSG… L1      
-## 3 ENSG00000185245    chr17_49268… 17          4926809 G     A     ENSG… L1      
-## 4 ENSG00000185245    chr17_49300… 17          4930090 T     C     ENSG… L1      
-## 5 ENSG00000185245    chr17_49358… 17          4935854 C     T     ENSG… L1      
-## 6 ENSG00000185245    chr17_49424… 17          4942473 G     A     ENSG… L1      
-## 7 ENSG00000185245    chr17_49511… 17          4951185 C     T     ENSG… L1      
-## # … with 10 more variables: finemapped_region <chr>, pip <dbl>, z <dbl>,
-## #   cs_min_r2 <dbl>, cs_avg_r2 <dbl>, cs_size <dbl>, posterior_mean <dbl>,
-## #   posterior_sd <dbl>, cs_log10bf <dbl>, max_allele_nchar <int>
+## # A tibble: 7 × 17
+##   molecular_t…¹ gene_id cs_id variant chrom…² posit…³ ref   alt   cs_size    pip
+##   <chr>         <chr>   <chr> <chr>   <chr>     <int> <chr> <chr>   <dbl>  <dbl>
+## 1 ENSG00000185… ENSG00… ENSG… chr17_… 17      4925554 C     G           9 0.121 
+## 2 ENSG00000185… ENSG00… ENSG… chr17_… 17      4926692 A     G           9 0.112 
+## 3 ENSG00000185… ENSG00… ENSG… chr17_… 17      4926809 G     A           9 0.112 
+## 4 ENSG00000185… ENSG00… ENSG… chr17_… 17      4930090 T     C           9 0.113 
+## 5 ENSG00000185… ENSG00… ENSG… chr17_… 17      4935854 C     T           9 0.117 
+## 6 ENSG00000185… ENSG00… ENSG… chr17_… 17      4942473 G     A           9 0.146 
+## 7 ENSG00000185… ENSG00… ENSG… chr17_… 17      4951185 C     T           9 0.0754
+## # … with 7 more variables: pvalue <dbl>, beta <dbl>, se <dbl>, z <dbl>,
+## #   cs_min_r2 <dbl>, region <chr>, max_allele_nchar <int>, and abbreviated
+## #   variable names ¹​molecular_trait_id, ²​chromosome, ³​position
 ```
 
 Next, we need format the credible set variant so that they will work with motifbreakR. This is a bit annoying as we need to first save the variants into a text file in BED format and then read them back into R. 
@@ -201,6 +206,7 @@ Finally, we can use motifbreakR together with the HOCOMOCO database to identify 
 
 
 ```r
+data("hocomoco")
 results <- motifbreakR(snpList = GP1BA_olaps, filterp = TRUE,
                        pwmList = hocomoco,
                        threshold = 1e-4,
@@ -212,20 +218,22 @@ results_df
 ```
 
 ```
-## # A tibble: 8 × 19
-##   SNP_id         REF   ALT   varType motifPos geneSymbol dataSource providerName
-##   <chr>          <chr> <chr> <chr>   <I<list> <chr>      <chr>      <chr>       
-## 1 chr17:4926809… G     A     SNV     <dbl>    SP3        HOCOMOCO   SP3_f1      
-## 2 chr17:4926809… G     A     SNV     <dbl>    KLF4       HOCOMOCO   KLF4_f2     
-## 3 chr17:4926809… G     A     SNV     <dbl>    SP1        HOCOMOCO   SP1_f2      
-## 4 chr17:4926809… G     A     SNV     <dbl>    MAZ        HOCOMOCO   MAZ_f1      
-## 5 chr17:4926809… G     A     SNV     <dbl>    IKZF1      HOCOMOCO   IKZF1_f1    
-## 6 chr17:4926809… G     A     SNV     <dbl>    SP1        HOCOMOCO   SP1_f1      
-## 7 chr17:4926809… G     A     SNV     <dbl>    KLF1       HOCOMOCO   KLF1_f1     
-## 8 chr17:4926809… G     A     SNV     <dbl>    HIVEP2     HOCOMOCO   ZEP2_si     
-## # … with 11 more variables: providerId <chr>, seqMatch <chr>, pctRef <dbl>,
-## #   pctAlt <dbl>, scoreRef <dbl>, scoreAlt <dbl>, Refpvalue <lgl>,
-## #   Altpvalue <lgl>, altPos <int>, alleleDiff <dbl>, effect <chr>
+## # A tibble: 8 × 23
+##   SNP_id     REF   ALT   varType motif…¹ geneS…² dataS…³ provi…⁴ provi…⁵ seqMa…⁶
+##   <chr>      <chr> <chr> <chr>   <list>  <chr>   <chr>   <chr>   <chr>   <chr>  
+## 1 chr17:492… G     A     SNV     <dbl>   SP3     HOCOMO… SP3_f1  SP3_HU… "aacaa…
+## 2 chr17:492… G     A     SNV     <dbl>   KLF4    HOCOMO… KLF4_f2 KLF4_H… "     …
+## 3 chr17:492… G     A     SNV     <dbl>   SP1     HOCOMO… SP1_f2  SP1_HU… "aacaa…
+## 4 chr17:492… G     A     SNV     <dbl>   MAZ     HOCOMO… MAZ_f1  MAZ_HU… "  caa…
+## 5 chr17:492… G     A     SNV     <dbl>   IKZF1   HOCOMO… IKZF1_… IKZF1_… "     …
+## 6 chr17:492… G     A     SNV     <dbl>   SP1     HOCOMO… SP1_f1  SP1_HU… "     …
+## 7 chr17:492… G     A     SNV     <dbl>   KLF1    HOCOMO… KLF1_f1 KLF1_H… "     …
+## 8 chr17:492… G     A     SNV     <dbl>   HIVEP2  HOCOMO… ZEP2_si ZEP2_H… "     …
+## # … with 13 more variables: pctRef <dbl>, pctAlt <dbl>, scoreRef <dbl>,
+## #   scoreAlt <dbl>, Refpvalue <lgl>, Altpvalue <lgl>, snpPos <int>,
+## #   alleleRef <dbl>, alleleAlt <dbl>, effect <chr>, altPos <int>,
+## #   alleleDiff <dbl>, alleleEffectSize <dbl>, and abbreviated variable names
+## #   ¹​motifPos, ²​geneSymbol, ³​dataSource, ⁴​providerName, ⁵​providerId, ⁶​seqMatch
 ```
 
 To identify more potential hits, we can reduce the p-value threshold to 1e-3:
@@ -243,23 +251,24 @@ results_df
 ```
 
 ```
-## # A tibble: 30 × 19
-##    SNP_id        REF   ALT   varType motifPos geneSymbol dataSource providerName
-##    <chr>         <chr> <chr> <chr>   <I<list> <chr>      <chr>      <chr>       
-##  1 chr17:492669… A     G     SNV     <dbl>    FOXF1      HOCOMOCO   FOXF1_f1    
-##  2 chr17:492669… A     G     SNV     <dbl>    FOXF2      HOCOMOCO   FOXF2_f1    
-##  3 chr17:492669… A     G     SNV     <dbl>    FOXJ2      HOCOMOCO   FOXJ2_f1    
-##  4 chr17:492669… A     G     SNV     <dbl>    HIVEP2     HOCOMOCO   ZEP2_si     
-##  5 chr17:492669… A     G     SNV     <dbl>    NFATC2     HOCOMOCO   NFAC2_f1    
-##  6 chr17:492669… A     G     SNV     <dbl>    NFATC4     HOCOMOCO   NFAC4_f1    
-##  7 chr17:492669… A     G     SNV     <dbl>    ZBTB4      HOCOMOCO   ZBTB4_si    
-##  8 chr17:492680… G     A     SNV     <dbl>    HIVEP2     HOCOMOCO   ZEP2_si     
-##  9 chr17:492680… G     A     SNV     <dbl>    IKZF1      HOCOMOCO   IKZF1_f1    
-## 10 chr17:492680… G     A     SNV     <dbl>    KLF1       HOCOMOCO   KLF1_f1     
-## # … with 20 more rows, and 11 more variables: providerId <chr>, seqMatch <chr>,
-## #   pctRef <dbl>, pctAlt <dbl>, scoreRef <dbl>, scoreAlt <dbl>,
-## #   Refpvalue <lgl>, Altpvalue <lgl>, altPos <int>, alleleDiff <dbl>,
-## #   effect <chr>
+## # A tibble: 30 × 23
+##    SNP_id    REF   ALT   varType motif…¹ geneS…² dataS…³ provi…⁴ provi…⁵ seqMa…⁶
+##    <chr>     <chr> <chr> <chr>   <list>  <chr>   <chr>   <chr>   <chr>   <chr>  
+##  1 chr17:49… A     G     SNV     <dbl>   FOXF1   HOCOMO… FOXF1_… FOXF1_… "     …
+##  2 chr17:49… A     G     SNV     <dbl>   FOXF2   HOCOMO… FOXF2_… FOXF2_… "     …
+##  3 chr17:49… A     G     SNV     <dbl>   FOXJ2   HOCOMO… FOXJ2_… FOXJ2_… "     …
+##  4 chr17:49… A     G     SNV     <dbl>   HIVEP2  HOCOMO… ZEP2_si ZEP2_H… "  gga…
+##  5 chr17:49… A     G     SNV     <dbl>   NFATC2  HOCOMO… NFAC2_… NFAC2_… "     …
+##  6 chr17:49… A     G     SNV     <dbl>   NFATC4  HOCOMO… NFAC4_… NFAC4_… "     …
+##  7 chr17:49… A     G     SNV     <dbl>   ZBTB4   HOCOMO… ZBTB4_… ZBTB4_… "gggga…
+##  8 chr17:49… G     A     SNV     <dbl>   HIVEP2  HOCOMO… ZEP2_si ZEP2_H… "     …
+##  9 chr17:49… G     A     SNV     <dbl>   IKZF1   HOCOMO… IKZF1_… IKZF1_… "     …
+## 10 chr17:49… G     A     SNV     <dbl>   KLF1    HOCOMO… KLF1_f1 KLF1_H… "     …
+## # … with 20 more rows, 13 more variables: pctRef <dbl>, pctAlt <dbl>,
+## #   scoreRef <dbl>, scoreAlt <dbl>, Refpvalue <lgl>, Altpvalue <lgl>,
+## #   snpPos <int>, alleleRef <dbl>, alleleAlt <dbl>, effect <chr>, altPos <int>,
+## #   alleleDiff <dbl>, alleleEffectSize <dbl>, and abbreviated variable names
+## #   ¹​motifPos, ²​geneSymbol, ³​dataSource, ⁴​providerName, ⁵​providerId, ⁶​seqMatch
 ```
 The NFKB transcription factor consists of multiple sub-units. In this case, we can look for both NFKB1 and RELA:
 
@@ -270,7 +279,7 @@ nfkb_results
 ```
 
 ```
-## GRanges object with 2 ranges and 19 metadata columns:
+## GRanges object with 2 ranges and 23 metadata columns:
 ##                     seqnames    ranges strand |            SNP_id
 ##                        <Rle> <IRanges>  <Rle> |       <character>
 ##   chr17:4926809:G:A    chr17   4926809      + | chr17:4926809:G:A
@@ -285,16 +294,16 @@ nfkb_results
 ##   chr17:4926809:G:A        RELA    HOCOMOCO      TF65_f2  TF65_HUMAN
 ##                                   seqMatch    pctRef    pctAlt  scoreRef
 ##                                <character> <numeric> <numeric> <numeric>
-##   chr17:4926809:G:A           ggtgggTggg..  0.858902  0.727704   9.03707
-##   chr17:4926809:G:A           ggtgggTggg..  0.871681  0.739436   9.96409
-##                      scoreAlt Refpvalue Altpvalue    altPos alleleDiff
-##                     <numeric> <logical> <logical> <integer>  <numeric>
-##   chr17:4926809:G:A   7.68218      <NA>      <NA>         1   -1.35489
-##   chr17:4926809:G:A   8.47282      <NA>      <NA>         1   -1.49127
-##                          effect
-##                     <character>
-##   chr17:4926809:G:A      strong
-##   chr17:4926809:G:A      strong
+##   chr17:4926809:G:A           ggtgggtggg..  0.858902  0.727704   9.03707
+##   chr17:4926809:G:A           ggtgggtggg..  0.871681  0.739436   9.96409
+##                      scoreAlt Refpvalue Altpvalue    snpPos alleleRef alleleAlt
+##                     <numeric> <logical> <logical> <integer> <numeric> <numeric>
+##   chr17:4926809:G:A   7.68218      <NA>      <NA>      <NA>        NA        NA
+##   chr17:4926809:G:A   8.47282      <NA>      <NA>      <NA>        NA        NA
+##                          effect    altPos alleleDiff alleleEffectSize
+##                     <character> <integer>  <numeric>        <numeric>
+##   chr17:4926809:G:A      strong         1   -1.35489        -0.129109
+##   chr17:4926809:G:A      strong         1   -1.49127        -0.130686
 ##   -------
 ##   seqinfo: 1 sequence from hg38 genome
 ```
@@ -308,40 +317,44 @@ nfkb_results
 
 
 ```r
-cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018_ge_macrophage_IFNg.purity_filtered.txt.gz")
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000001/QTD000006/QTD000006.credible_sets.tsv.gz")
 ```
 
 ```
-## Rows: 53497 Columns: 17
+## Rows: 61056 Columns: 13
 ## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: "\t"
-## chr (8): molecular_trait_id, variant, chromosome, ref, alt, cs_id, cs_index,...
-## dbl (9): position, pip, z, cs_min_r2, cs_avg_r2, cs_size, posterior_mean, po...
+## chr (6): molecular_trait_id, gene_id, cs_id, variant, rsid, region
+## dbl (7): cs_size, pip, pvalue, beta, se, z, cs_min_r2
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 ```r
-SPOPL_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000144228")
+SPOPL_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000144228") %>%
+  dplyr::select(-rsid) %>% dplyr::distinct() %>%
+  tidyr::separate(variant, into = c("chromosome", "position", "ref", "alt"), sep = "\\_", remove = FALSE) %>%
+  dplyr::mutate(chromosome = stringr::str_replace(chromosome,"chr", replacement = "")) %>%
+  dplyr::mutate(position = as.integer(position))
 SPOPL_cs
 ```
 
 ```
-## # A tibble: 10 × 17
-##    molecular_trait_id variant     chromosome position ref   alt   cs_id cs_index
-##    <chr>              <chr>       <chr>         <dbl> <chr> <chr> <chr> <chr>   
-##  1 ENSG00000144228    chr2_13868… 2            1.39e8 C     T     ENSG… L1      
-##  2 ENSG00000144228    chr2_13868… 2            1.39e8 T     C     ENSG… L1      
-##  3 ENSG00000144228    chr2_13868… 2            1.39e8 C     T     ENSG… L1      
-##  4 ENSG00000144228    chr2_13868… 2            1.39e8 T     C     ENSG… L1      
-##  5 ENSG00000144228    chr2_13868… 2            1.39e8 C     T     ENSG… L1      
-##  6 ENSG00000144228    chr2_13869… 2            1.39e8 C     G     ENSG… L1      
-##  7 ENSG00000144228    chr2_13869… 2            1.39e8 G     A     ENSG… L1      
-##  8 ENSG00000144228    chr2_13869… 2            1.39e8 G     A     ENSG… L1      
-##  9 ENSG00000144228    chr2_13869… 2            1.39e8 A     G     ENSG… L1      
-## 10 ENSG00000144228    chr2_13870… 2            1.39e8 T     C     ENSG… L1      
-## # … with 9 more variables: finemapped_region <chr>, pip <dbl>, z <dbl>,
-## #   cs_min_r2 <dbl>, cs_avg_r2 <dbl>, cs_size <dbl>, posterior_mean <dbl>,
-## #   posterior_sd <dbl>, cs_log10bf <dbl>
+## # A tibble: 10 × 16
+##    molecular_…¹ gene_id cs_id variant chrom…² posit…³ ref   alt   cs_size    pip
+##    <chr>        <chr>   <chr> <chr>   <chr>     <int> <chr> <chr>   <dbl>  <dbl>
+##  1 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 C     T          10 0.110 
+##  2 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 T     C          10 0.110 
+##  3 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 C     T          10 0.103 
+##  4 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 T     C          10 0.110 
+##  5 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 C     T          10 0.0936
+##  6 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 C     G          10 0.0940
+##  7 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 G     A          10 0.0939
+##  8 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 G     A          10 0.0933
+##  9 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 A     G          10 0.0935
+## 10 ENSG0000014… ENSG00… ENSG… chr2_1… 2        1.39e8 T     C          10 0.0997
+## # … with 6 more variables: pvalue <dbl>, beta <dbl>, se <dbl>, z <dbl>,
+## #   cs_min_r2 <dbl>, region <chr>, and abbreviated variable names
+## #   ¹​molecular_trait_id, ²​chromosome, ³​position
 ```

@@ -17,6 +17,7 @@ library("MotifDb")
 library("BSgenome.Hsapiens.UCSC.hg38")
 library("dplyr")
 library("GenomicRanges")
+library("tidyr")
 ```
 
 
@@ -25,14 +26,18 @@ library("GenomicRanges")
 First, we need to download the eQTL fine mapping results from the Alasoo_2018 study from macrophages stimulated with interferon-gamma and Salmonella. 
 
 ```{r}
-cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018_ge_macrophage_IFNg+Salmonella.purity_filtered.txt.gz")
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000001/QTD000016/QTD000016.credible_sets.tsv.gz")
 ```
 
 # GP1BA
 Next, let's extract the credible set for the GP1BA gene (ENSG00000185245):
 
 ```{r}
-GP1BA_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000185245")
+GP1BA_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000185245") %>%
+  dplyr::select(-rsid) %>% dplyr::distinct() %>%
+  tidyr::separate(variant, into = c("chromosome", "position", "ref", "alt"), sep = "\\_", remove = FALSE) %>%
+  dplyr::mutate(chromosome = stringr::str_replace(chromosome,"chr", replacement = "")) %>%
+  dplyr::mutate(position = as.integer(position))
 GP1BA_cs
 ```
 
@@ -80,6 +85,7 @@ GP1BA_olaps
 Finally, we can use motifbreakR together with the HOCOMOCO database to identify transcription factors whose motifs might be disrupted by these genetic variants:
 
 ```{r}
+data("hocomoco")
 results <- motifbreakR(snpList = GP1BA_olaps, filterp = TRUE,
                        pwmList = hocomoco,
                        threshold = 1e-4,
@@ -114,7 +120,11 @@ nfkb_results
 # SPOPL
 
 ```{r}
-cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/credible_sets/Alasoo_2018_ge_macrophage_IFNg.purity_filtered.txt.gz")
-SPOPL_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000144228")
+cs_table = readr::read_tsv("ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000001/QTD000006/QTD000006.credible_sets.tsv.gz")
+SPOPL_cs = dplyr::filter(cs_table, molecular_trait_id == "ENSG00000144228") %>%
+  dplyr::select(-rsid) %>% dplyr::distinct() %>%
+  tidyr::separate(variant, into = c("chromosome", "position", "ref", "alt"), sep = "\\_", remove = FALSE) %>%
+  dplyr::mutate(chromosome = stringr::str_replace(chromosome,"chr", replacement = "")) %>%
+  dplyr::mutate(position = as.integer(position))
 SPOPL_cs
 ```
