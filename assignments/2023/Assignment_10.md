@@ -13,7 +13,7 @@ Your are given the following three transcripts with corresponding exon-level rea
 ## Task 2: Identify transcripts that are differentially used between conditions (2 points)
 **Learning objective**: Learn how differentially used transcripts can be detected using DRIMSeq and how these changes can be visualized using IGV.
 
-**Dataset:** [SummarizedExperiment object](https://www.dropbox.com/s/hwl30are5g6k3ka/salmon_SummarizedExperiment_subset.rds?dl=0) ([alternative link](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG)) containing transcript expression levels estimated using [Salmon](https://combine-lab.github.io/salmon/). [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) for visualisation.
+**Dataset:** [SummarizedExperiment object](https://www.dropbox.com/s/hwl30are5g6k3ka/salmon_SummarizedExperiment_subset.rds?dl=0) ([alternative link](https://drive.google.com/drive/folders/11rWNV_QuH8YX8IpbEw4ruCNIvMb0UzjF?usp=sharing)) containing transcript expression levels estimated using [Salmon](https://combine-lab.github.io/salmon/). [BigWig files](https://drive.google.com/drive/folders/11rWNV_QuH8YX8IpbEw4ruCNIvMb0UzjF?usp=sharing) for visualisation.
 
 **Software:** [DRIMSeq R package](http://bioconductor.org/packages/release/bioc/html/DRIMSeq.html), IGV
 
@@ -27,14 +27,7 @@ Following the [DRIMSeq tutorial](http://bioconductor.org/packages/release/bioc/v
 ## Task 3: Visualise differentially used transcripts using IGV (1 point)
 **Learning objective:** Understand how differential transcript usage manifest at the level of RNA-seq read coverage and how these changes can be detected using visual inspection.
 
- 1. First, download the [BigWig files](https://1drv.ms/f/s!AmCRrTXF10_MgWr91VIHfVT9booG) containing the RNA-seq read coverage from four of the samples found in the original dataset. The `aipt_A` and `auim_A` samples are from the naive condition and the `aipt_C` and `auim_C` samples are from the *Salmonella* condition. 
+ 1. First, download the [BigWig files](https://drive.google.com/drive/folders/11rWNV_QuH8YX8IpbEw4ruCNIvMb0UzjF?usp=sharing) containing the RNA-seq read coverage from four of the samples found in the original dataset. The `aipt_A` and `auim_A` samples are from the naive condition and the `aipt_C` and `auim_C` samples are from the *Salmonella* condition. 
  2. Open these four bigWig files in IGV and make sure that the reference genome version is set to GRCh38.
  3. Use the search box in IGV to locate the top 3 genes with the smallest differential transcript usage p-values from the naive vs *Salmonella* comparison that you identified in Task 2. 
  4. Make screenshots of RNA-seq read coverage from these three genes and include them in your report. Also, highlight (e.g. with a red rectangle) the specific exons or parts of transcript whose usage changes between naive vs *Salmonella* conditions. 
-
-
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTIzMjI1MzQsMTE3MzEzOTQ4OF19
--->
