@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=4G
 #SBATCH --job-name="nf-hisat2"
-#SBATCH --partition=testing
+#SBATCH --partition=main
 
 # Load needed system tools (Java 8 is required, one of singularity or anaconda - python 2.7 is needed,
 # depending on the method for dependancy management). The exact names of tool modules might depend on HPC.
