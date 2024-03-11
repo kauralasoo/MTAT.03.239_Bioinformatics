@@ -29,7 +29,7 @@ library("ggplot2")
 
 ## Importing the data
 
-First, download the full dataset from the course [website](https://courses.cs.ut.ee/2019/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip).
+First, download the full dataset from the course [website](https://zenodo.org/records/10805436/files/RNA_SummarizedExperiment.rds?download=1).
 
 Now you can import the dataset into R using the following command:
 

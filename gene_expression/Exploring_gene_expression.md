@@ -22,7 +22,7 @@ library("ggplot2")
 
 ## Importing the data
 
-First, download the full dataset from the course [website](https://courses.cs.ut.ee/2019/bioinfo/spring/uploads/Main/RNA_SummarizedExperiment.rds.zip).
+First, download the full dataset from the course [website](https://zenodo.org/records/10805436/files/RNA_SummarizedExperiment.rds?download=1).
 
 Now you can import the dataset into R using the following command:
 
@@ -45,12 +45,11 @@ You can see the summary of the dataset by just printing it out:
 ## dim: 35033 336 
 ## metadata(0):
 ## assays(1): counts
-## rownames(35033): ENSG00000198888 ENSG00000198763 ...
-##   ENSG00000233136 ENSG00000165795
+## rownames(35033): ENSG00000198888 ENSG00000198763 ... ENSG00000233136
+##   ENSG00000165795
 ## rowData names(11): gene_id gene_biotype ... exon_starts exon_ends
 ## colnames(336): aipt_A aipt_B ... zuta_C zuta_D
-## colData names(44): sample_id donor ... mean_purity_filtered
-##   purity_bins
+## colData names(44): sample_id donor ... mean_purity_filtered purity_bins
 ```
 The `## dim` line tells to that this dataset has 35033 genes and 336 samples. 
 
@@ -87,10 +86,10 @@ And you can do the same for gene metadata:
 ## ENSG00000228253 ENSG00000228253 protein_coding          MT           1
 ##                 gene_start  gene_end percentage_gc_content   gene_name
 ##                  <integer> <integer>             <numeric> <character>
-## ENSG00000198888       3307      4262                  47.7      MT-ND1
+## ENSG00000198888       3307      4262                 47.70      MT-ND1
 ## ENSG00000198763       4470      5511                 42.99      MT-ND2
 ## ENSG00000198804       5904      7445                 46.24      MT-CO1
-## ENSG00000198712       7586      8269                  46.2      MT-CO2
+## ENSG00000198712       7586      8269                 46.20      MT-CO2
 ## ENSG00000228253       8366      8572                 39.61     MT-ATP8
 ##                    length exon_starts   exon_ends
 ##                 <integer> <character> <character>
@@ -136,7 +135,7 @@ To illustrate the power of SummarizedExperiment, let's take a random subset of t
 ```
 
 ```
-## [1] "febc" "guss" "kuxp" "veqz" "eipl" "sukz" "yuze" "nibo"
+## [1] "qolg" "ieki" "aipt" "heja" "jorr" "debk" "oomz" "nibo"
 ```
 Note that I used the `%>%` (pipe) operator from the [dplyr](https://dplyr.tidyverse.org/) pacakge. The last command is exactly equivalent (but more readable) as the following:
 
@@ -147,7 +146,7 @@ Note that I used the `%>%` (pipe) operator from the [dplyr](https://dplyr.tidyve
 ```
 
 ```
-## [1] "febc" "guss" "kuxp" "veqz" "eipl" "sukz" "yuze" "nibo"
+## [1] "qolg" "ieki" "aipt" "heja" "jorr" "debk" "oomz" "nibo"
 ```
 
 Now we can just subset the original dataset:
@@ -162,12 +161,11 @@ data_subset
 ## dim: 35033 32 
 ## metadata(0):
 ## assays(1): counts
-## rownames(35033): ENSG00000198888 ENSG00000198763 ...
-##   ENSG00000233136 ENSG00000165795
+## rownames(35033): ENSG00000198888 ENSG00000198763 ... ENSG00000233136
+##   ENSG00000165795
 ## rowData names(11): gene_id gene_biotype ... exon_starts exon_ends
-## colnames(32): eipl_A eipl_B ... yuze_C yuze_D
-## colData names(44): sample_id donor ... mean_purity_filtered
-##   purity_bins
+## colnames(32): aipt_A aipt_B ... qolg_C qolg_D
+## colData names(44): sample_id donor ... mean_purity_filtered purity_bins
 ```
 Note the that we now have 8 donors x 4 conditions = 32 samples.
 
@@ -181,8 +179,8 @@ dds <- DESeqDataSet(data_subset, design = ~ condition_name)
 ```
 
 ```
-## Warning in DESeqDataSet(data_subset, design = ~condition_name): some
-## variables in design formula are characters, converting to factors
+## Warning in DESeqDataSet(data_subset, design = ~condition_name): some variables
+## in design formula are characters, converting to factors
 ```
 
 ```r
@@ -194,12 +192,11 @@ dds
 ## dim: 35033 32 
 ## metadata(1): version
 ## assays(1): counts
-## rownames(35033): ENSG00000198888 ENSG00000198763 ...
-##   ENSG00000233136 ENSG00000165795
+## rownames(35033): ENSG00000198888 ENSG00000198763 ... ENSG00000233136
+##   ENSG00000165795
 ## rowData names(11): gene_id gene_biotype ... exon_starts exon_ends
-## colnames(32): eipl_A eipl_B ... yuze_C yuze_D
-## colData names(44): sample_id donor ... mean_purity_filtered
-##   purity_bins
+## colnames(32): aipt_A aipt_B ... qolg_C qolg_D
+## colData names(44): sample_id donor ... mean_purity_filtered purity_bins
 ```
 
 Next, let's perform variance stabilising normalisation:
@@ -214,12 +211,12 @@ This is what the data looks like after normalisation:
 ```
 
 ```
-##                   eipl_A   eipl_B   eipl_C   eipl_D   febc_C
-## ENSG00000198888 16.00214 16.07723 16.90692 16.84831 15.73874
-## ENSG00000198763 15.78570 15.89761 16.70480 16.58796 15.61369
-## ENSG00000198804 18.07762 18.18235 19.24408 18.93902 18.01835
-## ENSG00000198712 16.61340 16.76516 17.68664 17.44199 16.55762
-## ENSG00000228253 13.90250 13.94963 14.89475 14.78564 13.90849
+##                   aipt_A   aipt_B   aipt_C   aipt_D   debk_A
+## ENSG00000198888 14.87803 15.33472 15.93831 16.43372 15.21502
+## ENSG00000198763 15.10283 15.11641 15.96577 16.25164 15.02112
+## ENSG00000198804 17.48413 17.73481 18.59548 18.99370 17.56722
+## ENSG00000198712 16.14815 16.04868 17.14063 17.30029 16.11999
+## ENSG00000228253 13.06007 13.45161 14.30090 14.50893 13.20468
 ```
 Now, let's etract 10,000 most highly expressed genes
 
@@ -278,8 +275,8 @@ dds <- DESeqDataSet(naive_IFNg, design = ~ condition_name)
 ```
 
 ```
-## Warning in DESeqDataSet(naive_IFNg, design = ~condition_name): some
-## variables in design formula are characters, converting to factors
+## Warning in DESeqDataSet(naive_IFNg, design = ~condition_name): some variables
+## in design formula are characters, converting to factors
 ```
 
 ```r
@@ -324,7 +321,7 @@ dds <- DESeq(dds)
 ```
 
 ```
-## -- replacing outliers and refitting for 106 genes
+## -- replacing outliers and refitting for 116 genes
 ## -- DESeq argument 'minReplicatesForReplace' = 7 
 ## -- original counts are preserved in counts(dds)
 ```
@@ -362,20 +359,20 @@ filtered_genes
 ```
 
 ```
-## # A tibble: 3,402 x 7
-##    baseMean log2FoldChange lfcSE  stat    pvalue      padj gene_id        
-##       <dbl>          <dbl> <dbl> <dbl>     <dbl>     <dbl> <chr>          
-##  1  368450.           11.8 1.08   11.0 6.11e- 28 2.08e- 26 ENSG00000138755
-##  2   16775.           11.7 0.655  17.8 1.01e- 70 1.80e- 68 ENSG00000154451
-##  3    8880.           11.4 0.344  33.2 4.44e-241 9.68e-238 ENSG00000100336
-##  4     239.           11.2 0.803  13.9 7.16e- 44 4.91e- 42 ENSG00000253838
-##  5   37562.           11.1 0.498  22.2 2.52e-109 1.27e-106 ENSG00000162654
-##  6   66277.           11.0 0.871  12.6 2.84e- 36 1.44e- 34 ENSG00000131203
-##  7   24491.           10.9 0.633  17.2 4.77e- 66 7.62e- 64 ENSG00000169248
-##  8  154578.           10.6 0.469  22.6 1.30e-112 7.50e-110 ENSG00000169245
-##  9    2723.           10.6 0.304  34.8 3.14e-265 8.80e-262 ENSG00000174944
-## 10     150.           10.5 1.01   10.4 2.45e- 25 6.97e- 24 ENSG00000213886
-## # ... with 3,392 more rows
+## # A tibble: 3,163 × 7
+##    baseMean log2FoldChange lfcSE  stat   pvalue     padj gene_id        
+##       <dbl>          <dbl> <dbl> <dbl>    <dbl>    <dbl> <chr>          
+##  1    234.            9.36 0.717 13.1  5.87e-39 7.10e-37 ENSG00000253838
+##  2  29616.            8.80 0.912  9.65 4.82e-22 1.99e-20 ENSG00000169248
+##  3     31.8           8.79 0.809 10.9  1.67e-27 1.04e-25 ENSG00000267074
+##  4     83.1           8.79 0.838 10.5  1.01e-25 5.54e-24 ENSG00000188676
+##  5 374230.            8.73 1.00   8.71 2.91e-18 9.34e-17 ENSG00000138755
+##  6  12165.            8.44 0.961  8.78 1.60e-18 5.21e-17 ENSG00000154451
+##  7    120.            8.42 0.721 11.7  1.78e-31 1.44e-29 ENSG00000121380
+##  8  66183.            8.33 0.915  9.10 8.73e-20 3.12e-18 ENSG00000131203
+##  9     29.6           8.32 0.900  9.24 2.49e-20 9.14e-19 ENSG00000213512
+## 10     25.8           8.12 0.796 10.2  1.84e-24 9.23e-23 ENSG00000227531
+## # ℹ 3,153 more rows
 ```
 
 Save the results to disk:
@@ -394,8 +391,8 @@ dds <- DESeqDataSet(naive_SL1344, design = ~ condition_name)
 ```
 
 ```
-## Warning in DESeqDataSet(naive_SL1344, design = ~condition_name): some
-## variables in design formula are characters, converting to factors
+## Warning in DESeqDataSet(naive_SL1344, design = ~condition_name): some variables
+## in design formula are characters, converting to factors
 ```
 
 ```r
@@ -434,7 +431,7 @@ dds <- DESeq(dds)
 ```
 
 ```
-## -- replacing outliers and refitting for 117 genes
+## -- replacing outliers and refitting for 115 genes
 ## -- DESeq argument 'minReplicatesForReplace' = 7 
 ## -- original counts are preserved in counts(dds)
 ```
@@ -476,12 +473,12 @@ cor.test(joint_lfc$log2FoldChange.x, joint_lfc$log2FoldChange.y)
 ## 	Pearson's product-moment correlation
 ## 
 ## data:  joint_lfc$log2FoldChange.x and joint_lfc$log2FoldChange.y
-## t = 84.016, df = 19994, p-value < 2.2e-16
+## t = 94.141, df = 20516, p-value < 2.2e-16
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
-##  0.5004914 0.5209804
+##  0.5396149 0.5587267
 ## sample estimates:
 ##       cor 
-## 0.5108085
+## 0.5492426
 ```
 
