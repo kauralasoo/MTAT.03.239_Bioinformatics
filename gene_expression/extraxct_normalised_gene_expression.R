@@ -1,4 +1,6 @@
 library("dplyr")
+library("tibble")
+library("readr")
 
 #Import gene expression data from Zenodo
 ge_matrix = read.table("~/Downloads/salmonella_cqn_matrix.txt.gz", sep = "\t")
