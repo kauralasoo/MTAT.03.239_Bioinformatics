@@ -93,8 +93,13 @@ fitted$variant_id = colnames(standard_genotypes)
 and extract the univariate z scores:
 ```{r}
 z_df = dplyr::tibble(variant = fitted$variant_id, z = fitted$z) %>%
-  dplyr::mutate(varaint_rank = c(1:n()))
+  dplyr::mutate(variant_rank = c(1:n()))
 z_df
+```
+
+We can also visualise the association signal:
+```{r}
+ggplot(z_df, aes(x = variant_rank, y = abs(z))) + geom_point()
 ```
 
 Calculate LD between the lead variant (=variant with the largest absolute Z score) and all other variants:

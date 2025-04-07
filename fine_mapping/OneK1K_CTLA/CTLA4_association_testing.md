@@ -181,13 +181,13 @@ and extract the univariate z scores:
 
 ``` r
 z_df = dplyr::tibble(variant = fitted$variant_id, z = fitted$z) %>%
-  dplyr::mutate(varaint_rank = c(1:n()))
+  dplyr::mutate(variant_rank = c(1:n()))
 z_df
 ```
 
 ```
 ## # A tibble: 1,390 × 3
-##    variant                     z varaint_rank
+##    variant                     z variant_rank
 ##    <chr>                   <dbl>        <int>
 ##  1 chr2_203674302_G_A     -1.18             1
 ##  2 chr2_203674547_C_A     -1.18             2
@@ -201,6 +201,14 @@ z_df
 ## 10 chr2_203678432_A_G     -1.18            10
 ## # ℹ 1,380 more rows
 ```
+
+We can also visualise the association signal:
+
+``` r
+ggplot(z_df, aes(x = variant_rank, y = abs(z))) + geom_point()
+```
+
+![](CTLA4_association_testing_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 Calculate LD between the lead variant (=variant with the largest absolute Z score) and all other variants:
 
@@ -235,7 +243,7 @@ joined_df = dplyr::left_join(ld_df, z_df, by = "variant")
 ggplot(joined_df, aes(x = abs(z), y = ld)) + geom_point()
 ```
 
-![](CTLA4_association_testing_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](CTLA4_association_testing_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 As you can see, there are many variants with large absolute Z scores, but their Z scores are almost perfectly explained by their LD (r2) with the lead variant. 
 
@@ -248,7 +256,7 @@ Visualise fine mapping results on top of -log10 p-values z-scores from the univa
 susieR::susie_plot(fitted, y = "z")
 ```
 
-![](CTLA4_association_testing_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](CTLA4_association_testing_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
 Visualise posterior inclusion probabilities (PIP) for each variant directly
 
@@ -257,7 +265,7 @@ Visualise posterior inclusion probabilities (PIP) for each variant directly
 susieR::susie_plot(fitted, y = "PIP")
 ```
 
-![](CTLA4_association_testing_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](CTLA4_association_testing_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 Extract variant belonging to the credible set
 
