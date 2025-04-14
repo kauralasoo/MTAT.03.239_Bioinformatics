@@ -1,0 +1,84 @@
+---
+title: "CTLA4 colocalisation"
+output: 
+  html_document: 
+    keep_md: true
+date: "2025-04-14"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+suppressMessages(library("dplyr"))
+suppressMessages(library("coloc"))
+suppressMessages(library("ggplot2"))
+
+```
+
+## Import the necessary R packages
+```{r}
+library("dplyr")
+library("coloc")
+library("ggplot2")
+```
+
+## Import data
+
+Import eQTL summary statistics for the CTLA4 gene in the OneK1K CD4+ T-cells.
+
+```{r}
+ctla4_data = readr::read_tsv("CTLA_sumstats.tsv")
+ctla4_data
+```
+
+Plot associations:
+```{r}
+ggplot(ctla4_data, aes(x = position, y = -log(pvalue, 10))) + geom_point()
+```
+
+Import GWAS results for rheumatoid arthritis (RA) from the UK Biobank + FinnGen + Million Veterns Program meta-analysis (https://mvp-ukbb.finngen.fi/)
+
+```{r}
+ra_data = readr::read_tsv("RA_sumstats.tsv")
+ra_data
+```
+
+Plot associations:
+```{r}
+ggplot(ra_data, aes(x = POS, y = mlogp)) + geom_point()
+```
+
+# Colocalisation analysis
+
+We will be using the coloc R package to test if the genetic association with CTLA4 expression and rheumatoid arthritis is driven by the same causal variant. You can read more about the coloc method and software in this paper: https://doi.org/10.1371/journal.pgen.1004383.
+
+First, let's prepare both datasets for colocalisation analysis.
+
+eQTL data:
+
+```{r}
+eqtl_dataset = list(snp = ctla4_data$variant, beta = ctla4_data$beta, varbeta = ctla4_data$se^2, type = "quant", sdY = 1)
+coloc::check_dataset(eqtl_dataset)
+```
+
+RA data:
+```{r}
+gwas_dataset = list(snp = ra_data$variant, beta = ra_data$beta, varbeta = ra_data$se^2, type = "cc")
+coloc::check_dataset(gwas_dataset)
+```
+
+Test for colocalisation:
+```{r}
+coloc.abf(eqtl_dataset, gwas_dataset, p1 = 1e-4, p2 = 1e-4, p12 = 1e-5)
+```
+
+# Visualise association signals for the two traits
+```{r}
+joined_data = dplyr::transmute(ctla4_data, molecular_trait_id, variant, CTLA4_nlogp = -log(pvalue, 10)) %>% 
+  dplyr::left_join(ra_data, by = "variant") %>% 
+  dplyr::rename(RA_nlogp = mlogp)
+
+ggplot(joined_data, aes(x = CTLA4_nlogp, y = RA_nlogp)) + geom_point()
+```
