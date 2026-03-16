@@ -54,11 +54,7 @@ Now, let's align all of the reads in these two files to the reference genome usi
 
 By default, HISAT2 outputs results as uncompressed SAM to the standard output. Since these files can be very large, it makes sense to convert them directly into binary compressed BAM format using samtools. See [wikipedia](https://en.wikipedia.org/wiki/SAMtools) and [SAM format specification](https://samtools.github.io/hts-specs/SAMv1.pdf) for more detail.
 
-First add samtools to your path:
-
-    module load samtools/1.9
-
-Then align with HISAT2:
+Align with HISAT2:
 
 	mkdir results
 	hisat2 -x hisat2_index/hisat2_index -1 data/fikt_A.1.fastq.gz -2 data/fikt_A.2.fastq.gz | samtools view -Sb > results/fikt_A.bam
